@@ -1,5 +1,7 @@
 project(Phoenix CXX C)
 
+add_subdirectory(dep)
+
 # set(Phoenix_SRCS phoenix.cxx)
 
 # add_library(Phoenix STATIC ${Phoenix_SRCS})
