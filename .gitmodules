@@ -1,3 +1,6 @@
 [submodule "dep/SDL"]
 	path = dep/SDL
 	url = git@github.com:phoenix-engine/SDL.git
+[submodule "dep/glad"]
+	path = dep/glad
+	url = git@github.com:phoenix-engine/glad-4.1-core.git
