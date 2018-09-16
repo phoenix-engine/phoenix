@@ -1,10 +1,7 @@
 project(Phoenix CXX C)
 
 add_subdirectory(dep)
-
-# set(Phoenix_SRCS phoenix.cxx)
-
-# add_library(Phoenix STATIC ${Phoenix_SRCS})
+add_subdirectory(src)
 
 # find_package(SDL2 REQUIRED)
 
@@ -27,6 +24,3 @@ add_subdirectory(dep)
 #   World
 #   Graphics
 # )
-
-# set_property(TARGET App PROPERTY CXX_STANDARD 17)
-# set_property(TARGET App PROPERTY CXX_STANDARD_REQUIRED ON)
