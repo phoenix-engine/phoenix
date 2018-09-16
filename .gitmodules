@@ -1,0 +1,3 @@
+[submodule "dep/SDL"]
+	path = dep/SDL
+	url = git@github.com:phoenix-engine/SDL.git
