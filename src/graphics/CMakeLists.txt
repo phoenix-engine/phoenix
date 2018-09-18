@@ -6,8 +6,6 @@ set(Graphics_SRCS
 
 add_library(Graphics STATIC ${Graphics_SRCS})
 
-find_package(SDL2 REQUIRED)
-
 target_include_directories(Graphics PUBLIC
   ${SDL2_INCLUDE_DIR}
   ${Phoenix_INCLUDE_DIR}/error
@@ -16,7 +14,7 @@ target_include_directories(Graphics PUBLIC
 )
 
 target_link_libraries(Graphics
-  ${SDL2_LIBRARY}
+  SDL2
   Error
   SDLWindow
   SDLRenderer

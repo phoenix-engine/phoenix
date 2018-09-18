@@ -4,8 +4,6 @@ set(SDLWindow_SRCS
 
 add_library(SDLWindow STATIC ${SDLWindow_SRCS})
 
-find_package(SDL2 REQUIRED)
-
 target_include_directories(SDLWindow PUBLIC
   ${SDL2_INCLUDE_DIR}
   ${Phoenix_INCLUDE_DIR}/error
@@ -13,7 +11,7 @@ target_include_directories(SDLWindow PUBLIC
 )
 
 target_link_libraries(SDLWindow
-  ${SDL2_LIBRARY}
+  SDL2
   Error
 )
 

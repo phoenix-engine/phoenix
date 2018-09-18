@@ -12,8 +12,6 @@ set(SDLUtil_SRCS
 
 add_library(SDLUtil STATIC ${SDLUtil_SRCS})
 
-find_package(SDL2 REQUIRED)
-
 target_include_directories(SDLUtil PUBLIC
   ${SDL2_INCLUDE_DIR}
   ${Phoenix_INCLUDE_DIR}/error
@@ -21,7 +19,7 @@ target_include_directories(SDLUtil PUBLIC
 )
 
 target_link_libraries(SDLUtil
-  ${SDL2_LIBRARY}
+  SDL2
   Error
   SDLInitUtil
   SDLInitVideo

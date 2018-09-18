@@ -4,8 +4,6 @@ set(SDLTexture_SRCS
 
 add_library(SDLTexture STATIC ${SDLTexture_SRCS})
 
-find_package(SDL2 REQUIRED)
-
 target_include_directories(SDLTexture PUBLIC
   ${SDL2_INCLUDE_DIR}
   ${Phoenix_INCLUDE_DIR}/error
@@ -13,7 +11,7 @@ target_include_directories(SDLTexture PUBLIC
 )
 
 target_link_libraries(SDLTexture
-  ${SDL2_LIBRARY}
+  SDL2
   Error
 )
 

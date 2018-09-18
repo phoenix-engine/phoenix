@@ -4,8 +4,6 @@ set(SDLDisplay_SRCS
 
 add_library(SDLDisplay STATIC ${SDLDisplay_SRCS})
 
-find_package(SDL2 REQUIRED)
-
 target_include_directories(SDLDisplay PUBLIC
   ${SDL2_INCLUDE_DIR}
   ${Phoenix_INCLUDE_DIR}/error
@@ -13,7 +11,7 @@ target_include_directories(SDLDisplay PUBLIC
 )
 
 target_link_libraries(SDLDisplay
-  ${SDL2_LIBRARY}
+  SDL2
   Error
 )
 

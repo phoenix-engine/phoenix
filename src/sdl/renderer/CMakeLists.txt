@@ -4,8 +4,6 @@ set(SDLRenderer_SRCS
 
 add_library(SDLRenderer STATIC ${SDLRenderer_SRCS})
 
-find_package(SDL2 REQUIRED)
-
 target_include_directories(SDLRenderer PUBLIC
   ${GLAD_INCLUDE_DIR}
   ${SDL2_INCLUDE_DIR}
@@ -15,7 +13,7 @@ target_include_directories(SDLRenderer PUBLIC
 
 target_link_libraries(SDLRenderer
   GLAD
-  ${SDL2_LIBRARY}
+  SDL2
   Error
   SDLTexture
 )

@@ -4,8 +4,6 @@ set(SDLInitUtil_SRCS
 
 add_library(SDLInitUtil STATIC ${SDLInitUtil_SRCS})
 
-find_package(SDL2 REQUIRED)
-
 target_include_directories(SDLInitUtil PUBLIC
   ${SDL2_INCLUDE_DIR}
   ${Phoenix_INCLUDE_DIR}/error
@@ -13,7 +11,7 @@ target_include_directories(SDLInitUtil PUBLIC
 )
 
 target_link_libraries(SDLInitUtil
-  ${SDL2_LIBRARY}
+  SDL2
   Error
 )
 

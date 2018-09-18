@@ -4,8 +4,6 @@ set(SDLGLRenderer_SRCS
 
 add_library(SDLGLRenderer STATIC ${SDLGLRenderer_SRCS})
 
-find_package(SDL2 REQUIRED)
-
 target_include_directories(SDLGLRenderer PUBLIC
   ${GLAD_INCLUDE_DIR}
   ${SDL2_INCLUDE_DIR}
@@ -15,7 +13,7 @@ target_include_directories(SDLGLRenderer PUBLIC
 
 target_link_libraries(SDLGLRenderer
   GLAD
-  ${SDL2_LIBRARY}
+  SDL2
   Error
 )
 
