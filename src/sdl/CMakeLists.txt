@@ -13,13 +13,11 @@ set(SDLUtil_SRCS
 add_library(SDLUtil STATIC ${SDLUtil_SRCS})
 
 target_include_directories(SDLUtil PUBLIC
-  ${SDL2_INCLUDE_DIR}
   ${Phoenix_INCLUDE_DIR}/error
   ${Phoenix_INCLUDE_DIR}/sdl
 )
 
 target_link_libraries(SDLUtil
-  SDL2
   Error
   SDLInitUtil
   SDLInitVideo

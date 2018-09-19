@@ -1,8 +1,6 @@
 #include <sstream>
 #include <string>
 
-#include "SDL.h"
-
 #include "display.hpp"
 #include "init_error.hpp"
 #include "sdl_util.hpp"
