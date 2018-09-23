@@ -1,5 +1,5 @@
-#ifndef PHX_GLSDLRENDERER_H
-#define PHX_GLSDLRENDERER_H
+#ifndef PHX_SDL_GLRENDERER_H
+#define PHX_SDL_GLRENDERER_H
 
 #include "SDL.h"
 

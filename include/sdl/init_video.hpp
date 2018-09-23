@@ -1,5 +1,5 @@
-#ifndef PHX_SDLINIT_VIDEO_H
-#define PHX_SDLINIT_VIDEO_H
+#ifndef PHX_SDL_INITVIDEO_H
+#define PHX_SDL_INITVIDEO_H
 
 namespace sdl {
     class InitVideo {

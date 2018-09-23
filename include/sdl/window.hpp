@@ -1,9 +1,7 @@
-#ifndef PHX_SDLWINDOW_H
-#define PHX_SDLWINDOW_H
+#ifndef PHX_SDL_WINDOW_H
+#define PHX_SDL_WINDOW_H
 
 #include "SDL.h"
-
-#include "renderer.hpp"
 
 namespace sdl {
     class Window {

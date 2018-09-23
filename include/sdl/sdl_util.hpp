@@ -1,5 +1,5 @@
-#ifndef PHX_SDLUTIL_H
-#define PHX_SDLUTIL_H
+#ifndef PHX_SDL_SDLUTIL_H
+#define PHX_SDL_SDLUTIL_H
 
 #include <string>
 

@@ -5,6 +5,7 @@
 #include "sdl_util.hpp"
 
 namespace phx {
+
     template <class R>
     class Phoenix {
     public:
@@ -14,6 +15,7 @@ namespace phx {
 	sdl::SDLUtil     sdlUtil;
 	gfx::Graphics<R> gfx;
     };
+
 }; // namespace phx
 
 #endif

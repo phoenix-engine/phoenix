@@ -2,7 +2,7 @@ add_subdirectory(init_util)
 add_subdirectory(init_video)
 add_subdirectory(display)
 add_subdirectory(window)
-add_subdirectory(renderer)
+add_subdirectory(sdl_renderer)
 add_subdirectory(gl_renderer)
 add_subdirectory(texture)
 

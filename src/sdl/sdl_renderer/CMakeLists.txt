@@ -1,5 +1,5 @@
 set(SDLRenderer_SRCS
-  renderer.cxx
+  sdl_renderer.cxx
 )
 
 add_library(SDLRenderer STATIC ${SDLRenderer_SRCS})

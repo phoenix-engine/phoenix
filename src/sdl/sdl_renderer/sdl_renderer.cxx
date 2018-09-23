@@ -6,13 +6,14 @@
 #include "SDL.h"
 
 #include "init_error.hpp"
-#include "renderer.hpp"
+#include "sdl_renderer.hpp"
 #include "texture.hpp"
 
 namespace sdl {
     SDL_Renderer* makeRenderer(SDL_Window* win);
 
-    Renderer::Renderer(SDL_Window* win, int w, int h) noexcept(false)
+    SDLRenderer::SDLRenderer(SDL_Window* win, int w,
+                             int h) noexcept(false)
         : w(w), h(h), renderer(makeRenderer(win)),
           pixels(new Uint32[w * h]), texture(renderer, w, h) {
 	if (renderer == NULL) {
@@ -38,25 +39,25 @@ namespace sdl {
 	return renderer;
     }
 
-    void Renderer::drawPoint(int x, int y, int color) {
+    void SDLRenderer::drawPoint(int x, int y, int color) {
 	pixels[y * w + x] = color;
     }
 
-    void Renderer::update() {
+    void SDLRenderer::update() {
 	texture.update(NULL, pixels, w * sizeof(Uint32));
     }
 
-    void Renderer::draw() {
+    void SDLRenderer::draw() {
 	SDL_RenderClear(renderer);
 	SDL_RenderCopy(renderer, texture.handle(), NULL, NULL);
 	SDL_RenderPresent(renderer);
     }
 
-    void Renderer::clear() {
+    void SDLRenderer::clear() {
 	memset(pixels, 0, w * h * sizeof(Uint32));
     }
 
-    Renderer::~Renderer() {
+    SDLRenderer::~SDLRenderer() {
 	SDL_DestroyRenderer(renderer);
 	delete[] pixels;
     }
