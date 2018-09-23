@@ -1,28 +1,31 @@
-#ifndef PHX_SDLRENDERER_H
-#define PHX_SDLRENDERER_H
+#ifndef PHX_SDL_RENDERER
+#define PHX_SDL_RENDERER
 
 #include "SDL.h"
 
-#include "texture.hpp"
-
 namespace sdl {
+
+    /**
+     * Renderer is an interface for renderer implementations; that is,
+     * it specifies an API which Phoenix uses to visualize entities.
+     *
+     * The intent of the Renderer is not to be used with dynamic
+     * implementations, but rather to specify the API expected for
+     * renderers.  The Phoenix class is explicitly templated with
+     * sdl::GLRenderer and sdl::SDLRenderer.
+     *
+     * A later implementation will allow Renderer subclasses to be used
+     * as the Phoenix Renderer.
+     */
     class Renderer {
     public:
 	Renderer(SDL_Window*, int w, int h) noexcept(false);
 
-	void update();
-	void draw();
-	void clear();
+	virtual void update();
+	virtual void draw();
+	virtual void clear();
 
-	void drawPoint(int x, int y, int color);
-
-	~Renderer();
-
-    private:
-	int           w, h;
-	SDL_Renderer* renderer;
-	Uint32*       pixels;
-	sdl::Texture  texture;
+	virtual void drawPoint(int x, int y, int color);
     };
 } // namespace sdl
 

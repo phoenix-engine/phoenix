@@ -1,8 +1,9 @@
 #include <cmath>
 
-#include "gl_renderer.hpp"
 #include "graphics.hpp"
-#include "renderer.hpp"
+
+#include "gl_renderer.hpp"
+#include "sdl_renderer.hpp"
 
 namespace gfx {
 
@@ -55,6 +56,6 @@ namespace gfx {
     }
 
     template class gfx::Graphics<sdl::GLRenderer>;
-    template class gfx::Graphics<sdl::Renderer>;
+    template class gfx::Graphics<sdl::SDLRenderer>;
 
 }; // namespace gfx

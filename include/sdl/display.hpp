@@ -1,5 +1,5 @@
-#ifndef PHX_SDLDISPLAY_H
-#define PHX_SDLDISPLAY_H
+#ifndef PHX_SDL_DISPLAY_H
+#define PHX_SDL_DISPLAY_H
 
 #include "SDL.h"
 

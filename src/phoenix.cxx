@@ -1,11 +1,12 @@
 #include <iostream>
 #include <sstream>
 
-#include "gl_renderer.hpp"
 #include "graphics.hpp"
 #include "init_error.hpp"
 #include "phoenix.hpp"
-#include "renderer.hpp"
+
+#include "gl_renderer.hpp"
+#include "sdl_renderer.hpp"
 
 namespace phx {
 
@@ -17,6 +18,6 @@ namespace phx {
           gfx(sdlUtil.windowHandle(), sdlUtil.w(), sdlUtil.h()) {}
 
     template class Phoenix<sdl::GLRenderer>;
-    template class Phoenix<sdl::Renderer>;
+    template class Phoenix<sdl::SDLRenderer>;
 
 }; // namespace phx

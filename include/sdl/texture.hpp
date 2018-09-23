@@ -1,5 +1,5 @@
-#ifndef PHX_SDLTEXTURE_H
-#define PHX_SDLTEXTURE_H
+#ifndef PHX_SDL_TEXTURE_H
+#define PHX_SDL_TEXTURE_H
 
 #include "SDL.h"
 
