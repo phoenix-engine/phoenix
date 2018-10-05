@@ -7,16 +7,16 @@
 
 namespace sdl {
     InitVideo::InitVideo() noexcept(false) {
-	if (SDL_GetNumVideoDrivers() > 0) {
-	    if (int v = SDL_VideoInit(NULL) != 0) {
-		std::stringstream ss;
-		ss << "SDL_VideoInit failed with code " << v << ": "
-		   << SDL_GetError();
-		throw err::InitError(ss);
-	    }
-	} else {
+	if (SDL_GetNumVideoDrivers() == 0) {
 	    std::stringstream ss;
 	    ss << "0 drivers found";
+	    throw err::InitError(ss);
+	}
+
+	if (int v = SDL_VideoInit(NULL) != 0) {
+	    std::stringstream ss;
+	    ss << "SDL_VideoInit failed with code " << v << ": "
+	       << SDL_GetError();
 	    throw err::InitError(ss);
 	}
 

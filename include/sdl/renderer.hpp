@@ -21,6 +21,17 @@ namespace sdl {
     public:
 	Renderer(SDL_Window*, int w, int h) noexcept(false);
 
+	// windowFlags must return the required SDL window flags.
+	static const Uint32 windowFlags() noexcept(true);
+
+	// sdlDefaults must return the default flags for SDL_Init.
+	static const Uint32 sdlDefaults() noexcept(true);
+
+	// postHooks defines the post-setup hooks to call, typically for
+	// configuring the SDL GL context, loading function pointers,
+	// etc.
+	static void postHooks() noexcept(true);
+
 	virtual void update();
 	virtual void draw();
 	virtual void clear();

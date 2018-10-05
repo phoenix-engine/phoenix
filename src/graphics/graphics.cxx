@@ -4,6 +4,7 @@
 
 #include "gl_renderer.hpp"
 #include "sdl_renderer.hpp"
+#include "window.hpp"
 
 namespace gfx {
 

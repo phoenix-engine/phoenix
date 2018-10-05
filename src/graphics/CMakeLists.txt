@@ -15,11 +15,9 @@ target_include_directories(Graphics PUBLIC
 
 target_link_libraries(Graphics
   SDL2
-  Error
   SDLWindow
   SDLRenderer
   SDLGLRenderer
-  SDLTexture
 )
 
 set_property(TARGET Graphics PROPERTY POSITION_INDEPENDENT_CODE ON)

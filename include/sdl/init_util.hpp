@@ -5,7 +5,7 @@ namespace sdl {
     // InitUtil simply handles SDL_Init and SDL_Quit.
     class InitUtil {
     public:
-	InitUtil(Uint32 flags = 0) noexcept(false);
+	InitUtil(Uint32 flags) noexcept(false);
 	~InitUtil();
     };
 } // namespace sdl

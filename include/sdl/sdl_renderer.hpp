@@ -10,6 +10,10 @@ namespace sdl {
     public:
 	SDLRenderer(SDL_Window*, int w, int h) noexcept(false);
 
+	static const Uint32 windowFlags() noexcept(true);
+	static const Uint32 sdlDefaults() noexcept(true);
+	static void         postHooks() noexcept(true);
+
 	void update();
 	void draw();
 	void clear();

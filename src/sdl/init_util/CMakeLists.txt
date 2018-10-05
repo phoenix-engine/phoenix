@@ -5,7 +5,7 @@ set(SDLInitUtil_SRCS
 add_library(SDLInitUtil STATIC ${SDLInitUtil_SRCS})
 
 target_include_directories(SDLInitUtil PUBLIC
-  ${SDL2_INCLUDE_DIR}
+  ${SDL2_INCLUDE_DIR}/include
   ${Phoenix_INCLUDE_DIR}/error
   ${Phoenix_INCLUDE_DIR}/sdl
 )

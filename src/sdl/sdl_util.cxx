@@ -1,18 +1,22 @@
-#include <sstream>
+#include <functional>
 #include <string>
 
-#include "display.hpp"
-#include "init_error.hpp"
+#include "SDL.h"
+
 #include "sdl_util.hpp"
+
+#include "display.hpp"
 
 namespace sdl {
     SDLUtil::SDLUtil(const std::string& titleIn, Uint32 windowFlags,
-                     Uint32 SDLSubsystems) noexcept(false)
-        : title(titleIn), initVideo(),
+                     Uint32                SDLSubsystems,
+                     std::function<void()> postHooks) noexcept(false)
+        : title(titleIn), initUtil(SDLSubsystems), initVideo(),
           window(title.c_str(), SDL_WINDOWPOS_CENTERED,
                  SDL_WINDOWPOS_CENTERED, display.w(), display.h(),
-                 windowFlags),
-          initUtil(SDLSubsystems) {
+                 windowFlags) {
+
+	postHooks();
 
 	window.show();
     }
