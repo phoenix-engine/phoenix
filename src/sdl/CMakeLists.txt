@@ -1,3 +1,4 @@
+add_subdirectory(helper)
 add_subdirectory(init_util)
 add_subdirectory(init_video)
 add_subdirectory(display)
@@ -23,7 +24,6 @@ target_link_libraries(SDLUtil
   SDLInitVideo
   SDLDisplay
   SDLWindow
-  Graphics
 )
 
 set_property(TARGET SDLUtil PROPERTY POSITION_INDEPENDENT_CODE ON)

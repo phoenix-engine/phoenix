@@ -5,7 +5,7 @@ set(SDLDisplay_SRCS
 add_library(SDLDisplay STATIC ${SDLDisplay_SRCS})
 
 target_include_directories(SDLDisplay PUBLIC
-  ${SDL2_INCLUDE_DIR}
+  ${SDL2_INCLUDE_DIR}/include
   ${Phoenix_INCLUDE_DIR}/error
   ${Phoenix_INCLUDE_DIR}/sdl
 )

@@ -20,6 +20,7 @@ target_include_directories(Phoenix PUBLIC
 target_link_libraries(Phoenix
   Error
   SDLUtil
+  SDLRenderer
   SDLGLRenderer
   Graphics
 )
