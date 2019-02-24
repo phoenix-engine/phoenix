@@ -6,3 +6,6 @@
 	path = dep/glad
 	url = git@github.com:phoenix-engine/glad-4.1-core.git
 	branch = master
+[submodule "dep/phoenix-apple-components"]
+	path = dep/phoenix-apple-components
+	url = git@github.com:phoenix-engine/phoenix-apple-components.git
