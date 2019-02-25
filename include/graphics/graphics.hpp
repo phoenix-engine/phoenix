@@ -1,5 +1,5 @@
-#ifndef PHX_GRAPHICS_H
-#define PHX_GRAPHICS_H
+#ifndef PHX_GRAPHICS_HPP
+#define PHX_GRAPHICS_HPP
 
 #include "init_error.hpp"
 #include "window.hpp"
@@ -9,7 +9,7 @@ namespace gfx {
     template <class R>
     class Graphics {
     public:
-	Graphics(sdl::Window&, int w, int h) noexcept(false);
+	Graphics(R& r, int w, int h) noexcept(false);
 
 	void update();
 	void draw();
@@ -22,7 +22,7 @@ namespace gfx {
 	    }
 	}
 
-	void drawBlob(int&& x, int&& y, int&& r, int&& color);
+	void drawBlob(int x, int y, int r, int color);
 
 	void drawLine(int x1, int y1, int x2, int y2);
 
@@ -32,6 +32,7 @@ namespace gfx {
 
 	R renderer;
     };
+
 } // namespace gfx
 
 #endif
