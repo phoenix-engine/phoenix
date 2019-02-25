@@ -9,9 +9,8 @@
 namespace gfx {
 
     template <class R>
-    Graphics<R>::Graphics(sdl::Window& winIn, int wIn,
-                          int hIn) noexcept(false)
-        : w(wIn), h(hIn), renderer(winIn.handle(), wIn, hIn) {}
+    Graphics<R>::Graphics(R& r, int wIn, int hIn) noexcept(false)
+        : w(wIn), h(hIn), renderer(r) {}
 
     template <class R>
     void Graphics<R>::update() {
@@ -42,7 +41,7 @@ namespace gfx {
     }
 
     template <class R>
-    void Graphics<R>::drawBlob(int&& x, int&& y, int&& r, int&& color) {
+    void Graphics<R>::drawBlob(int x, int y, int r, int color) {
 	int dx = 0, dy = 0, d2 = (r * r);
 
 	for (int i = x - r; i < x + r; i++) {
