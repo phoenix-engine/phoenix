@@ -1,7 +1,8 @@
 add_subdirectory(error)
+add_subdirectory(consumer)
 
-if(WIN32 OR LINUX)
+if(APPLE OR IOS)
+  # Do nothing, depend on the MetalPhoenix renderer
+else()
   add_subdirectory(sdl)
 endif()
-
-add_subdirectory(graphics)

@@ -1,0 +1,9 @@
+@PACKAGE_INIT@
+
+# set(Phoenix_DIR "@PACKAGE_INSTALL_FULL_INCLUDEDIR@")
+set(Phoenix_DIR "@Phoenix_DIR@")
+set(Phoenix_INCLUDE_DIR "@Phoenix_INCLUDE_DIR@")
+# set(Phoenix_DATA_DIR    "/usr/local/" )
+
+#...logic to determine installedPrefix from the own location...
+# set(Phoenix_CONFIG_DIR  "${installedPrefix}/" )
