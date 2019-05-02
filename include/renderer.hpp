@@ -1,5 +1,5 @@
-#ifndef PHX_RENDERER_HPP
-#define PHX_RENDERER_HPP
+#ifndef PHX_GFX_RENDERER_HPP
+#define PHX_GFX_RENDERER_HPP
 
 namespace gfx {
 
@@ -29,4 +29,4 @@ namespace gfx {
 
 } // namespace gfx
 
-#endif
+#endif // PHX_GFX_RENDERER_HPP

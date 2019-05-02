@@ -4,7 +4,8 @@
 #include <exception>
 #include <string>
 
-namespace err {
+namespace phx_err {
+
     class InitError : public std::exception {
     public:
 	InitError();
@@ -22,10 +23,6 @@ namespace err {
 	  "unknown error: ";
     };
 
-    class SDLInitError : InitError {
-    public:
-	SDLInitError();
-    };
-} // namespace err
+} // namespace phx_err
 
 #endif
