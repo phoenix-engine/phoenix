@@ -16,6 +16,11 @@ target/
 *.so
 *.a
 
+# Xcode build / user data
+xcuserdata/
+*/xcuserdata/
+**/xcuserdata/
+
 *.opensdf
 *.sdf
 *.sln
