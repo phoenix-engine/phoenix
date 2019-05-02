@@ -1,18 +1,18 @@
-#ifndef PHX_GRAPHICS_HPP
-#define PHX_GRAPHICS_HPP
+#ifndef PHX_GFX_GRAPHICS_HPP
+#define PHX_GFX_GRAPHICS_HPP
 
 #include "init_error.hpp"
-#include "window.hpp"
 
 namespace gfx {
 
-    template <class R>
+    template <class Renderer, class RenderPayload = void>
     class Graphics {
     public:
-	Graphics(R& r, int w, int h) noexcept(false);
+	Graphics() = default;
+	Graphics(Renderer&& r, int w, int h) noexcept(true);
 
 	void update();
-	void draw();
+	void draw(RenderPayload&);
 	void clear();
 
 	// TODO: Build a better drawing API.
@@ -30,9 +30,11 @@ namespace gfx {
 	int w;
 	int h;
 
-	R renderer;
+	Renderer renderer;
     };
+
+#include "impl/graphics_impl.hxx"
 
 } // namespace gfx
 
-#endif
+#endif // PHX_GFX_GRAPHICS_HPP
