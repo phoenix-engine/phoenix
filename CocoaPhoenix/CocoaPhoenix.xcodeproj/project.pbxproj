@@ -1,0 +1,2203 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		884F646422679F6F0079636D /* CocoaPhoenix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 885D103F222FEA28001D927F /* CocoaPhoenix.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		884F64AC2267D1E10079636D /* CocoaPhoenix_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8881F95A22296F01005691FA /* CocoaPhoenix_iOS.framework */; };
+		884F64AD2267D1E10079636D /* CocoaPhoenix_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8881F95A22296F01005691FA /* CocoaPhoenix_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		885BA92E226E7B4100F46A4A /* libConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 885BA929226E7B1C00F46A4A /* libConsumer.a */; };
+		885BA92F226E7B4100F46A4A /* libError.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 885BA92B226E7B1C00F46A4A /* libError.a */; };
+		88772D76225E478B00E6337F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88772D75225E478B00E6337F /* AppDelegate.m */; };
+		88772D79225E478B00E6337F /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88772D78225E478B00E6337F /* GameViewController.mm */; };
+		88772D7C225E478B00E6337F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88772D7A225E478B00E6337F /* Main.storyboard */; };
+		88772D7F225E478B00E6337F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88772D7D225E478B00E6337F /* LaunchScreen.storyboard */; };
+		88772D82225E478B00E6337F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88772D81225E478B00E6337F /* main.m */; };
+		88772D8B225E478C00E6337F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88772D8A225E478C00E6337F /* AppDelegate.m */; };
+		88772D8E225E478C00E6337F /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88772D8D225E478C00E6337F /* GameViewController.mm */; };
+		88772D91225E478C00E6337F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88772D8F225E478C00E6337F /* Main.storyboard */; };
+		88772D94225E478C00E6337F /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88772D93225E478C00E6337F /* main.mm */; };
+		88772E00225F7A4F00E6337F /* CocoaPhoenix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 885D103F222FEA28001D927F /* CocoaPhoenix.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88772E01225F7A4F00E6337F /* PHXApplePrelude.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88EB9C722258EE020096AED3 /* PHXApplePrelude.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88772E02225F7A4F00E6337F /* PHXCocoaClassNames.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88EB9C642258EC610096AED3 /* PHXCocoaClassNames.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88772E03225F7A4F00E6337F /* PHXCppWrappers.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88EB9C712258ED010096AED3 /* PHXCppWrappers.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88772E04225F7A4F00E6337F /* PHXCoreIncludes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88EB9C702258ECB20096AED3 /* PHXCoreIncludes.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88772E05225F7A4F00E6337F /* PHXCocoaTemplates.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88772D29225B809F00E6337F /* PHXCocoaTemplates.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88772E06225F7A4F00E6337F /* PHXCocoaClassDefs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88772D2A225C058100E6337F /* PHXCocoaClassDefs.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		8881F94722296EDF005691FA /* CocoaPhoenix_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8881F93D22296EDF005691FA /* CocoaPhoenix_macOS.framework */; };
+		8881F94C22296EDF005691FA /* Phoenix_macOSTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8881F94B22296EDF005691FA /* Phoenix_macOSTests.mm */; };
+		8881F96322296F01005691FA /* CocoaPhoenix_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8881F95A22296F01005691FA /* CocoaPhoenix_iOS.framework */; };
+		8881F96822296F01005691FA /* Phoenix_iOSTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8881F96722296F01005691FA /* Phoenix_iOSTests.mm */; };
+		88A6A744225FEFF0002DE200 /* CocoaPhoenix_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8881F93D22296EDF005691FA /* CocoaPhoenix_macOS.framework */; };
+		88A8EB732278FE4600193793 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A8EB662278FE4600193793 /* MetalKit.framework */; };
+		88A8EB85227A305000193793 /* impl in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50E52274C70000661838 /* impl */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB86227A305000193793 /* cocoa_phx in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50C02274BE4600661838 /* cocoa_phx */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB87227A305000193793 /* renderer in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50BF2274BE4600661838 /* renderer */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB88227A305A00193793 /* event.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CC2274C05700661838 /* event.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB89227A305A00193793 /* graphics.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CA2274C05700661838 /* graphics.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB8A227A305A00193793 /* init_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CD2274C05700661838 /* init_error.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB8B227A305A00193793 /* input.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CF2274C05800661838 /* input.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB8C227A305A00193793 /* phoenix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CE2274C05700661838 /* phoenix.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB8D227A305A00193793 /* queue.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50C92274C05700661838 /* queue.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB8E227A305A00193793 /* renderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CB2274C05700661838 /* renderer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB8F227A305A00193793 /* sdl_init_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50D02274C05800661838 /* sdl_init_error.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB90227A306800193793 /* PHXApplePrelude.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88EB9C722258EE020096AED3 /* PHXApplePrelude.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB91227A306800193793 /* PHXCocoaClassNames.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88EB9C642258EC610096AED3 /* PHXCocoaClassNames.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB92227A306800193793 /* PHXCoreIncludes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88EB9C702258ECB20096AED3 /* PHXCoreIncludes.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB93227A306800193793 /* PHXCppWrappers.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88EB9C712258ED010096AED3 /* PHXCppWrappers.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB94227A306800193793 /* PHXCocoaTemplates.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88772D29225B809F00E6337F /* PHXCocoaTemplates.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB95227A306800193793 /* PHXCocoaClassDefs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88772D2A225C058100E6337F /* PHXCocoaClassDefs.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A8EB97227A307800193793 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A8EB96227A307800193793 /* MetalKit.framework */; };
+		88FF1051227CB6A8001C1637 /* PHXResponder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1050227CB6A8001C1637 /* PHXResponder.mm */; };
+		88FF1054227CB8FE001C1637 /* PHXResourceManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1053227CB8FE001C1637 /* PHXResourceManager.mm */; };
+		88FF1055227CB8FE001C1637 /* PHXResourceManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1053227CB8FE001C1637 /* PHXResourceManager.mm */; };
+		88FF1057227CBC79001C1637 /* PHXDefaultFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1056227CBC79001C1637 /* PHXDefaultFactory.mm */; };
+		88FF1058227CBC79001C1637 /* PHXDefaultFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1056227CBC79001C1637 /* PHXDefaultFactory.mm */; };
+		88FF105A227CC293001C1637 /* PHXViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1059227CC293001C1637 /* PHXViewController.mm */; };
+		88FF105D227CC2DF001C1637 /* PHXViewController_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF105C227CC2D4001C1637 /* PHXViewController_iOS.mm */; };
+		88FF105F227CC3A2001C1637 /* PHXResponder_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF105E227CC398001C1637 /* PHXResponder_iOS.mm */; };
+		88FF1064227CC803001C1637 /* PHXViewDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1063227CC803001C1637 /* PHXViewDelegate.mm */; };
+		88FF1065227CC803001C1637 /* PHXViewDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1063227CC803001C1637 /* PHXViewDelegate.mm */; };
+		88FF1067227CC90C001C1637 /* PHXDrawer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1066227CC90C001C1637 /* PHXDrawer.mm */; };
+		88FF1068227CC90C001C1637 /* PHXDrawer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1066227CC90C001C1637 /* PHXDrawer.mm */; };
+		88FF106A227CCD05001C1637 /* PHXRenderer_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF1069227CCD05001C1637 /* PHXRenderer_iOS.mm */; };
+		88FF106D227CCF6A001C1637 /* PHXRenderer_macOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88FF106B227CCF23001C1637 /* PHXRenderer_macOS.mm */; };
+		88FF50572273307700661838 /* PHXMetal-iOS.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 88FF504C22732F5000661838 /* PHXMetal-iOS.metallib */; };
+		88FF5061227330B700661838 /* PHXMetal.metal in Sources */ = {isa = PBXBuildFile; fileRef = 88A1298E226F55980056FA12 /* PHXMetal.metal */; };
+		88FF5062227330BE00661838 /* PHXMetal.metal in Sources */ = {isa = PBXBuildFile; fileRef = 88A1298E226F55980056FA12 /* PHXMetal.metal */; };
+		88FF50C12274BED500661838 /* cocoa_phx in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50C02274BE4600661838 /* cocoa_phx */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50C22274BED700661838 /* renderer in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50BF2274BE4600661838 /* renderer */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50D12274C06300661838 /* event.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CC2274C05700661838 /* event.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50D22274C06300661838 /* graphics.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CA2274C05700661838 /* graphics.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50D32274C06300661838 /* init_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CD2274C05700661838 /* init_error.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50D42274C06300661838 /* input.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CF2274C05800661838 /* input.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50D52274C06300661838 /* phoenix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CE2274C05700661838 /* phoenix.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50D62274C06300661838 /* queue.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50C92274C05700661838 /* queue.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50D72274C06300661838 /* renderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50CB2274C05700661838 /* renderer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50D82274C06300661838 /* sdl_init_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50D02274C05800661838 /* sdl_init_error.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50E62274C70500661838 /* impl in Headers */ = {isa = PBXBuildFile; fileRef = 88FF50E52274C70000661838 /* impl */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FF50FB2274D4D600661838 /* PHXMetal-macOS.metallib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 88FF505A227330A500661838 /* PHXMetal-macOS.metallib */; };
+		88FF51092275BDB100661838 /* libConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88772D44225D4A4800E6337F /* libConsumer.a */; };
+		88FF510A2275BDB200661838 /* libError.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8881F9AB2229EDA4005691FA /* libError.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		885BA928226E7B1C00F46A4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 885BA905226E7B0000F46A4A /* Phoenix-iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0AB7FF89E15049359C455828;
+			remoteInfo = Consumer;
+		};
+		885BA92A226E7B1C00F46A4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 885BA905226E7B0000F46A4A /* Phoenix-iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D748D9756634EBEA4B527AB;
+			remoteInfo = Error;
+		};
+		88772D43225D4A4800E6337F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F9A32229EDA4005691FA /* Phoenix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2CA15F611A12493FA746DFE6;
+			remoteInfo = Consumer;
+		};
+		88772DAB225E47B100E6337F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F93222296EC4005691FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8881F93C22296EDF005691FA;
+			remoteInfo = "Phoenix-macOS";
+		};
+		88772DAE225E47C900E6337F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F93222296EC4005691FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8881F95922296F01005691FA;
+			remoteInfo = "Phoenix-iOS";
+		};
+		8881F94822296EDF005691FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F93222296EC4005691FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8881F93C22296EDF005691FA;
+			remoteInfo = "Phoenix-macOS";
+		};
+		8881F96422296F01005691FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F93222296EC4005691FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8881F95922296F01005691FA;
+			remoteInfo = "Phoenix-iOS";
+		};
+		8881F9AA2229EDA4005691FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F9A32229EDA4005691FA /* Phoenix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0500F6677A644ACC95278A05;
+			remoteInfo = Error;
+		};
+		88A8EB81227A300500193793 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 885BA905226E7B0000F46A4A /* Phoenix-iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DBE2F715D35948EEBB0405DE;
+			remoteInfo = Consumer;
+		};
+		88A8EB83227A300500193793 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 885BA905226E7B0000F46A4A /* Phoenix-iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BBFD453678C4EA6A3A622D8;
+			remoteInfo = Error;
+		};
+		88FF505522732F6900661838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F93222296EC4005691FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88FF504B22732F5000661838;
+			remoteInfo = PHXMetal;
+		};
+		88FF5063227330CF00661838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F93222296EC4005691FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88FF5059227330A500661838;
+			remoteInfo = "PHXMetal-macOS";
+		};
+		88FF51012275BA0100661838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F9A32229EDA4005691FA /* Phoenix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BF2A5FD03FCF41E78A68F380;
+			remoteInfo = Consumer;
+		};
+		88FF51032275BA0100661838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8881F9A32229EDA4005691FA /* Phoenix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB7295DE6AF4104B99F0B9B;
+			remoteInfo = Error;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		884F64AE2267D1E10079636D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				884F64AD2267D1E10079636D /* CocoaPhoenix_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FF50FA2274D4C700661838 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				88FF50FB2274D4D600661838 /* PHXMetal-macOS.metallib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FF50FD2274D5F200661838 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		884F649F2267B7470079636D /* libConsumer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libConsumer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		884F64A12267B7470079636D /* libError.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libError.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		885BA905226E7B0000F46A4A /* Phoenix-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Phoenix-iOS.xcodeproj"; path = "../xcode-ios-build/Phoenix-iOS.xcodeproj"; sourceTree = "<group>"; };
+		885D103F222FEA28001D927F /* CocoaPhoenix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CocoaPhoenix.hpp; sourceTree = "<group>"; };
+		885D104B222FEC67001D927F /* PHXViewController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXViewController.hpp; sourceTree = "<group>"; };
+		885D104F222FF594001D927F /* PHXResponder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXResponder.hpp; sourceTree = "<group>"; };
+		885D105A2238654A001D927F /* PHXViewDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXViewDelegate.hpp; sourceTree = "<group>"; };
+		88772D29225B809F00E6337F /* PHXCocoaTemplates.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXCocoaTemplates.hpp; sourceTree = "<group>"; };
+		88772D2A225C058100E6337F /* PHXCocoaClassDefs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXCocoaClassDefs.hpp; sourceTree = "<group>"; };
+		88772D72225E478B00E6337F /* CocoaPhoenixTestingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaPhoenixTestingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88772D74225E478B00E6337F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		88772D75225E478B00E6337F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		88772D77225E478B00E6337F /* GameViewController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameViewController.hpp; sourceTree = "<group>"; };
+		88772D78225E478B00E6337F /* GameViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GameViewController.mm; sourceTree = "<group>"; };
+		88772D7B225E478B00E6337F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88772D7E225E478B00E6337F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88772D80225E478B00E6337F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88772D81225E478B00E6337F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88772D87225E478B00E6337F /* CocoaPhoenixTestingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaPhoenixTestingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88772D89225E478C00E6337F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		88772D8A225E478C00E6337F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		88772D8C225E478C00E6337F /* GameViewController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameViewController.hpp; sourceTree = "<group>"; };
+		88772D8D225E478C00E6337F /* GameViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GameViewController.mm; sourceTree = "<group>"; };
+		88772D90225E478C00E6337F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88772D92225E478C00E6337F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88772D93225E478C00E6337F /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		8881F93D22296EDF005691FA /* CocoaPhoenix_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaPhoenix_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8881F94622296EDF005691FA /* Phoenix-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Phoenix-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8881F94B22296EDF005691FA /* Phoenix_macOSTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Phoenix_macOSTests.mm; sourceTree = "<group>"; };
+		8881F94D22296EDF005691FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8881F95A22296F01005691FA /* CocoaPhoenix_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaPhoenix_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8881F96222296F01005691FA /* Phoenix-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Phoenix-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8881F96722296F01005691FA /* Phoenix_iOSTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Phoenix_iOSTests.mm; sourceTree = "<group>"; };
+		8881F96922296F01005691FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8881F9A32229EDA4005691FA /* Phoenix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Phoenix.xcodeproj; path = "../xcode-build/Phoenix.xcodeproj"; sourceTree = "<group>"; };
+		88A12976226F50A10056FA12 /* Renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		88A12977226F50A90056FA12 /* Renderer_impl.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer_impl.hxx; sourceTree = "<group>"; };
+		88A12980226F51320056FA12 /* PHXRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXRenderer.hpp; sourceTree = "<group>"; };
+		88A12982226F52A60056FA12 /* PHXResourceManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXResourceManager.hpp; sourceTree = "<group>"; };
+		88A12986226F53F80056FA12 /* PHXDrawer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXDrawer.hpp; sourceTree = "<group>"; };
+		88A1298D226F55730056FA12 /* PHXShaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHXShaders.h; sourceTree = "<group>"; };
+		88A1298E226F55980056FA12 /* PHXMetal.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PHXMetal.metal; sourceTree = "<group>"; };
+		88A12991226FBD3A0056FA12 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		88A8EB662278FE4600193793 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		88A8EB96227A307800193793 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
+		88EB9C642258EC610096AED3 /* PHXCocoaClassNames.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXCocoaClassNames.hpp; sourceTree = "<group>"; };
+		88EB9C702258ECB20096AED3 /* PHXCoreIncludes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXCoreIncludes.hpp; sourceTree = "<group>"; };
+		88EB9C712258ED010096AED3 /* PHXCppWrappers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXCppWrappers.hpp; sourceTree = "<group>"; };
+		88EB9C722258EE020096AED3 /* PHXApplePrelude.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXApplePrelude.hpp; sourceTree = "<group>"; };
+		88FF1050227CB6A8001C1637 /* PHXResponder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXResponder.mm; sourceTree = "<group>"; };
+		88FF1053227CB8FE001C1637 /* PHXResourceManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXResourceManager.mm; sourceTree = "<group>"; };
+		88FF1056227CBC79001C1637 /* PHXDefaultFactory.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXDefaultFactory.mm; sourceTree = "<group>"; };
+		88FF1059227CC293001C1637 /* PHXViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXViewController.mm; sourceTree = "<group>"; };
+		88FF105C227CC2D4001C1637 /* PHXViewController_iOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXViewController_iOS.mm; sourceTree = "<group>"; };
+		88FF105E227CC398001C1637 /* PHXResponder_iOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXResponder_iOS.mm; sourceTree = "<group>"; };
+		88FF1063227CC803001C1637 /* PHXViewDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXViewDelegate.mm; sourceTree = "<group>"; };
+		88FF1066227CC90C001C1637 /* PHXDrawer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXDrawer.mm; sourceTree = "<group>"; };
+		88FF1069227CCD05001C1637 /* PHXRenderer_iOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXRenderer_iOS.mm; sourceTree = "<group>"; };
+		88FF106B227CCF23001C1637 /* PHXRenderer_macOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXRenderer_macOS.mm; sourceTree = "<group>"; };
+		88FF504C22732F5000661838 /* PHXMetal-iOS.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = "PHXMetal-iOS.metallib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88FF505A227330A500661838 /* PHXMetal-macOS.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = "PHXMetal-macOS.metallib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88FF506822733C2D00661838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FF50BF2274BE4600661838 /* renderer */ = {isa = PBXFileReference; lastKnownFileType = folder; name = renderer; path = include/renderer; sourceTree = SOURCE_ROOT; };
+		88FF50C02274BE4600661838 /* cocoa_phx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = cocoa_phx; path = include/cocoa_phx; sourceTree = SOURCE_ROOT; };
+		88FF50C92274C05700661838 /* queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = queue.hpp; path = ../../include/queue.hpp; sourceTree = "<group>"; };
+		88FF50CA2274C05700661838 /* graphics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = graphics.hpp; path = ../../include/graphics.hpp; sourceTree = "<group>"; };
+		88FF50CB2274C05700661838 /* renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = renderer.hpp; path = ../../include/renderer.hpp; sourceTree = "<group>"; };
+		88FF50CC2274C05700661838 /* event.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = event.hpp; path = ../../include/event.hpp; sourceTree = "<group>"; };
+		88FF50CD2274C05700661838 /* init_error.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = init_error.hpp; path = ../../include/init_error.hpp; sourceTree = "<group>"; };
+		88FF50CE2274C05700661838 /* phoenix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = phoenix.hpp; path = ../../include/phoenix.hpp; sourceTree = "<group>"; };
+		88FF50CF2274C05800661838 /* input.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = input.hpp; path = ../../include/input.hpp; sourceTree = "<group>"; };
+		88FF50D02274C05800661838 /* sdl_init_error.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = sdl_init_error.hpp; path = ../../include/sdl_init_error.hpp; sourceTree = "<group>"; };
+		88FF50E12274C19300661838 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		88FF50E52274C70000661838 /* impl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = impl; path = ../../include/impl; sourceTree = "<group>"; };
+		88FF51292275C0A500661838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88772D6F225E478B00E6337F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884F64AC2267D1E10079636D /* CocoaPhoenix_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88772D84225E478B00E6337F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A6A744225FEFF0002DE200 /* CocoaPhoenix_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F93A22296EDF005691FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A8EB732278FE4600193793 /* MetalKit.framework in Frameworks */,
+				88FF51092275BDB100661838 /* libConsumer.a in Frameworks */,
+				88FF510A2275BDB200661838 /* libError.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F94322296EDF005691FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8881F94722296EDF005691FA /* CocoaPhoenix_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F95722296F01005691FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A8EB97227A307800193793 /* MetalKit.framework in Frameworks */,
+				885BA92E226E7B4100F46A4A /* libConsumer.a in Frameworks */,
+				885BA92F226E7B4100F46A4A /* libError.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F95F22296F01005691FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8881F96322296F01005691FA /* CocoaPhoenix_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		885BA91F226E7B1C00F46A4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				885BA929226E7B1C00F46A4A /* libConsumer.a */,
+				885BA92B226E7B1C00F46A4A /* libError.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		885D1042222FEA50001D927F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				885D103F222FEA28001D927F /* CocoaPhoenix.hpp */,
+				88EB9C722258EE020096AED3 /* PHXApplePrelude.hpp */,
+				88EB9C642258EC610096AED3 /* PHXCocoaClassNames.hpp */,
+				88EB9C702258ECB20096AED3 /* PHXCoreIncludes.hpp */,
+				88EB9C712258ED010096AED3 /* PHXCppWrappers.hpp */,
+				88772D29225B809F00E6337F /* PHXCocoaTemplates.hpp */,
+				88772D2A225C058100E6337F /* PHXCocoaClassDefs.hpp */,
+				88A12975226F50880056FA12 /* renderer */,
+				88772D1D225B7CC000E6337F /* cocoa_phx */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		88772D1D225B7CC000E6337F /* cocoa_phx */ = {
+			isa = PBXGroup;
+			children = (
+				88A1298D226F55730056FA12 /* PHXShaders.h */,
+				88A12980226F51320056FA12 /* PHXRenderer.hpp */,
+				88A12986226F53F80056FA12 /* PHXDrawer.hpp */,
+				88A12982226F52A60056FA12 /* PHXResourceManager.hpp */,
+				885D104B222FEC67001D927F /* PHXViewController.hpp */,
+				885D104F222FF594001D927F /* PHXResponder.hpp */,
+				885D105A2238654A001D927F /* PHXViewDelegate.hpp */,
+			);
+			path = cocoa_phx;
+			sourceTree = "<group>";
+		};
+		88772D73225E478B00E6337F /* CocoaPhoenixTestingApp_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				88772D74225E478B00E6337F /* AppDelegate.h */,
+				88772D75225E478B00E6337F /* AppDelegate.m */,
+				88772D77225E478B00E6337F /* GameViewController.hpp */,
+				88772D78225E478B00E6337F /* GameViewController.mm */,
+				88772D7A225E478B00E6337F /* Main.storyboard */,
+				88772D7D225E478B00E6337F /* LaunchScreen.storyboard */,
+				88772D80225E478B00E6337F /* Info.plist */,
+				88772D81225E478B00E6337F /* main.m */,
+			);
+			path = CocoaPhoenixTestingApp_iOS;
+			sourceTree = "<group>";
+		};
+		88772D88225E478C00E6337F /* CocoaPhoenixTestingApp_macOS */ = {
+			isa = PBXGroup;
+			children = (
+				88772D89225E478C00E6337F /* AppDelegate.h */,
+				88772D8A225E478C00E6337F /* AppDelegate.m */,
+				88772D8C225E478C00E6337F /* GameViewController.hpp */,
+				88772D8D225E478C00E6337F /* GameViewController.mm */,
+				88772D8F225E478C00E6337F /* Main.storyboard */,
+				88772D92225E478C00E6337F /* Info.plist */,
+				88772D93225E478C00E6337F /* main.mm */,
+			);
+			path = CocoaPhoenixTestingApp_macOS;
+			sourceTree = "<group>";
+		};
+		8881F93122296EC4005691FA = {
+			isa = PBXGroup;
+			children = (
+				88A12991226FBD3A0056FA12 /* README.md */,
+				88FF50E02274C16400661838 /* doc */,
+				88FF50BE2274BDE200661838 /* dist_headers */,
+				885D1042222FEA50001D927F /* include */,
+				8881F9B0222ABD16005691FA /* src */,
+				8881F9A32229EDA4005691FA /* Phoenix.xcodeproj */,
+				88FF506722733C0500661838 /* Phoenix-macOS */,
+				885BA905226E7B0000F46A4A /* Phoenix-iOS.xcodeproj */,
+				88FF506922733C3C00661838 /* Phoenix-iOS */,
+				8881F94A22296EDF005691FA /* Phoenix-macOSTests */,
+				8881F96622296F01005691FA /* Phoenix-iOSTests */,
+				88772D88225E478C00E6337F /* CocoaPhoenixTestingApp_macOS */,
+				88772D73225E478B00E6337F /* CocoaPhoenixTestingApp_iOS */,
+				8881F93E22296EDF005691FA /* Products */,
+				8881F9E6222C1FD7005691FA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8881F93E22296EDF005691FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8881F93D22296EDF005691FA /* CocoaPhoenix_macOS.framework */,
+				8881F94622296EDF005691FA /* Phoenix-macOSTests.xctest */,
+				8881F95A22296F01005691FA /* CocoaPhoenix_iOS.framework */,
+				8881F96222296F01005691FA /* Phoenix-iOSTests.xctest */,
+				88772D72225E478B00E6337F /* CocoaPhoenixTestingApp.app */,
+				88772D87225E478B00E6337F /* CocoaPhoenixTestingApp.app */,
+				88FF504C22732F5000661838 /* PHXMetal-iOS.metallib */,
+				88FF505A227330A500661838 /* PHXMetal-macOS.metallib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8881F94A22296EDF005691FA /* Phoenix-macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				8881F94B22296EDF005691FA /* Phoenix_macOSTests.mm */,
+				8881F94D22296EDF005691FA /* Info.plist */,
+			);
+			path = "Phoenix-macOSTests";
+			sourceTree = "<group>";
+		};
+		8881F96622296F01005691FA /* Phoenix-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				8881F96722296F01005691FA /* Phoenix_iOSTests.mm */,
+				8881F96922296F01005691FA /* Info.plist */,
+			);
+			path = "Phoenix-iOSTests";
+			sourceTree = "<group>";
+		};
+		8881F9A42229EDA4005691FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88772D44225D4A4800E6337F /* libConsumer.a */,
+				8881F9AB2229EDA4005691FA /* libError.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8881F9B0222ABD16005691FA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				88A1298E226F55980056FA12 /* PHXMetal.metal */,
+				88FF1053227CB8FE001C1637 /* PHXResourceManager.mm */,
+				88FF1056227CBC79001C1637 /* PHXDefaultFactory.mm */,
+				88FF1059227CC293001C1637 /* PHXViewController.mm */,
+				88FF105C227CC2D4001C1637 /* PHXViewController_iOS.mm */,
+				88FF1050227CB6A8001C1637 /* PHXResponder.mm */,
+				88FF105E227CC398001C1637 /* PHXResponder_iOS.mm */,
+				88FF1063227CC803001C1637 /* PHXViewDelegate.mm */,
+				88FF1066227CC90C001C1637 /* PHXDrawer.mm */,
+				88FF106B227CCF23001C1637 /* PHXRenderer_macOS.mm */,
+				88FF1069227CCD05001C1637 /* PHXRenderer_iOS.mm */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		8881F9E6222C1FD7005691FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88A8EB662278FE4600193793 /* MetalKit.framework */,
+				88A8EB96227A307800193793 /* MetalKit.framework */,
+				884F649F2267B7470079636D /* libConsumer.a */,
+				884F64A12267B7470079636D /* libError.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88A12975226F50880056FA12 /* renderer */ = {
+			isa = PBXGroup;
+			children = (
+				88A12976226F50A10056FA12 /* Renderer.hpp */,
+				88A12977226F50A90056FA12 /* Renderer_impl.hxx */,
+			);
+			path = renderer;
+			sourceTree = "<group>";
+		};
+		88FF506722733C0500661838 /* Phoenix-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				88FF506822733C2D00661838 /* Info.plist */,
+			);
+			path = "Phoenix-macOS";
+			sourceTree = "<group>";
+		};
+		88FF506922733C3C00661838 /* Phoenix-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				88FF51292275C0A500661838 /* Info.plist */,
+			);
+			path = "Phoenix-iOS";
+			sourceTree = "<group>";
+		};
+		88FF50BE2274BDE200661838 /* dist_headers */ = {
+			isa = PBXGroup;
+			children = (
+				88FF50E52274C70000661838 /* impl */,
+				88FF50CC2274C05700661838 /* event.hpp */,
+				88FF50CA2274C05700661838 /* graphics.hpp */,
+				88FF50CD2274C05700661838 /* init_error.hpp */,
+				88FF50CF2274C05800661838 /* input.hpp */,
+				88FF50CE2274C05700661838 /* phoenix.hpp */,
+				88FF50C92274C05700661838 /* queue.hpp */,
+				88FF50CB2274C05700661838 /* renderer.hpp */,
+				88FF50D02274C05800661838 /* sdl_init_error.hpp */,
+				88FF50C02274BE4600661838 /* cocoa_phx */,
+				88FF50BF2274BE4600661838 /* renderer */,
+			);
+			path = dist_headers;
+			sourceTree = "<group>";
+		};
+		88FF50E02274C16400661838 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				88FF50E12274C19300661838 /* README.md */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8881F93822296EDF005691FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FF50D12274C06300661838 /* event.hpp in Headers */,
+				88FF50D22274C06300661838 /* graphics.hpp in Headers */,
+				88FF50D32274C06300661838 /* init_error.hpp in Headers */,
+				88FF50D42274C06300661838 /* input.hpp in Headers */,
+				88FF50D52274C06300661838 /* phoenix.hpp in Headers */,
+				88FF50D62274C06300661838 /* queue.hpp in Headers */,
+				88FF50D72274C06300661838 /* renderer.hpp in Headers */,
+				88FF50D82274C06300661838 /* sdl_init_error.hpp in Headers */,
+				88772E00225F7A4F00E6337F /* CocoaPhoenix.hpp in Headers */,
+				88772E01225F7A4F00E6337F /* PHXApplePrelude.hpp in Headers */,
+				88772E02225F7A4F00E6337F /* PHXCocoaClassNames.hpp in Headers */,
+				88772E04225F7A4F00E6337F /* PHXCoreIncludes.hpp in Headers */,
+				88772E03225F7A4F00E6337F /* PHXCppWrappers.hpp in Headers */,
+				88772E05225F7A4F00E6337F /* PHXCocoaTemplates.hpp in Headers */,
+				88772E06225F7A4F00E6337F /* PHXCocoaClassDefs.hpp in Headers */,
+				88FF50C12274BED500661838 /* cocoa_phx in Headers */,
+				88FF50C22274BED700661838 /* renderer in Headers */,
+				88FF50E62274C70500661838 /* impl in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F95522296F01005691FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884F646422679F6F0079636D /* CocoaPhoenix.hpp in Headers */,
+				88A8EB90227A306800193793 /* PHXApplePrelude.hpp in Headers */,
+				88A8EB91227A306800193793 /* PHXCocoaClassNames.hpp in Headers */,
+				88A8EB92227A306800193793 /* PHXCoreIncludes.hpp in Headers */,
+				88A8EB93227A306800193793 /* PHXCppWrappers.hpp in Headers */,
+				88A8EB94227A306800193793 /* PHXCocoaTemplates.hpp in Headers */,
+				88A8EB95227A306800193793 /* PHXCocoaClassDefs.hpp in Headers */,
+				88A8EB85227A305000193793 /* impl in Headers */,
+				88A8EB86227A305000193793 /* cocoa_phx in Headers */,
+				88A8EB87227A305000193793 /* renderer in Headers */,
+				88A8EB88227A305A00193793 /* event.hpp in Headers */,
+				88A8EB89227A305A00193793 /* graphics.hpp in Headers */,
+				88A8EB8A227A305A00193793 /* init_error.hpp in Headers */,
+				88A8EB8B227A305A00193793 /* input.hpp in Headers */,
+				88A8EB8C227A305A00193793 /* phoenix.hpp in Headers */,
+				88A8EB8D227A305A00193793 /* queue.hpp in Headers */,
+				88A8EB8E227A305A00193793 /* renderer.hpp in Headers */,
+				88A8EB8F227A305A00193793 /* sdl_init_error.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88A6A745225FEFF9002DE200 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		88772D71225E478B00E6337F /* CocoaPhoenixTestingApp-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88772DA9225E478C00E6337F /* Build configuration list for PBXNativeTarget "CocoaPhoenixTestingApp-iOS" */;
+			buildPhases = (
+				88772D6E225E478B00E6337F /* Sources */,
+				88772D6F225E478B00E6337F /* Frameworks */,
+				88772D70225E478B00E6337F /* Resources */,
+				884F64AE2267D1E10079636D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88772DAF225E47C900E6337F /* PBXTargetDependency */,
+			);
+			name = "CocoaPhoenixTestingApp-iOS";
+			productName = "CocoaPhoenixTestingApp iOS";
+			productReference = 88772D72225E478B00E6337F /* CocoaPhoenixTestingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88772D86225E478B00E6337F /* CocoaPhoenixTestingApp-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88772DAA225E478C00E6337F /* Build configuration list for PBXNativeTarget "CocoaPhoenixTestingApp-macOS" */;
+			buildPhases = (
+				88A6A745225FEFF9002DE200 /* Headers */,
+				88772D83225E478B00E6337F /* Sources */,
+				88772D84225E478B00E6337F /* Frameworks */,
+				88772D85225E478B00E6337F /* Resources */,
+				88FF50FD2274D5F200661838 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88772DAC225E47B100E6337F /* PBXTargetDependency */,
+			);
+			name = "CocoaPhoenixTestingApp-macOS";
+			productName = "CocoaPhoenixTestingApp macOS";
+			productReference = 88772D87225E478B00E6337F /* CocoaPhoenixTestingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8881F93C22296EDF005691FA /* CocoaPhoenix-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8881F94F22296EDF005691FA /* Build configuration list for PBXNativeTarget "CocoaPhoenix-macOS" */;
+			buildPhases = (
+				8881F93822296EDF005691FA /* Headers */,
+				8881F93922296EDF005691FA /* Sources */,
+				8881F93A22296EDF005691FA /* Frameworks */,
+				88FF50FA2274D4C700661838 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88FF51022275BA0100661838 /* PBXTargetDependency */,
+				88FF51042275BA0100661838 /* PBXTargetDependency */,
+				88FF5064227330CF00661838 /* PBXTargetDependency */,
+			);
+			name = "CocoaPhoenix-macOS";
+			productName = "Phoenix-macOS";
+			productReference = 8881F93D22296EDF005691FA /* CocoaPhoenix_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8881F94522296EDF005691FA /* Phoenix-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8881F95222296EDF005691FA /* Build configuration list for PBXNativeTarget "Phoenix-macOSTests" */;
+			buildPhases = (
+				8881F94222296EDF005691FA /* Sources */,
+				8881F94322296EDF005691FA /* Frameworks */,
+				8881F94422296EDF005691FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8881F94922296EDF005691FA /* PBXTargetDependency */,
+			);
+			name = "Phoenix-macOSTests";
+			productName = "Phoenix-macOSTests";
+			productReference = 8881F94622296EDF005691FA /* Phoenix-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8881F95922296F01005691FA /* CocoaPhoenix-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8881F96B22296F01005691FA /* Build configuration list for PBXNativeTarget "CocoaPhoenix-iOS" */;
+			buildPhases = (
+				8881F95522296F01005691FA /* Headers */,
+				8881F95622296F01005691FA /* Sources */,
+				8881F95722296F01005691FA /* Frameworks */,
+				8881F95822296F01005691FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88A8EB82227A300500193793 /* PBXTargetDependency */,
+				88A8EB84227A300500193793 /* PBXTargetDependency */,
+				88FF505622732F6900661838 /* PBXTargetDependency */,
+			);
+			name = "CocoaPhoenix-iOS";
+			productName = "Phoenix-iOS";
+			productReference = 8881F95A22296F01005691FA /* CocoaPhoenix_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8881F96122296F01005691FA /* Phoenix-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8881F96E22296F01005691FA /* Build configuration list for PBXNativeTarget "Phoenix-iOSTests" */;
+			buildPhases = (
+				8881F95E22296F01005691FA /* Sources */,
+				8881F95F22296F01005691FA /* Frameworks */,
+				8881F96022296F01005691FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8881F96522296F01005691FA /* PBXTargetDependency */,
+			);
+			name = "Phoenix-iOSTests";
+			productName = "Phoenix-iOSTests";
+			productReference = 8881F96222296F01005691FA /* Phoenix-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		88FF504B22732F5000661838 /* PHXMetal-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88FF505022732F5100661838 /* Build configuration list for PBXNativeTarget "PHXMetal-iOS" */;
+			buildPhases = (
+				88FF504A22732F5000661838 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PHXMetal-iOS";
+			productName = PHXMetal;
+			productReference = 88FF504C22732F5000661838 /* PHXMetal-iOS.metallib */;
+			productType = "com.apple.product-type.metal-library";
+		};
+		88FF5059227330A500661838 /* PHXMetal-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88FF505E227330A500661838 /* Build configuration list for PBXNativeTarget "PHXMetal-macOS" */;
+			buildPhases = (
+				88FF5058227330A500661838 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PHXMetal-macOS";
+			productName = "PHXMetal-macOS";
+			productReference = 88FF505A227330A500661838 /* PHXMetal-macOS.metallib */;
+			productType = "com.apple.product-type.metal-library";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8881F93222296EC4005691FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					88772D71225E478B00E6337F = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					88772D86225E478B00E6337F = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					8881F93C22296EDF005691FA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					8881F94522296EDF005691FA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					8881F95922296F01005691FA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					8881F96122296F01005691FA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					88FF504B22732F5000661838 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					88FF5059227330A500661838 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8881F93522296EC4005691FA /* Build configuration list for PBXProject "CocoaPhoenix" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8881F93122296EC4005691FA;
+			productRefGroup = 8881F93E22296EDF005691FA /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 885BA91F226E7B1C00F46A4A /* Products */;
+					ProjectRef = 885BA905226E7B0000F46A4A /* Phoenix-iOS.xcodeproj */;
+				},
+				{
+					ProductGroup = 8881F9A42229EDA4005691FA /* Products */;
+					ProjectRef = 8881F9A32229EDA4005691FA /* Phoenix.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				88FF5059227330A500661838 /* PHXMetal-macOS */,
+				8881F93C22296EDF005691FA /* CocoaPhoenix-macOS */,
+				8881F94522296EDF005691FA /* Phoenix-macOSTests */,
+				88772D86225E478B00E6337F /* CocoaPhoenixTestingApp-macOS */,
+				88FF504B22732F5000661838 /* PHXMetal-iOS */,
+				8881F95922296F01005691FA /* CocoaPhoenix-iOS */,
+				8881F96122296F01005691FA /* Phoenix-iOSTests */,
+				88772D71225E478B00E6337F /* CocoaPhoenixTestingApp-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		885BA929226E7B1C00F46A4A /* libConsumer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libConsumer.a;
+			remoteRef = 885BA928226E7B1C00F46A4A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		885BA92B226E7B1C00F46A4A /* libError.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libError.a;
+			remoteRef = 885BA92A226E7B1C00F46A4A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88772D44225D4A4800E6337F /* libConsumer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libConsumer.a;
+			remoteRef = 88772D43225D4A4800E6337F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8881F9AB2229EDA4005691FA /* libError.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libError.a;
+			remoteRef = 8881F9AA2229EDA4005691FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88772D70225E478B00E6337F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88772D7C225E478B00E6337F /* Main.storyboard in Resources */,
+				88772D7F225E478B00E6337F /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88772D85225E478B00E6337F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88772D91225E478C00E6337F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F94422296EDF005691FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F95822296F01005691FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FF50572273307700661838 /* PHXMetal-iOS.metallib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F96022296F01005691FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88772D6E225E478B00E6337F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88772D79225E478B00E6337F /* GameViewController.mm in Sources */,
+				88772D82225E478B00E6337F /* main.m in Sources */,
+				88772D76225E478B00E6337F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88772D83225E478B00E6337F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88772D8E225E478C00E6337F /* GameViewController.mm in Sources */,
+				88772D94225E478C00E6337F /* main.mm in Sources */,
+				88772D8B225E478C00E6337F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F93922296EDF005691FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FF1054227CB8FE001C1637 /* PHXResourceManager.mm in Sources */,
+				88FF1064227CC803001C1637 /* PHXViewDelegate.mm in Sources */,
+				88FF1067227CC90C001C1637 /* PHXDrawer.mm in Sources */,
+				88FF1057227CBC79001C1637 /* PHXDefaultFactory.mm in Sources */,
+				88FF106D227CCF6A001C1637 /* PHXRenderer_macOS.mm in Sources */,
+				88FF1051227CB6A8001C1637 /* PHXResponder.mm in Sources */,
+				88FF105A227CC293001C1637 /* PHXViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F94222296EDF005691FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8881F94C22296EDF005691FA /* Phoenix_macOSTests.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F95622296F01005691FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FF105D227CC2DF001C1637 /* PHXViewController_iOS.mm in Sources */,
+				88FF1065227CC803001C1637 /* PHXViewDelegate.mm in Sources */,
+				88FF1068227CC90C001C1637 /* PHXDrawer.mm in Sources */,
+				88FF1055227CB8FE001C1637 /* PHXResourceManager.mm in Sources */,
+				88FF106A227CCD05001C1637 /* PHXRenderer_iOS.mm in Sources */,
+				88FF1058227CBC79001C1637 /* PHXDefaultFactory.mm in Sources */,
+				88FF105F227CC3A2001C1637 /* PHXResponder_iOS.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8881F95E22296F01005691FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8881F96822296F01005691FA /* Phoenix_iOSTests.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FF504A22732F5000661838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FF5062227330BE00661838 /* PHXMetal.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FF5058227330A500661838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FF5061227330B700661838 /* PHXMetal.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88772DAC225E47B100E6337F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8881F93C22296EDF005691FA /* CocoaPhoenix-macOS */;
+			targetProxy = 88772DAB225E47B100E6337F /* PBXContainerItemProxy */;
+		};
+		88772DAF225E47C900E6337F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8881F95922296F01005691FA /* CocoaPhoenix-iOS */;
+			targetProxy = 88772DAE225E47C900E6337F /* PBXContainerItemProxy */;
+		};
+		8881F94922296EDF005691FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8881F93C22296EDF005691FA /* CocoaPhoenix-macOS */;
+			targetProxy = 8881F94822296EDF005691FA /* PBXContainerItemProxy */;
+		};
+		8881F96522296F01005691FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8881F95922296F01005691FA /* CocoaPhoenix-iOS */;
+			targetProxy = 8881F96422296F01005691FA /* PBXContainerItemProxy */;
+		};
+		88A8EB82227A300500193793 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Consumer;
+			targetProxy = 88A8EB81227A300500193793 /* PBXContainerItemProxy */;
+		};
+		88A8EB84227A300500193793 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Error;
+			targetProxy = 88A8EB83227A300500193793 /* PBXContainerItemProxy */;
+		};
+		88FF505622732F6900661838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88FF504B22732F5000661838 /* PHXMetal-iOS */;
+			targetProxy = 88FF505522732F6900661838 /* PBXContainerItemProxy */;
+		};
+		88FF5064227330CF00661838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88FF5059227330A500661838 /* PHXMetal-macOS */;
+			targetProxy = 88FF5063227330CF00661838 /* PBXContainerItemProxy */;
+		};
+		88FF51022275BA0100661838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Consumer;
+			targetProxy = 88FF51012275BA0100661838 /* PBXContainerItemProxy */;
+		};
+		88FF51042275BA0100661838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Error;
+			targetProxy = 88FF51032275BA0100661838 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		88772D7A225E478B00E6337F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88772D7B225E478B00E6337F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		88772D7D225E478B00E6337F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88772D7E225E478B00E6337F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		88772D8F225E478C00E6337F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88772D90225E478C00E6337F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88772D9B225E478C00E6337F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+				);
+				INFOPLIST_FILE = CocoaPhoenixTestingApp_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PHX.CocoaPhoenixTestingApp-iOS";
+				PRODUCT_NAME = CocoaPhoenixTestingApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88772D9C225E478C00E6337F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+				);
+				INFOPLIST_FILE = CocoaPhoenixTestingApp_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PHX.CocoaPhoenixTestingApp-iOS";
+				PRODUCT_NAME = CocoaPhoenixTestingApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88772D9D225E478C00E6337F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+				);
+				INFOPLIST_FILE = CocoaPhoenixTestingApp_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PHX.CocoaPhoenixTestingApp-macOS";
+				PRODUCT_NAME = CocoaPhoenixTestingApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		88772D9E225E478C00E6337F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+				);
+				INFOPLIST_FILE = CocoaPhoenixTestingApp_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PHX.CocoaPhoenixTestingApp-macOS";
+				PRODUCT_NAME = CocoaPhoenixTestingApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8881F93622296EC4005691FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		8881F93722296EC4005691FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		8881F95022296EDF005691FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/../include\"",
+				);
+				INFOPLIST_FILE = "Phoenix-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_NO_PIE = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LLVM_LTO = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CocoaPhoenix;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8881F95122296EDF005691FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/../include\"",
+				);
+				INFOPLIST_FILE = "Phoenix-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_NO_PIE = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LLVM_LTO = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CocoaPhoenix;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8881F95322296EDF005691FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/Phoenix-macOS/include\"",
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+					"$(SRCROOT)/include\"",
+				);
+				INFOPLIST_FILE = "Phoenix-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NWG.Phoenix-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8881F95422296EDF005691FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/Phoenix-macOS/include\"",
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+					"$(SRCROOT)/include\"",
+				);
+				INFOPLIST_FILE = "Phoenix-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NWG.Phoenix-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8881F96C22296F01005691FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/../include\"",
+				);
+				INFOPLIST_FILE = "Phoenix-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NWG.Phoenix-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8881F96D22296F01005691FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/include\"",
+					"\"$(SRCROOT)/../include\"",
+				);
+				INFOPLIST_FILE = "Phoenix-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NWG.Phoenix-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8881F96F22296F01005691FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include/\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+				);
+				INFOPLIST_FILE = "Phoenix-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NWG.Phoenix-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8881F97022296F01005691FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/include/\"",
+					"\"$(SRCROOT)/../dep/phoenix-apple-components/src/PHXRenderer\"",
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/../dep/readerwriterqueue\"",
+				);
+				INFOPLIST_FILE = "Phoenix-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fmodules",
+					"-fcxx-modules",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NWG.Phoenix-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88FF505122732F5100661838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		88FF505222732F5100661838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		88FF505F227330A500661838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				HEADER_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		88FF5060227330A500661838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BQ7Q4Z7U34;
+				HEADER_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88772DA9225E478C00E6337F /* Build configuration list for PBXNativeTarget "CocoaPhoenixTestingApp-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88772D9B225E478C00E6337F /* Debug */,
+				88772D9C225E478C00E6337F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88772DAA225E478C00E6337F /* Build configuration list for PBXNativeTarget "CocoaPhoenixTestingApp-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88772D9D225E478C00E6337F /* Debug */,
+				88772D9E225E478C00E6337F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8881F93522296EC4005691FA /* Build configuration list for PBXProject "CocoaPhoenix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8881F93622296EC4005691FA /* Debug */,
+				8881F93722296EC4005691FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8881F94F22296EDF005691FA /* Build configuration list for PBXNativeTarget "CocoaPhoenix-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8881F95022296EDF005691FA /* Debug */,
+				8881F95122296EDF005691FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8881F95222296EDF005691FA /* Build configuration list for PBXNativeTarget "Phoenix-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8881F95322296EDF005691FA /* Debug */,
+				8881F95422296EDF005691FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8881F96B22296F01005691FA /* Build configuration list for PBXNativeTarget "CocoaPhoenix-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8881F96C22296F01005691FA /* Debug */,
+				8881F96D22296F01005691FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8881F96E22296F01005691FA /* Build configuration list for PBXNativeTarget "Phoenix-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8881F96F22296F01005691FA /* Debug */,
+				8881F97022296F01005691FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88FF505022732F5100661838 /* Build configuration list for PBXNativeTarget "PHXMetal-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88FF505122732F5100661838 /* Debug */,
+				88FF505222732F5100661838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88FF505E227330A500661838 /* Build configuration list for PBXNativeTarget "PHXMetal-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88FF505F227330A500661838 /* Debug */,
+				88FF5060227330A500661838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8881F93222296EC4005691FA /* Project object */;
+}
