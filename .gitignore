@@ -1,3 +1,6 @@
+Phoenix-version.cmake
+PhoenixConfig.cmake
+
 cmake_install.cmake
 CMakeCache.txt
 CMakeFiles/
@@ -12,6 +15,11 @@ target/
 
 *.so
 *.a
+
+# Xcode build / user data
+xcuserdata/
+*/xcuserdata/
+**/xcuserdata/
 
 *.opensdf
 *.sdf

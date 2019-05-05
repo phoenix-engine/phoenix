@@ -12,7 +12,7 @@ require only a Window handle, so first create an SDLUtil, then use its
 Window handle to initialize a rendering context.
 
 - [Display](display.hpp)
-- [Renderer](renderer.hpp)
+- [Renderer](renderer.hpp) # TODO: Fixme
 - [GLRenderer](gl_renderer.hpp)
 - [InitUtil](init_util.hpp)
 - [InitVideo](init_video.hpp)
