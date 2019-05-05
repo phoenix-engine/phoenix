@@ -1,0 +1,1240 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		693BA5AA25AD4FF5A227E491 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0DF70118046B468FAE9A3065 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				1E1F698ADE3F40978E20DDF8 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		CF7A28B3E24641129B256E56 /* SpdLogHeaders */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6A54F2BC251C4BF9A485AEB4 /* Build configuration list for PBXAggregateTarget "SpdLogHeaders" */;
+			buildPhases = (
+			);
+			dependencies = (
+				0951DF328F6F4F7AB436C754 /* PBXTargetDependency */,
+			);
+			name = SpdLogHeaders;
+			productName = SpdLogHeaders;
+		};
+		F038A34BE8D64BFC980B2A48 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 595F1F1D34614A7FA93A113F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				873ACB79E0D94315925ED9C3 /* CMake Rules */,
+			);
+			dependencies = (
+				8E5EF71D232040F0A6A23C30 /* PBXTargetDependency */,
+				5F6DBDA211F94FB6964269E0 /* PBXTargetDependency */,
+				8714E1E237F94501B1E74CC5 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		F52DE8E0BB6749228827097C /* PhoenixHeaders */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 57A195D236D0430CA65B67D0 /* Build configuration list for PBXAggregateTarget "PhoenixHeaders" */;
+			buildPhases = (
+			);
+			dependencies = (
+				CC5513644B4949058D7A23C3 /* PBXTargetDependency */,
+			);
+			name = PhoenixHeaders;
+			productName = PhoenixHeaders;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4B3972A35C5946F1B18EA1EB /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/error/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 82BA170D3A4C4ED6A6A3D923 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/error/CMakeLists.txt */; };
+		61C93CC06A10470C921CA53D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/error/init_error.cxx */ = {isa = PBXBuildFile; fileRef = 0EA82F74356F4FE5863C9303 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/error/init_error.cxx */; };
+		66D14F7F33F040B19F369FAC /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/consumer/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 4C1AA9FE0A7E4EB9B7C62334 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/consumer/CMakeLists.txt */; };
+		EBCD869DB04C4C74B11E6BF5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/consumer/consumer.cxx */ = {isa = PBXBuildFile; fileRef = B9CB3F4EFF27443F8B90D817 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/consumer/consumer.cxx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		14A3F5EBC2AB4A24A0591743 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		86044E6082024D409FF09680 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		8F1164742E0C48AD88972289 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		F66FEDE8E3514CA98BB1D7B5 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		0683365AE56C426E96033324 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33A2A2E82354E66B066D5F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 693BA5AA25AD4FF5A227E491;
+			remoteInfo = ZERO_CHECK;
+		};
+		130D87B1656A46EC8347112A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33A2A2E82354E66B066D5F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF2A5FD03FCF41E78A68F380;
+			remoteInfo = Consumer;
+		};
+		6B4C138590774E85B78E4782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33A2A2E82354E66B066D5F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 693BA5AA25AD4FF5A227E491;
+			remoteInfo = ZERO_CHECK;
+		};
+		6B84A6A710A5418AAA2753AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33A2A2E82354E66B066D5F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 693BA5AA25AD4FF5A227E491;
+			remoteInfo = ZERO_CHECK;
+		};
+		7477CFE3618146FBA56B765A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33A2A2E82354E66B066D5F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 693BA5AA25AD4FF5A227E491;
+			remoteInfo = ZERO_CHECK;
+		};
+		74CE455FD89E490184E91714 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33A2A2E82354E66B066D5F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 693BA5AA25AD4FF5A227E491;
+			remoteInfo = ZERO_CHECK;
+		};
+		DD8B6803B8FE4091A7BC237A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33A2A2E82354E66B066D5F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB7295DE6AF4104B99F0B9B;
+			remoteInfo = Error;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005A6D85736A4E8EB839FBA9 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = common.h; path = dep/spdlog/include/spdlog/common.h; sourceTree = SOURCE_ROOT; };
+		04693385A3944230828EA7BC /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = dep/spdlog/include/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		08114593A93B444D8126CC27 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/msvc_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = msvc_sink.h; path = dep/spdlog/include/spdlog/sinks/msvc_sink.h; sourceTree = SOURCE_ROOT; };
+		0AB77500B2CB4584A668C0D2 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/async_logger_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = async_logger_impl.h; path = dep/spdlog/include/spdlog/details/async_logger_impl.h; sourceTree = SOURCE_ROOT; };
+		0C25F22182584D6BA588C135 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0CE45CE9FA88474CBC609EAA /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = details; path = dep/spdlog/include/spdlog/details; sourceTree = SOURCE_ROOT; };
+		0DE682D1CD424615A274DA02 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/android_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = android_sink.h; path = dep/spdlog/include/spdlog/sinks/android_sink.h; sourceTree = SOURCE_ROOT; };
+		0EA82F74356F4FE5863C9303 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/error/init_error.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = init_error.cxx; path = src/error/init_error.cxx; sourceTree = SOURCE_ROOT; };
+		0F0C6A24ED4B41ECBC253C70 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sink.h; path = dep/spdlog/include/spdlog/sinks/sink.h; sourceTree = SOURCE_ROOT; };
+		1750BF2DCF224696B17FF75D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/console_globals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = console_globals.h; path = dep/spdlog/include/spdlog/details/console_globals.h; sourceTree = SOURCE_ROOT; };
+		1AEE37A338B545C8867FA7D1 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/async.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = async.h; path = dep/spdlog/include/spdlog/async.h; sourceTree = SOURCE_ROOT; };
+		1DED5B96CC82482A920F5859 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/graphics.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = graphics.hpp; path = include/graphics.hpp; sourceTree = SOURCE_ROOT; };
+		1E4C56E3334F4D508324ECC6 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/time.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = time.h; path = dep/spdlog/include/spdlog/fmt/bundled/time.h; sourceTree = SOURCE_ROOT; };
+		27F4EFDAAD1747EE92CE0C03 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/null_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = null_sink.h; path = dep/spdlog/include/spdlog/sinks/null_sink.h; sourceTree = SOURCE_ROOT; };
+		2B4D6565FC3A47228616AAA5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/ostr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ostr.h; path = dep/spdlog/include/spdlog/fmt/ostr.h; sourceTree = SOURCE_ROOT; };
+		2FCD93CC59554020A37D8DE6 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bin_to_hex.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bin_to_hex.h; path = dep/spdlog/include/spdlog/fmt/bin_to_hex.h; sourceTree = SOURCE_ROOT; };
+		37811452940248D3B53F79A8 /* Consumer */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libConsumer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EBDF119FB9447AF8E9851B6 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/periodic_worker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = periodic_worker.h; path = dep/spdlog/include/spdlog/details/periodic_worker.h; sourceTree = SOURCE_ROOT; };
+		3ECE73FE1EB348BAAC54FAA3 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = bundled; path = dep/spdlog/include/spdlog/fmt/bundled; sourceTree = SOURCE_ROOT; };
+		410612EACCFB45A8AFFD8199 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/circular_q.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = circular_q.h; path = dep/spdlog/include/spdlog/details/circular_q.h; sourceTree = SOURCE_ROOT; };
+		4457C8C0EB504CF4B1770D46 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = version.h; path = dep/spdlog/include/spdlog/version.h; sourceTree = SOURCE_ROOT; };
+		486EC217D55041A0933F2DB2 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/locale.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = locale.h; path = dep/spdlog/include/spdlog/fmt/bundled/locale.h; sourceTree = SOURCE_ROOT; };
+		4A4579F489EA43B8920F754B /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/color.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = color.h; path = dep/spdlog/include/spdlog/fmt/bundled/color.h; sourceTree = SOURCE_ROOT; };
+		4C1AA9FE0A7E4EB9B7C62334 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/consumer/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/consumer/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4E20EF2A93E14973AB1EB29D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/impl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = impl; path = include/impl; sourceTree = SOURCE_ROOT; };
+		4E621615D7014A449826003D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = sinks; path = dep/spdlog/include/spdlog/sinks; sourceTree = SOURCE_ROOT; };
+		51D59425830141EBB3B42D9F /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/basic_file_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basic_file_sink.h; path = dep/spdlog/include/spdlog/sinks/basic_file_sink.h; sourceTree = SOURCE_ROOT; };
+		58269D33E2E240FBBE5B4D8A /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/format-inl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "format-inl.h"; path = "dep/spdlog/include/spdlog/fmt/bundled/format-inl.h"; sourceTree = SOURCE_ROOT; };
+		59B8D8C73CE7445F840577DE /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/rotating_file_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = rotating_file_sink.h; path = dep/spdlog/include/spdlog/sinks/rotating_file_sink.h; sourceTree = SOURCE_ROOT; };
+		5B5C2FE8BF2B485CAC780702 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/thread_pool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = thread_pool.h; path = dep/spdlog/include/spdlog/details/thread_pool.h; sourceTree = SOURCE_ROOT; };
+		61B935B5A34F432BAC118914 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/stdout_color_sinks.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stdout_color_sinks.h; path = dep/spdlog/include/spdlog/sinks/stdout_color_sinks.h; sourceTree = SOURCE_ROOT; };
+		6759F71CB56249EBBB3B7F1B /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = include/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6768FB4323EE4C329DD64CAB /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/syslog_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = syslog_sink.h; path = dep/spdlog/include/spdlog/sinks/syslog_sink.h; sourceTree = SOURCE_ROOT; };
+		6A8AFC9371C24698B2C31FA5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/logger.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = logger.h; path = dep/spdlog/include/spdlog/logger.h; sourceTree = SOURCE_ROOT; };
+		72903162216A4910A3DC358F /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = core.h; path = dep/spdlog/include/spdlog/fmt/bundled/core.h; sourceTree = SOURCE_ROOT; };
+		7719FECC290049FFB19BC66C /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/ostream_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ostream_sink.h; path = dep/spdlog/include/spdlog/sinks/ostream_sink.h; sourceTree = SOURCE_ROOT; };
+		78984063A2CB4C10A4778BD8 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/event.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = event.hpp; path = include/event.hpp; sourceTree = SOURCE_ROOT; };
+		7D2B6344B6B045F08437ACE7 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/formatter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = formatter.h; path = dep/spdlog/include/spdlog/formatter.h; sourceTree = SOURCE_ROOT; };
+		82BA170D3A4C4ED6A6A3D923 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/error/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/error/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8BFA7E8D2C46453E9922B56A /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/input.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = input.hpp; path = include/input.hpp; sourceTree = SOURCE_ROOT; };
+		90F7C1E85B9642D984AC4717 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/phoenix.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = phoenix.hpp; path = include/phoenix.hpp; sourceTree = SOURCE_ROOT; };
+		93CA886CAC17423AB787E21A /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/null_mutex.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = null_mutex.h; path = dep/spdlog/include/spdlog/details/null_mutex.h; sourceTree = SOURCE_ROOT; };
+		9731FE990BBB4C389E997A87 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/fmt_helper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fmt_helper.h; path = dep/spdlog/include/spdlog/details/fmt_helper.h; sourceTree = SOURCE_ROOT; };
+		999AAD6D7F09471CA853B2C8 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = fmt; path = dep/spdlog/include/spdlog/fmt; sourceTree = SOURCE_ROOT; };
+		9ABE116F383846F39B3F2FCD /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/base_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base_sink.h; path = dep/spdlog/include/spdlog/sinks/base_sink.h; sourceTree = SOURCE_ROOT; };
+		9E3157BFD4F64616BC4B1839 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/stdout_sinks.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stdout_sinks.h; path = dep/spdlog/include/spdlog/sinks/stdout_sinks.h; sourceTree = SOURCE_ROOT; };
+		9FDA3D7414664D4F8BE3B9AC /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/chrono.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = chrono.h; path = dep/spdlog/include/spdlog/fmt/bundled/chrono.h; sourceTree = SOURCE_ROOT; };
+		A42C3CB489D14ECCA4762704 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/ranges.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ranges.h; path = dep/spdlog/include/spdlog/fmt/bundled/ranges.h; sourceTree = SOURCE_ROOT; };
+		B13348C95AC847279D73D03E /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/format.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = format.h; path = dep/spdlog/include/spdlog/fmt/bundled/format.h; sourceTree = SOURCE_ROOT; };
+		B640081C8A7D412EBC0598A4 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/registry.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = registry.h; path = dep/spdlog/include/spdlog/details/registry.h; sourceTree = SOURCE_ROOT; };
+		B69F9D8975E64223902313F4 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/fmt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fmt.h; path = dep/spdlog/include/spdlog/fmt/fmt.h; sourceTree = SOURCE_ROOT; };
+		B834ECEAE3B742CB9767A79A /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/dist_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dist_sink.h; path = dep/spdlog/include/spdlog/sinks/dist_sink.h; sourceTree = SOURCE_ROOT; };
+		B8D6E3FEAAD24D20BFE10B39 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/file_helper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = file_helper.h; path = dep/spdlog/include/spdlog/details/file_helper.h; sourceTree = SOURCE_ROOT; };
+		B9CB3F4EFF27443F8B90D817 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/consumer/consumer.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = consumer.cxx; path = src/consumer/consumer.cxx; sourceTree = SOURCE_ROOT; };
+		BA6B7718E88D4D2EBA8CE01C /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/wincolor_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = wincolor_sink.h; path = dep/spdlog/include/spdlog/sinks/wincolor_sink.h; sourceTree = SOURCE_ROOT; };
+		BA95CB6A8FE64B03A66C739F /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/daily_file_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = daily_file_sink.h; path = dep/spdlog/include/spdlog/sinks/daily_file_sink.h; sourceTree = SOURCE_ROOT; };
+		C96733E240264EB6A9843FD5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/os.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = os.h; path = dep/spdlog/include/spdlog/details/os.h; sourceTree = SOURCE_ROOT; };
+		D4DBC6676A134A38B97CEA83 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/ansicolor_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ansicolor_sink.h; path = dep/spdlog/include/spdlog/sinks/ansicolor_sink.h; sourceTree = SOURCE_ROOT; };
+		DC5AA97B38EE4CCAA1EC6CE2 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/logger_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = logger_impl.h; path = dep/spdlog/include/spdlog/details/logger_impl.h; sourceTree = SOURCE_ROOT; };
+		DD7C3CC24E504A148E5F3F64 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/log_msg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = log_msg.h; path = dep/spdlog/include/spdlog/details/log_msg.h; sourceTree = SOURCE_ROOT; };
+		E318307FCCA6437A91DE2E16 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/queue.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = queue.hpp; path = include/queue.hpp; sourceTree = SOURCE_ROOT; };
+		E87C9F7FA8B644B697B928F2 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/mpmc_blocking_q.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mpmc_blocking_q.h; path = dep/spdlog/include/spdlog/details/mpmc_blocking_q.h; sourceTree = SOURCE_ROOT; };
+		EAA105B9F5744023BD4F9B69 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/async_logger.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = async_logger.h; path = dep/spdlog/include/spdlog/async_logger.h; sourceTree = SOURCE_ROOT; };
+		EC6368214D064F5781C46B50 /* Error */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libError.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCC3B5B1363469E827E016D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/spdlog.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = spdlog.h; path = dep/spdlog/include/spdlog/spdlog.h; sourceTree = SOURCE_ROOT; };
+		ED683D556F4A4A26A19768B5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/ostream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ostream.h; path = dep/spdlog/include/spdlog/fmt/bundled/ostream.h; sourceTree = SOURCE_ROOT; };
+		EEE510A38EED417284311461 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/printf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = printf.h; path = dep/spdlog/include/spdlog/fmt/bundled/printf.h; sourceTree = SOURCE_ROOT; };
+		EF977653A5CF47219BF37D46 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/renderer.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = renderer.hpp; path = include/renderer.hpp; sourceTree = SOURCE_ROOT; };
+		F4723D5B9B9B42EDA575CBC7 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/pattern_formatter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pattern_formatter.h; path = dep/spdlog/include/spdlog/details/pattern_formatter.h; sourceTree = SOURCE_ROOT; };
+		FA85A1737FE849819BB0B60E /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/posix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix.h; path = dep/spdlog/include/spdlog/fmt/bundled/posix.h; sourceTree = SOURCE_ROOT; };
+		FEFFF3271D9942B58E2A1051 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/tweakme.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tweakme.h; path = dep/spdlog/include/spdlog/tweakme.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1390E589672B437EB5E16B71 /* PhoenixHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				C09C02F567FD49C3B3B389CA /* Header Files */,
+				4E20EF2A93E14973AB1EB29D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/impl */,
+				6759F71CB56249EBBB3B7F1B /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/CMakeLists.txt */,
+			);
+			name = PhoenixHeaders;
+			sourceTree = "<group>";
+		};
+		2195A2D19C0B4D23A0200F46 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9CB3F4EFF27443F8B90D817 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/consumer/consumer.cxx */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		46A38C2B4D1D4CD48D7C1D09 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EA82F74356F4FE5863C9303 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/error/init_error.cxx */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		4A697C3F67C04F0A83BA6010 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				C877A9E09F02400E8D6668BA /* CMake Rules */,
+				0C25F22182584D6BA588C135 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		58ACCD09610E446893ED7E89 /* SpdLogHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				9050C2EE1280491E8A7DA7BE /* Header Files */,
+				0CE45CE9FA88474CBC609EAA /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details */,
+				999AAD6D7F09471CA853B2C8 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt */,
+				3ECE73FE1EB348BAAC54FAA3 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled */,
+				4E621615D7014A449826003D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks */,
+				04693385A3944230828EA7BC /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/CMakeLists.txt */,
+			);
+			name = SpdLogHeaders;
+			sourceTree = "<group>";
+		};
+		7CE7E0E95F0D4E6CB660B4A6 = {
+			isa = PBXGroup;
+			children = (
+				4A697C3F67C04F0A83BA6010 /* ALL_BUILD */,
+				58ACCD09610E446893ED7E89 /* SpdLogHeaders */,
+				B3C1C95297CF41CC967ADC27 /* Error */,
+				B2C424DEB59A41C2A5CF2ED8 /* Consumer */,
+				1390E589672B437EB5E16B71 /* PhoenixHeaders */,
+				B541DF2763C542FA898E47EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9050C2EE1280491E8A7DA7BE /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AEE37A338B545C8867FA7D1 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/async.h */,
+				EAA105B9F5744023BD4F9B69 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/async_logger.h */,
+				005A6D85736A4E8EB839FBA9 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/common.h */,
+				0AB77500B2CB4584A668C0D2 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/async_logger_impl.h */,
+				410612EACCFB45A8AFFD8199 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/circular_q.h */,
+				1750BF2DCF224696B17FF75D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/console_globals.h */,
+				B8D6E3FEAAD24D20BFE10B39 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/file_helper.h */,
+				9731FE990BBB4C389E997A87 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/fmt_helper.h */,
+				DD7C3CC24E504A148E5F3F64 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/log_msg.h */,
+				DC5AA97B38EE4CCAA1EC6CE2 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/logger_impl.h */,
+				E87C9F7FA8B644B697B928F2 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/mpmc_blocking_q.h */,
+				93CA886CAC17423AB787E21A /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/null_mutex.h */,
+				C96733E240264EB6A9843FD5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/os.h */,
+				F4723D5B9B9B42EDA575CBC7 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/pattern_formatter.h */,
+				3EBDF119FB9447AF8E9851B6 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/periodic_worker.h */,
+				B640081C8A7D412EBC0598A4 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/registry.h */,
+				5B5C2FE8BF2B485CAC780702 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/details/thread_pool.h */,
+				2FCD93CC59554020A37D8DE6 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bin_to_hex.h */,
+				9FDA3D7414664D4F8BE3B9AC /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/chrono.h */,
+				4A4579F489EA43B8920F754B /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/color.h */,
+				72903162216A4910A3DC358F /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/core.h */,
+				58269D33E2E240FBBE5B4D8A /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/format-inl.h */,
+				B13348C95AC847279D73D03E /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/format.h */,
+				486EC217D55041A0933F2DB2 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/locale.h */,
+				ED683D556F4A4A26A19768B5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/ostream.h */,
+				FA85A1737FE849819BB0B60E /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/posix.h */,
+				EEE510A38EED417284311461 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/printf.h */,
+				A42C3CB489D14ECCA4762704 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/ranges.h */,
+				1E4C56E3334F4D508324ECC6 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/bundled/time.h */,
+				B69F9D8975E64223902313F4 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/fmt.h */,
+				2B4D6565FC3A47228616AAA5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/fmt/ostr.h */,
+				7D2B6344B6B045F08437ACE7 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/formatter.h */,
+				6A8AFC9371C24698B2C31FA5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/logger.h */,
+				0DE682D1CD424615A274DA02 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/android_sink.h */,
+				D4DBC6676A134A38B97CEA83 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/ansicolor_sink.h */,
+				9ABE116F383846F39B3F2FCD /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/base_sink.h */,
+				51D59425830141EBB3B42D9F /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/basic_file_sink.h */,
+				BA95CB6A8FE64B03A66C739F /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/daily_file_sink.h */,
+				B834ECEAE3B742CB9767A79A /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/dist_sink.h */,
+				08114593A93B444D8126CC27 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/msvc_sink.h */,
+				27F4EFDAAD1747EE92CE0C03 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/null_sink.h */,
+				7719FECC290049FFB19BC66C /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/ostream_sink.h */,
+				59B8D8C73CE7445F840577DE /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/rotating_file_sink.h */,
+				0F0C6A24ED4B41ECBC253C70 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/sink.h */,
+				61B935B5A34F432BAC118914 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/stdout_color_sinks.h */,
+				9E3157BFD4F64616BC4B1839 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/stdout_sinks.h */,
+				6768FB4323EE4C329DD64CAB /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/syslog_sink.h */,
+				BA6B7718E88D4D2EBA8CE01C /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/sinks/wincolor_sink.h */,
+				ECCC3B5B1363469E827E016D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/spdlog.h */,
+				FEFFF3271D9942B58E2A1051 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/tweakme.h */,
+				4457C8C0EB504CF4B1770D46 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/spdlog/include/spdlog/version.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		B2C424DEB59A41C2A5CF2ED8 /* Consumer */ = {
+			isa = PBXGroup;
+			children = (
+				2195A2D19C0B4D23A0200F46 /* Source Files */,
+				4C1AA9FE0A7E4EB9B7C62334 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/consumer/CMakeLists.txt */,
+			);
+			name = Consumer;
+			sourceTree = "<group>";
+		};
+		B3C1C95297CF41CC967ADC27 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				46A38C2B4D1D4CD48D7C1D09 /* Source Files */,
+				82BA170D3A4C4ED6A6A3D923 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/error/CMakeLists.txt */,
+			);
+			name = Error;
+			sourceTree = "<group>";
+		};
+		B541DF2763C542FA898E47EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37811452940248D3B53F79A8 /* Consumer */,
+				EC6368214D064F5781C46B50 /* Error */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C09C02F567FD49C3B3B389CA /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				90F7C1E85B9642D984AC4717 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/phoenix.hpp */,
+				1DED5B96CC82482A920F5859 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/graphics.hpp */,
+				EF977653A5CF47219BF37D46 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/renderer.hpp */,
+				8BFA7E8D2C46453E9922B56A /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/input.hpp */,
+				78984063A2CB4C10A4778BD8 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/event.hpp */,
+				E318307FCCA6437A91DE2E16 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include/queue.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		C877A9E09F02400E8D6668BA /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CB7295DE6AF4104B99F0B9B /* Error */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C941F5DA838B4A588127EF63 /* Build configuration list for PBXNativeTarget "Error" */;
+			buildPhases = (
+				9E413B572C504AB09D1C8CB8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44415F393F624F18B092BCD1 /* PBXTargetDependency */,
+			);
+			name = Error;
+			productName = Error;
+			productReference = EC6368214D064F5781C46B50 /* Error */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BF2A5FD03FCF41E78A68F380 /* Consumer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0F99FA8870D4174A511C71B /* Build configuration list for PBXNativeTarget "Consumer" */;
+			buildPhases = (
+				61533CCA04FF4C95BF8791FB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				350D75C16CCA4A5BB421EC31 /* PBXTargetDependency */,
+			);
+			name = Consumer;
+			productName = Consumer;
+			productReference = 37811452940248D3B53F79A8 /* Consumer */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B33A2A2E82354E66B066D5F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = CD09BB7D522B4A67A60453DE /* Build configuration list for PBXProject "Phoenix" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				F66FEDE8E3514CA98BB1D7B5 /* Debug */,
+				14A3F5EBC2AB4A24A0591743 /* Release */,
+				8F1164742E0C48AD88972289 /* MinSizeRel */,
+				86044E6082024D409FF09680 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 7CE7E0E95F0D4E6CB660B4A6;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				F038A34BE8D64BFC980B2A48 /* ALL_BUILD */,
+				BF2A5FD03FCF41E78A68F380 /* Consumer */,
+				3CB7295DE6AF4104B99F0B9B /* Error */,
+				F52DE8E0BB6749228827097C /* PhoenixHeaders */,
+				CF7A28B3E24641129B256E56 /* SpdLogHeaders */,
+				693BA5AA25AD4FF5A227E491 /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E1F698ADE3F40978E20DDF8 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build -f /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		3D661E2485AC4514B31DB934 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		4D6E4DE3D8384052B561F339 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		873ACB79E0D94315925ED9C3 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build -f /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		A973B99EF9C748998938C13F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		EC0FE2637F8E4C6DAFBF4D9F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61533CCA04FF4C95BF8791FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBCD869DB04C4C74B11E6BF5 /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/consumer/consumer.cxx */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E413B572C504AB09D1C8CB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61C93CC06A10470C921CA53D /* /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/src/error/init_error.cxx */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0951DF328F6F4F7AB436C754 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 693BA5AA25AD4FF5A227E491 /* ZERO_CHECK */;
+			targetProxy = 6B84A6A710A5418AAA2753AF /* PBXContainerItemProxy */;
+		};
+		350D75C16CCA4A5BB421EC31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 693BA5AA25AD4FF5A227E491 /* ZERO_CHECK */;
+			targetProxy = 0683365AE56C426E96033324 /* PBXContainerItemProxy */;
+		};
+		44415F393F624F18B092BCD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 693BA5AA25AD4FF5A227E491 /* ZERO_CHECK */;
+			targetProxy = 74CE455FD89E490184E91714 /* PBXContainerItemProxy */;
+		};
+		5F6DBDA211F94FB6964269E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF2A5FD03FCF41E78A68F380 /* Consumer */;
+			targetProxy = 130D87B1656A46EC8347112A /* PBXContainerItemProxy */;
+		};
+		8714E1E237F94501B1E74CC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 693BA5AA25AD4FF5A227E491 /* ZERO_CHECK */;
+			targetProxy = 6B4C138590774E85B78E4782 /* PBXContainerItemProxy */;
+		};
+		8E5EF71D232040F0A6A23C30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CB7295DE6AF4104B99F0B9B /* Error */;
+			targetProxy = DD8B6803B8FE4091A7BC237A /* PBXContainerItemProxy */;
+		};
+		CC5513644B4949058D7A23C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 693BA5AA25AD4FF5A227E491 /* ZERO_CHECK */;
+			targetProxy = 7477CFE3618146FBA56B765A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0FB3861537874A3792D44472 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG -fPIC '-std=gnu++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Consumer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/src/consumer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		0FB938965FA64A8F80A3578C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		0FE1E44A91954E338AE01E31 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		138DF069B56744B6BAA03F42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/build";
+			};
+			name = Release;
+		};
+		19E8F10643A34CAEA53E3DDC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		29069EE59645410BADF847E0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG -fPIC '-std=gnu++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Error;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/src/error";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2B1FCCA6B40B4B1EA55B1637 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		32D26840E68F4E4E99CA1570 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Error;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/src/error";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3C85B2F29DF6457F80F1CF57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Error;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/src/error";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		40917BCE02F04E2090E020FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		46CA38BE40F84AFB8C53415B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/build";
+			};
+			name = MinSizeRel;
+		};
+		4D68ABC68E3748DCB0552282 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5827CA92E1D3471EA683B960 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Consumer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/src/consumer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		592193A393FB47108CF8636D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SpdLogHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/dep/spdlog/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		5F66A3F7140D4F419329643C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -fPIC '-std=gnu++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Error;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/src/error";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		616DCD9C41EF4B789A7CD6B2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6D2AC0942F654BDB9CA80BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6D369F1AAA064543B3C3703C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PhoenixHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6EB55CDEEB6145C5A86AE1A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SpdLogHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/dep/spdlog/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		7FC7C28997D24474A74FC8D3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SpdLogHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/dep/spdlog/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A517BA05D7554FE8A1A9430B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -fPIC '-std=gnu++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Consumer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/src/consumer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B31F6274D59C4746A3CD48AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Consumer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/src/consumer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		B93A68ADA36A4153B8F84C5A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SpdLogHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/dep/spdlog/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BF7D13D5D12E4D8ABEE4505F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PhoenixHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		C22F1E20130B4199AC32958F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/build";
+			};
+			name = Debug;
+		};
+		CB8305FBCA294131BAD0BCC9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		DFF0E0174E5B4B25A0D1DFE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PhoenixHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		E04749CEBAEE43689EB938ED /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PhoenixHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-build/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DF70118046B468FAE9A3065 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FB938965FA64A8F80A3578C /* Debug */,
+				6D2AC0942F654BDB9CA80BF0 /* Release */,
+				0FE1E44A91954E338AE01E31 /* MinSizeRel */,
+				616DCD9C41EF4B789A7CD6B2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		57A195D236D0430CA65B67D0 /* Build configuration list for PBXAggregateTarget "PhoenixHeaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF0E0174E5B4B25A0D1DFE6 /* Debug */,
+				BF7D13D5D12E4D8ABEE4505F /* Release */,
+				E04749CEBAEE43689EB938ED /* MinSizeRel */,
+				6D369F1AAA064543B3C3703C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		595F1F1D34614A7FA93A113F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B1FCCA6B40B4B1EA55B1637 /* Debug */,
+				40917BCE02F04E2090E020FE /* Release */,
+				19E8F10643A34CAEA53E3DDC /* MinSizeRel */,
+				4D68ABC68E3748DCB0552282 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6A54F2BC251C4BF9A485AEB4 /* Build configuration list for PBXAggregateTarget "SpdLogHeaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592193A393FB47108CF8636D /* Debug */,
+				6EB55CDEEB6145C5A86AE1A3 /* Release */,
+				B93A68ADA36A4153B8F84C5A /* MinSizeRel */,
+				7FC7C28997D24474A74FC8D3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C941F5DA838B4A588127EF63 /* Build configuration list for PBXNativeTarget "Error" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F66A3F7140D4F419329643C /* Debug */,
+				3C85B2F29DF6457F80F1CF57 /* Release */,
+				32D26840E68F4E4E99CA1570 /* MinSizeRel */,
+				29069EE59645410BADF847E0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CD09BB7D522B4A67A60453DE /* Build configuration list for PBXProject "Phoenix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C22F1E20130B4199AC32958F /* Debug */,
+				138DF069B56744B6BAA03F42 /* Release */,
+				46CA38BE40F84AFB8C53415B /* MinSizeRel */,
+				CB8305FBCA294131BAD0BCC9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E0F99FA8870D4174A511C71B /* Build configuration list for PBXNativeTarget "Consumer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A517BA05D7554FE8A1A9430B /* Debug */,
+				B31F6274D59C4746A3CD48AF /* Release */,
+				5827CA92E1D3471EA683B960 /* MinSizeRel */,
+				0FB3861537874A3792D44472 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B33A2A2E82354E66B066D5F0 /* Project object */;
+}

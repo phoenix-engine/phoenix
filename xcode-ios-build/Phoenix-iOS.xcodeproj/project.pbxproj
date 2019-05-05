@@ -1,0 +1,1612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1EADD26A14544A5384FA3F49 /* PhoenixHeaders */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E2A31108641C471BA59BA2C1 /* Build configuration list for PBXAggregateTarget "PhoenixHeaders" */;
+			buildPhases = (
+			);
+			dependencies = (
+				44AA4F631ABB463A9720907E /* PBXTargetDependency */,
+			);
+			name = PhoenixHeaders;
+			productName = PhoenixHeaders;
+		};
+		1FF31699FDFC4FCEAFE484EA /* SpdLogHeaders */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A74B0A39626349DA891445DB /* Build configuration list for PBXAggregateTarget "SpdLogHeaders" */;
+			buildPhases = (
+			);
+			dependencies = (
+				28041232B05B44BDA12924C9 /* PBXTargetDependency */,
+			);
+			name = SpdLogHeaders;
+			productName = SpdLogHeaders;
+		};
+		4970ED6A573044C08EA2DAC2 /* RWQueueHeaders */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CE86395FBFB14F29B7685B6B /* Build configuration list for PBXAggregateTarget "RWQueueHeaders" */;
+			buildPhases = (
+			);
+			dependencies = (
+				62B9FD77DB9744EE90A19562 /* PBXTargetDependency */,
+			);
+			name = RWQueueHeaders;
+			productName = RWQueueHeaders;
+		};
+		819C98A01FF34DB5B5DFBF90 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5B217841B7AF4B39B671B24A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				9297E29EFDF540BCB01CCAA5 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		DB8EA8754A3342589FE0BCDB /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9998CC86F5804A7FB92AE551 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				3EDD3443DD39467D93B7AAFC /* CMake Rules */,
+			);
+			dependencies = (
+				40CF54B869BC4819A3F00E31 /* PBXTargetDependency */,
+				C7FE9913CA4E4D3CB4CCD71C /* PBXTargetDependency */,
+				F44BCB3DEBAE41AF9155A6C7 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		07934FAFE2974357BC171A25 /* consumer.cxx in Sources */ = {isa = PBXBuildFile; fileRef = DDBD9907D9464F13B4810B5E /* consumer.cxx */; };
+		FE9A2E81E5944E9D956E5422 /* init_error.cxx in Sources */ = {isa = PBXBuildFile; fileRef = C0763FC3F4C148E8B5C2EE2D /* init_error.cxx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1604151B2806490D9C994355 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BC01209E1647C09B008037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 819C98A01FF34DB5B5DFBF90;
+			remoteInfo = ZERO_CHECK;
+		};
+		37B2AD0A4CFD469DB3B05334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BC01209E1647C09B008037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BBFD453678C4EA6A3A622D8;
+			remoteInfo = Error;
+		};
+		41557BBB7FF04657A4BF26FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BC01209E1647C09B008037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 819C98A01FF34DB5B5DFBF90;
+			remoteInfo = ZERO_CHECK;
+		};
+		4340428A16324F9EA1D0ED51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BC01209E1647C09B008037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 819C98A01FF34DB5B5DFBF90;
+			remoteInfo = ZERO_CHECK;
+		};
+		5223C15B4CD946F18FC23DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BC01209E1647C09B008037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 819C98A01FF34DB5B5DFBF90;
+			remoteInfo = ZERO_CHECK;
+		};
+		CDE985F5DCE5492D858C7D29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BC01209E1647C09B008037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 819C98A01FF34DB5B5DFBF90;
+			remoteInfo = ZERO_CHECK;
+		};
+		CE00BF7105A34280888BB858 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BC01209E1647C09B008037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBE2F715D35948EEBB0405DE;
+			remoteInfo = Consumer;
+		};
+		D90165BD45544F9D8184549F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BC01209E1647C09B008037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 819C98A01FF34DB5B5DFBF90;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01CD44A68E6E433C951E847A /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = core.h; path = dep/spdlog/include/spdlog/fmt/bundled/core.h; sourceTree = SOURCE_ROOT; };
+		0B3AED57C2DC40D9940CC30E /* chrono.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = chrono.h; path = dep/spdlog/include/spdlog/fmt/bundled/chrono.h; sourceTree = SOURCE_ROOT; };
+		0C97614D26194FE48F397CD6 /* pattern_formatter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pattern_formatter.h; path = dep/spdlog/include/spdlog/details/pattern_formatter.h; sourceTree = SOURCE_ROOT; };
+		0F49102D6D164AAAAC908612 /* bundled */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = bundled; path = dep/spdlog/include/spdlog/fmt/bundled; sourceTree = SOURCE_ROOT; };
+		10101470798A4384B02B9C7B /* msvc_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = msvc_sink.h; path = dep/spdlog/include/spdlog/sinks/msvc_sink.h; sourceTree = SOURCE_ROOT; };
+		154ADEA8E4424FDCBA926417 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = dep/spdlog/include/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		158FDBE29FF849A7A28843DB /* details */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = details; path = dep/spdlog/include/spdlog/details; sourceTree = SOURCE_ROOT; };
+		1C0139CC8408445DADEE994D /* atomicops.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = atomicops.h; path = dep/readerwriterqueue/atomicops.h; sourceTree = SOURCE_ROOT; };
+		1FD67F562AEF41A3AE32613E /* tweakme.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tweakme.h; path = dep/spdlog/include/spdlog/tweakme.h; sourceTree = SOURCE_ROOT; };
+		2184527BE6404D30B725E6FC /* ostr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ostr.h; path = dep/spdlog/include/spdlog/fmt/ostr.h; sourceTree = SOURCE_ROOT; };
+		2300C756BF4F4CFA87DB90BC /* os.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = os.h; path = dep/spdlog/include/spdlog/details/os.h; sourceTree = SOURCE_ROOT; };
+		266FF940505744EB94514894 /* formatter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = formatter.h; path = dep/spdlog/include/spdlog/formatter.h; sourceTree = SOURCE_ROOT; };
+		2825DD0D423E49CAB4D76696 /* wincolor_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = wincolor_sink.h; path = dep/spdlog/include/spdlog/sinks/wincolor_sink.h; sourceTree = SOURCE_ROOT; };
+		336A5DEA8F58454A887A7723 /* ranges.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ranges.h; path = dep/spdlog/include/spdlog/fmt/bundled/ranges.h; sourceTree = SOURCE_ROOT; };
+		3A11F9BC31014F4A99402244 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/error/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		40A3EC237C6948AEBAEC850B /* stdout_color_sinks.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stdout_color_sinks.h; path = dep/spdlog/include/spdlog/sinks/stdout_color_sinks.h; sourceTree = SOURCE_ROOT; };
+		463A6B56109A4A40853AFD4B /* file_helper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = file_helper.h; path = dep/spdlog/include/spdlog/details/file_helper.h; sourceTree = SOURCE_ROOT; };
+		46C8894546B14AB69FB9424B /* rotating_file_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = rotating_file_sink.h; path = dep/spdlog/include/spdlog/sinks/rotating_file_sink.h; sourceTree = SOURCE_ROOT; };
+		46E9F1E5A76B4FE9A91E6789 /* stdout_sinks.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stdout_sinks.h; path = dep/spdlog/include/spdlog/sinks/stdout_sinks.h; sourceTree = SOURCE_ROOT; };
+		4B969D4F8E454461A90592A3 /* console_globals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = console_globals.h; path = dep/spdlog/include/spdlog/details/console_globals.h; sourceTree = SOURCE_ROOT; };
+		563BCC01EA9E48DA960292AD /* basic_file_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basic_file_sink.h; path = dep/spdlog/include/spdlog/sinks/basic_file_sink.h; sourceTree = SOURCE_ROOT; };
+		5712C595CE0049968FB6D03D /* libError.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libError.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4B73FD7C234301BD6B2927 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = dep/readerwriterqueue/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		5E38FD5840964012A0EAC3C8 /* version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = version.h; path = dep/spdlog/include/spdlog/version.h; sourceTree = SOURCE_ROOT; };
+		5F30D4FF7B6F40678C27AAB2 /* syslog_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = syslog_sink.h; path = dep/spdlog/include/spdlog/sinks/syslog_sink.h; sourceTree = SOURCE_ROOT; };
+		648B0219E2C24FE281D823C3 /* async_logger.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = async_logger.h; path = dep/spdlog/include/spdlog/async_logger.h; sourceTree = SOURCE_ROOT; };
+		64BC343BBDEF4988A562351F /* format.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = format.h; path = dep/spdlog/include/spdlog/fmt/bundled/format.h; sourceTree = SOURCE_ROOT; };
+		65F5AFE513784A45ACE62E3A /* logger_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = logger_impl.h; path = dep/spdlog/include/spdlog/details/logger_impl.h; sourceTree = SOURCE_ROOT; };
+		69C0A53F16F541D0A115FEEB /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = include/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6DC169115042481D8197F733 /* ostream_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ostream_sink.h; path = dep/spdlog/include/spdlog/sinks/ostream_sink.h; sourceTree = SOURCE_ROOT; };
+		72C46918330C4A0582B15FB6 /* ansicolor_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ansicolor_sink.h; path = dep/spdlog/include/spdlog/sinks/ansicolor_sink.h; sourceTree = SOURCE_ROOT; };
+		74C7AE1C19094968B15018AE /* null_mutex.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = null_mutex.h; path = dep/spdlog/include/spdlog/details/null_mutex.h; sourceTree = SOURCE_ROOT; };
+		7981AF812E6749C58CF3FF72 /* printf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = printf.h; path = dep/spdlog/include/spdlog/fmt/bundled/printf.h; sourceTree = SOURCE_ROOT; };
+		7A5F363F0ACD48AEAAED61E5 /* posix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix.h; path = dep/spdlog/include/spdlog/fmt/bundled/posix.h; sourceTree = SOURCE_ROOT; };
+		7AFBE9E898C4456ABE6C986B /* graphics.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = graphics.hpp; path = include/graphics.hpp; sourceTree = SOURCE_ROOT; };
+		7C6946CE620743A2AA3F5B62 /* logger.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = logger.h; path = dep/spdlog/include/spdlog/logger.h; sourceTree = SOURCE_ROOT; };
+		80ACB60E706F4FD3B0B16881 /* spdlog.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = spdlog.h; path = dep/spdlog/include/spdlog/spdlog.h; sourceTree = SOURCE_ROOT; };
+		8129999168EE4CECB77667A8 /* readerwriterqueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = readerwriterqueue.h; path = dep/readerwriterqueue/readerwriterqueue.h; sourceTree = SOURCE_ROOT; };
+		893560DB3DFD4FE0B73D4483 /* phoenix.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = phoenix.hpp; path = include/phoenix.hpp; sourceTree = SOURCE_ROOT; };
+		91040D67BA3C48D9A89A537A /* input.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = input.hpp; path = include/input.hpp; sourceTree = SOURCE_ROOT; };
+		9322D3EFC15D4CB8A6328749 /* common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = common.h; path = dep/spdlog/include/spdlog/common.h; sourceTree = SOURCE_ROOT; };
+		99970268748442848FA27C1F /* atomicops.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = atomicops.h; path = dep/readerwriterqueue/atomicops.h; sourceTree = SOURCE_ROOT; };
+		A83B50AB66E84E99A1664B93 /* format-inl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "format-inl.h"; path = "dep/spdlog/include/spdlog/fmt/bundled/format-inl.h"; sourceTree = SOURCE_ROOT; };
+		A94A0432F7F9479290ADB2F5 /* periodic_worker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = periodic_worker.h; path = dep/spdlog/include/spdlog/details/periodic_worker.h; sourceTree = SOURCE_ROOT; };
+		AA18AF809CC243CDA764507B /* async_logger_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = async_logger_impl.h; path = dep/spdlog/include/spdlog/details/async_logger_impl.h; sourceTree = SOURCE_ROOT; };
+		AAB6D6D4F7844654B6AA5977 /* readerwriterqueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = readerwriterqueue.h; path = dep/readerwriterqueue/readerwriterqueue.h; sourceTree = SOURCE_ROOT; };
+		ADB46708228F4430B220F801 /* libConsumer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libConsumer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFCD3E15BDC045E7BBF48608 /* null_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = null_sink.h; path = dep/spdlog/include/spdlog/sinks/null_sink.h; sourceTree = SOURCE_ROOT; };
+		C0763FC3F4C148E8B5C2EE2D /* init_error.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = init_error.cxx; path = src/error/init_error.cxx; sourceTree = SOURCE_ROOT; };
+		C3753993283D47C38093F5A1 /* registry.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = registry.h; path = dep/spdlog/include/spdlog/details/registry.h; sourceTree = SOURCE_ROOT; };
+		C6FA6EBBFECD4EB2928DD805 /* time.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = time.h; path = dep/spdlog/include/spdlog/fmt/bundled/time.h; sourceTree = SOURCE_ROOT; };
+		CC63ED54B4C842DDBCB0DD9F /* sinks */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = sinks; path = dep/spdlog/include/spdlog/sinks; sourceTree = SOURCE_ROOT; };
+		CEAC1C5CC86240FBBDA00E68 /* async.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = async.h; path = dep/spdlog/include/spdlog/async.h; sourceTree = SOURCE_ROOT; };
+		CF7FC27BC4244A9FAEEDD7C4 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/consumer/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D26D254A31E04BFB842E869B /* fmt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = fmt; path = dep/spdlog/include/spdlog/fmt; sourceTree = SOURCE_ROOT; };
+		D3C1FAE370A5442F992C7F8F /* ostream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ostream.h; path = dep/spdlog/include/spdlog/fmt/bundled/ostream.h; sourceTree = SOURCE_ROOT; };
+		D475CB51E58C48C1ABEC135E /* dist_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dist_sink.h; path = dep/spdlog/include/spdlog/sinks/dist_sink.h; sourceTree = SOURCE_ROOT; };
+		D82630631D2E451C8FE0A3AB /* event.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = event.hpp; path = include/event.hpp; sourceTree = SOURCE_ROOT; };
+		D8565629D74A4D18B73008AC /* thread_pool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = thread_pool.h; path = dep/spdlog/include/spdlog/details/thread_pool.h; sourceTree = SOURCE_ROOT; };
+		D94D01F9D641463EB1D86D65 /* daily_file_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = daily_file_sink.h; path = dep/spdlog/include/spdlog/sinks/daily_file_sink.h; sourceTree = SOURCE_ROOT; };
+		DA9B012146424E998DD8F1B2 /* circular_q.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = circular_q.h; path = dep/spdlog/include/spdlog/details/circular_q.h; sourceTree = SOURCE_ROOT; };
+		DD10B9A055EC431C9B3ECFC3 /* bin_to_hex.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bin_to_hex.h; path = dep/spdlog/include/spdlog/fmt/bin_to_hex.h; sourceTree = SOURCE_ROOT; };
+		DDBD9907D9464F13B4810B5E /* consumer.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = consumer.cxx; path = src/consumer/consumer.cxx; sourceTree = SOURCE_ROOT; };
+		E335C122C8134FABB573B372 /* mpmc_blocking_q.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mpmc_blocking_q.h; path = dep/spdlog/include/spdlog/details/mpmc_blocking_q.h; sourceTree = SOURCE_ROOT; };
+		E34B6C1CC2544BCBAF95212A /* fmt_helper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fmt_helper.h; path = dep/spdlog/include/spdlog/details/fmt_helper.h; sourceTree = SOURCE_ROOT; };
+		E5139DE7435A4CF2AFD97A20 /* android_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = android_sink.h; path = dep/spdlog/include/spdlog/sinks/android_sink.h; sourceTree = SOURCE_ROOT; };
+		E5CE0CF8F91344BB987B2843 /* locale.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = locale.h; path = dep/spdlog/include/spdlog/fmt/bundled/locale.h; sourceTree = SOURCE_ROOT; };
+		E6E28203802F4EFD8ADA167D /* fmt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fmt.h; path = dep/spdlog/include/spdlog/fmt/fmt.h; sourceTree = SOURCE_ROOT; };
+		EAFD3C1521B6477AB470CF3E /* sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sink.h; path = dep/spdlog/include/spdlog/sinks/sink.h; sourceTree = SOURCE_ROOT; };
+		EB2574ED0A714F3DB449764B /* color.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = color.h; path = dep/spdlog/include/spdlog/fmt/bundled/color.h; sourceTree = SOURCE_ROOT; };
+		EBAE3BA32BD84D50ABE981C2 /* log_msg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = log_msg.h; path = dep/spdlog/include/spdlog/details/log_msg.h; sourceTree = SOURCE_ROOT; };
+		EE9DB2D5D3D7479EA1AA3DAB /* base_sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base_sink.h; path = dep/spdlog/include/spdlog/sinks/base_sink.h; sourceTree = SOURCE_ROOT; };
+		F2DD3A82144D45648EE09BBF /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F865E817784D4EB6AFFCFF1E /* renderer.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = renderer.hpp; path = include/renderer.hpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1EE40E34751A4C7F821AA8A3 /* PhoenixHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				F53D64851CD4462BB28D1778 /* Header Files */,
+				69C0A53F16F541D0A115FEEB /* CMakeLists.txt */,
+			);
+			name = PhoenixHeaders;
+			sourceTree = "<group>";
+		};
+		2F84A051575F42D18476CA2D /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				F1E0C712288F4769B9491C5D /* Source Files */,
+				3A11F9BC31014F4A99402244 /* CMakeLists.txt */,
+			);
+			name = Error;
+			sourceTree = "<group>";
+		};
+		364F866B005D4391833A14DA /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		6F556B9F9EBB4E98943397AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADB46708228F4430B220F801 /* libConsumer.a */,
+				5712C595CE0049968FB6D03D /* libError.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		810CDDAFFA5C421AAE0143E3 /* RWQueueHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				817B9A513C394935A46594B9 /* Header Files */,
+				5C4B73FD7C234301BD6B2927 /* CMakeLists.txt */,
+			);
+			name = RWQueueHeaders;
+			sourceTree = "<group>";
+		};
+		817B9A513C394935A46594B9 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C0139CC8408445DADEE994D /* atomicops.h */,
+				AAB6D6D4F7844654B6AA5977 /* readerwriterqueue.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		84027968B3B84A188DDF32DC /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC1C5CC86240FBBDA00E68 /* async.h */,
+				648B0219E2C24FE281D823C3 /* async_logger.h */,
+				9322D3EFC15D4CB8A6328749 /* common.h */,
+				AA18AF809CC243CDA764507B /* async_logger_impl.h */,
+				DA9B012146424E998DD8F1B2 /* circular_q.h */,
+				4B969D4F8E454461A90592A3 /* console_globals.h */,
+				463A6B56109A4A40853AFD4B /* file_helper.h */,
+				E34B6C1CC2544BCBAF95212A /* fmt_helper.h */,
+				EBAE3BA32BD84D50ABE981C2 /* log_msg.h */,
+				65F5AFE513784A45ACE62E3A /* logger_impl.h */,
+				E335C122C8134FABB573B372 /* mpmc_blocking_q.h */,
+				74C7AE1C19094968B15018AE /* null_mutex.h */,
+				2300C756BF4F4CFA87DB90BC /* os.h */,
+				0C97614D26194FE48F397CD6 /* pattern_formatter.h */,
+				A94A0432F7F9479290ADB2F5 /* periodic_worker.h */,
+				C3753993283D47C38093F5A1 /* registry.h */,
+				D8565629D74A4D18B73008AC /* thread_pool.h */,
+				DD10B9A055EC431C9B3ECFC3 /* bin_to_hex.h */,
+				0B3AED57C2DC40D9940CC30E /* chrono.h */,
+				EB2574ED0A714F3DB449764B /* color.h */,
+				01CD44A68E6E433C951E847A /* core.h */,
+				A83B50AB66E84E99A1664B93 /* format-inl.h */,
+				64BC343BBDEF4988A562351F /* format.h */,
+				E5CE0CF8F91344BB987B2843 /* locale.h */,
+				D3C1FAE370A5442F992C7F8F /* ostream.h */,
+				7A5F363F0ACD48AEAAED61E5 /* posix.h */,
+				7981AF812E6749C58CF3FF72 /* printf.h */,
+				336A5DEA8F58454A887A7723 /* ranges.h */,
+				C6FA6EBBFECD4EB2928DD805 /* time.h */,
+				E6E28203802F4EFD8ADA167D /* fmt.h */,
+				2184527BE6404D30B725E6FC /* ostr.h */,
+				266FF940505744EB94514894 /* formatter.h */,
+				7C6946CE620743A2AA3F5B62 /* logger.h */,
+				E5139DE7435A4CF2AFD97A20 /* android_sink.h */,
+				72C46918330C4A0582B15FB6 /* ansicolor_sink.h */,
+				EE9DB2D5D3D7479EA1AA3DAB /* base_sink.h */,
+				563BCC01EA9E48DA960292AD /* basic_file_sink.h */,
+				D94D01F9D641463EB1D86D65 /* daily_file_sink.h */,
+				D475CB51E58C48C1ABEC135E /* dist_sink.h */,
+				10101470798A4384B02B9C7B /* msvc_sink.h */,
+				BFCD3E15BDC045E7BBF48608 /* null_sink.h */,
+				6DC169115042481D8197F733 /* ostream_sink.h */,
+				46C8894546B14AB69FB9424B /* rotating_file_sink.h */,
+				EAFD3C1521B6477AB470CF3E /* sink.h */,
+				40A3EC237C6948AEBAEC850B /* stdout_color_sinks.h */,
+				46E9F1E5A76B4FE9A91E6789 /* stdout_sinks.h */,
+				5F30D4FF7B6F40678C27AAB2 /* syslog_sink.h */,
+				2825DD0D423E49CAB4D76696 /* wincolor_sink.h */,
+				80ACB60E706F4FD3B0B16881 /* spdlog.h */,
+				1FD67F562AEF41A3AE32613E /* tweakme.h */,
+				5E38FD5840964012A0EAC3C8 /* version.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		84713B38383F484B89A9489D /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDBD9907D9464F13B4810B5E /* consumer.cxx */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		AE9A998D101D407793D86D35 /* Consumer */ = {
+			isa = PBXGroup;
+			children = (
+				84713B38383F484B89A9489D /* Source Files */,
+				F814B9E61E724FF6AC810946 /* Header Files */,
+				CF7FC27BC4244A9FAEEDD7C4 /* CMakeLists.txt */,
+			);
+			name = Consumer;
+			sourceTree = "<group>";
+		};
+		CFE804D8D6A54CB5B0CEE0A1 /* SpdLogHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				84027968B3B84A188DDF32DC /* Header Files */,
+				158FDBE29FF849A7A28843DB /* details */,
+				D26D254A31E04BFB842E869B /* fmt */,
+				0F49102D6D164AAAAC908612 /* bundled */,
+				CC63ED54B4C842DDBCB0DD9F /* sinks */,
+				154ADEA8E4424FDCBA926417 /* CMakeLists.txt */,
+			);
+			name = SpdLogHeaders;
+			sourceTree = "<group>";
+		};
+		E2B0130F6E4B4E2DAFD39E05 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				364F866B005D4391833A14DA /* CMake Rules */,
+				F2DD3A82144D45648EE09BBF /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		F1E0C712288F4769B9491C5D /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0763FC3F4C148E8B5C2EE2D /* init_error.cxx */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		F53D64851CD4462BB28D1778 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				893560DB3DFD4FE0B73D4483 /* phoenix.hpp */,
+				7AFBE9E898C4456ABE6C986B /* graphics.hpp */,
+				F865E817784D4EB6AFFCFF1E /* renderer.hpp */,
+				91040D67BA3C48D9A89A537A /* input.hpp */,
+				D82630631D2E451C8FE0A3AB /* event.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		F5FD2CA10C144CDD8CEB511C = {
+			isa = PBXGroup;
+			children = (
+				E2B0130F6E4B4E2DAFD39E05 /* ALL_BUILD */,
+				810CDDAFFA5C421AAE0143E3 /* RWQueueHeaders */,
+				CFE804D8D6A54CB5B0CEE0A1 /* SpdLogHeaders */,
+				2F84A051575F42D18476CA2D /* Error */,
+				AE9A998D101D407793D86D35 /* Consumer */,
+				1EE40E34751A4C7F821AA8A3 /* PhoenixHeaders */,
+				6F556B9F9EBB4E98943397AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F814B9E61E724FF6AC810946 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				99970268748442848FA27C1F /* atomicops.h */,
+				8129999168EE4CECB77667A8 /* readerwriterqueue.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BBFD453678C4EA6A3A622D8 /* Error */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0195C1400F4943858206BC12 /* Build configuration list for PBXNativeTarget "Error" */;
+			buildPhases = (
+				BFCEEABC00CE4AAC92991ED3 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				321BBE75618446EDA3E835A1 /* PBXTargetDependency */,
+			);
+			name = Error;
+			productName = Error;
+			productReference = 5712C595CE0049968FB6D03D /* libError.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DBE2F715D35948EEBB0405DE /* Consumer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DF08C8C2616470EA613230E /* Build configuration list for PBXNativeTarget "Consumer" */;
+			buildPhases = (
+				8D2C9E8B25A6446E8B171B55 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB2CB2F8BC7B4BC2883E3EEA /* PBXTargetDependency */,
+			);
+			name = Consumer;
+			productName = Consumer;
+			productReference = ADB46708228F4430B220F801 /* libConsumer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0BC01209E1647C09B008037 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 408F8A9114124FD3B6190E93 /* Build configuration list for PBXProject "Phoenix-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F5FD2CA10C144CDD8CEB511C;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				DB8EA8754A3342589FE0BCDB /* ALL_BUILD */,
+				DBE2F715D35948EEBB0405DE /* Consumer */,
+				3BBFD453678C4EA6A3A622D8 /* Error */,
+				1EADD26A14544A5384FA3F49 /* PhoenixHeaders */,
+				4970ED6A573044C08EA2DAC2 /* RWQueueHeaders */,
+				1FF31699FDFC4FCEAFE484EA /* SpdLogHeaders */,
+				819C98A01FF34DB5B5DFBF90 /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EDD3443DD39467D93B7AAFC /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build -f /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		9297E29EFDF540BCB01CCAA5 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build -f /Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D2C9E8B25A6446E8B171B55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07934FAFE2974357BC171A25 /* consumer.cxx in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFCEEABC00CE4AAC92991ED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9A2E81E5944E9D956E5422 /* init_error.cxx in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28041232B05B44BDA12924C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 819C98A01FF34DB5B5DFBF90 /* ZERO_CHECK */;
+			targetProxy = 5223C15B4CD946F18FC23DB8 /* PBXContainerItemProxy */;
+		};
+		321BBE75618446EDA3E835A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 819C98A01FF34DB5B5DFBF90 /* ZERO_CHECK */;
+			targetProxy = 4340428A16324F9EA1D0ED51 /* PBXContainerItemProxy */;
+		};
+		40CF54B869BC4819A3F00E31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BBFD453678C4EA6A3A622D8 /* Error */;
+			targetProxy = 37B2AD0A4CFD469DB3B05334 /* PBXContainerItemProxy */;
+		};
+		44AA4F631ABB463A9720907E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 819C98A01FF34DB5B5DFBF90 /* ZERO_CHECK */;
+			targetProxy = 1604151B2806490D9C994355 /* PBXContainerItemProxy */;
+		};
+		62B9FD77DB9744EE90A19562 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 819C98A01FF34DB5B5DFBF90 /* ZERO_CHECK */;
+			targetProxy = CDE985F5DCE5492D858C7D29 /* PBXContainerItemProxy */;
+		};
+		C7FE9913CA4E4D3CB4CCD71C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBE2F715D35948EEBB0405DE /* Consumer */;
+			targetProxy = CE00BF7105A34280888BB858 /* PBXContainerItemProxy */;
+		};
+		DB2CB2F8BC7B4BC2883E3EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 819C98A01FF34DB5B5DFBF90 /* ZERO_CHECK */;
+			targetProxy = 41557BBB7FF04657A4BF26FD /* PBXContainerItemProxy */;
+		};
+		F44BCB3DEBAE41AF9155A6C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 819C98A01FF34DB5B5DFBF90 /* ZERO_CHECK */;
+			targetProxy = D90165BD45544F9D8184549F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02B48C7490A348B4BE0C0B78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		1D8EF74292464468B74F2CA8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include",
+					"/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/readerwriterqueue",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-DNDEBUG",
+					"-fPIC",
+					"'-std=gnu++1z'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Consumer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/src/consumer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		238566C81E5D4FFAA1036B7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk;
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/build";
+			};
+			name = Release;
+		};
+		2660040304C04D8FB91BE4BD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RWQueueHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/dep/readerwriterqueue";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		29742E2B6A3F4965AB609C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		2D1C63A42D3048DCB078611F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PhoenixHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		363EC8F1B1F0468B994ACF9F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SpdLogHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/dep/spdlog/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		392E9D798C834C509C9A2C11 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk;
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/build";
+			};
+			name = MinSizeRel;
+		};
+		3A37C8D1053C46909CD57178 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		3BB7FF5FED65460AB9596081 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		6417B08EE2934E968B521ABE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk;
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		6A90D217938C4281A6364620 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RWQueueHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/dep/readerwriterqueue";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		6B4551D0BBBE4631952B7305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RWQueueHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/dep/readerwriterqueue";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		77406CA2F09C49C3B0BFAE12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SpdLogHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/dep/spdlog/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		7795C3D9354F425E969A9BE7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include",
+					"/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/readerwriterqueue",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-DNDEBUG",
+					"-fPIC",
+					"'-std=gnu++1z'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Consumer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/src/consumer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		781A3ABBAD8B4CE29CBC4F26 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		7A368FD762E44FB7B59169A5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RWQueueHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/dep/readerwriterqueue";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		7F6822584FFA41E4A0800728 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		8192E7224AC648688B984A77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include";
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-fPIC",
+					"'-std=gnu++1z'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Error;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/src/error";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		81AE88634D234F7199D66921 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include";
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-DNDEBUG",
+					"-fPIC",
+					"'-std=gnu++1z'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Error;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/src/error";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		8278BF76F9674AD48880B357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk;
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/build";
+			};
+			name = Debug;
+		};
+		8A009D71055D4510AE362B0C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PhoenixHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		8C820822160B4B52BCB0756C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include";
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-DNDEBUG",
+					"-fPIC",
+					"'-std=gnu++1z'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Error;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/src/error";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		93BD56EDDD4A47C5BB5F6F5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include",
+					"/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/readerwriterqueue",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-DNDEBUG",
+					"-fomit-frame-pointer",
+					"-ffast-math",
+					"-DNDEBUG",
+					"-fomit-frame-pointer",
+					"-ffast-math",
+					"-fPIC",
+					"'-std=gnu++1z'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Consumer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/src/consumer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		9CBBA23F9EAA49AAA68CE739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		AEDE6EC74CD74BACBD32EC57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SpdLogHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/dep/spdlog/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		B605944EE9B54A0BA72BC725 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PhoenixHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		B66C3B70B1914C14AB120C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PhoenixHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		C7012D0E07BF42478A8F2D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		D5A52FE7C37449F4B9933DD1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SpdLogHeaders;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/dep/spdlog/include";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		D6E3117DF54C46BE9ED76AA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include",
+					"/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/dep/readerwriterqueue",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-fPIC",
+					"'-std=gnu++1z'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Consumer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/src/consumer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		F5E39BDEC81F4AB9AD923958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/include";
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-miphoneos-version-min=12.2",
+					"-fvisibility=hidden",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fobjc-arc",
+					"-DNDEBUG",
+					"-fomit-frame-pointer",
+					"-ffast-math",
+					"-DNDEBUG",
+					"-fomit-frame-pointer",
+					"-ffast-math",
+					"-fPIC",
+					"'-std=gnu++1z'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Error;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/bodie/meta/dev/workspace/workshop/dwarf-game/dwarf/dep/phoenix/xcode-ios-build/src/error";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0195C1400F4943858206BC12 /* Build configuration list for PBXNativeTarget "Error" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8192E7224AC648688B984A77 /* Debug */,
+				F5E39BDEC81F4AB9AD923958 /* Release */,
+				8C820822160B4B52BCB0756C /* MinSizeRel */,
+				81AE88634D234F7199D66921 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		408F8A9114124FD3B6190E93 /* Build configuration list for PBXProject "Phoenix-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8278BF76F9674AD48880B357 /* Debug */,
+				238566C81E5D4FFAA1036B7B /* Release */,
+				392E9D798C834C509C9A2C11 /* MinSizeRel */,
+				6417B08EE2934E968B521ABE /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5B217841B7AF4B39B671B24A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02B48C7490A348B4BE0C0B78 /* Debug */,
+				29742E2B6A3F4965AB609C4E /* Release */,
+				3BB7FF5FED65460AB9596081 /* MinSizeRel */,
+				7F6822584FFA41E4A0800728 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6DF08C8C2616470EA613230E /* Build configuration list for PBXNativeTarget "Consumer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E3117DF54C46BE9ED76AA8 /* Debug */,
+				93BD56EDDD4A47C5BB5F6F5C /* Release */,
+				7795C3D9354F425E969A9BE7 /* MinSizeRel */,
+				1D8EF74292464468B74F2CA8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9998CC86F5804A7FB92AE551 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7012D0E07BF42478A8F2D9D /* Debug */,
+				9CBBA23F9EAA49AAA68CE739 /* Release */,
+				3A37C8D1053C46909CD57178 /* MinSizeRel */,
+				781A3ABBAD8B4CE29CBC4F26 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A74B0A39626349DA891445DB /* Build configuration list for PBXAggregateTarget "SpdLogHeaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77406CA2F09C49C3B0BFAE12 /* Debug */,
+				AEDE6EC74CD74BACBD32EC57 /* Release */,
+				363EC8F1B1F0468B994ACF9F /* MinSizeRel */,
+				D5A52FE7C37449F4B9933DD1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CE86395FBFB14F29B7685B6B /* Build configuration list for PBXAggregateTarget "RWQueueHeaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A90D217938C4281A6364620 /* Debug */,
+				6B4551D0BBBE4631952B7305 /* Release */,
+				7A368FD762E44FB7B59169A5 /* MinSizeRel */,
+				2660040304C04D8FB91BE4BD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E2A31108641C471BA59BA2C1 /* Build configuration list for PBXAggregateTarget "PhoenixHeaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66C3B70B1914C14AB120C8C /* Debug */,
+				2D1C63A42D3048DCB078611F /* Release */,
+				8A009D71055D4510AE362B0C /* MinSizeRel */,
+				B605944EE9B54A0BA72BC725 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0BC01209E1647C09B008037 /* Project object */;
+}
