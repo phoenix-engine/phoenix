@@ -1,7 +1,7 @@
 set(Error_SRCS init_error.cxx)
 
 if(NOT (APPLE OR IOS))
-  set(Error_SRCS init_error.cxx sdl_init.error.cxx)
+  set(Error_SRCS init_error.cxx sdl_init_error.cxx)
 else()
 endif()
 
