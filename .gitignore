@@ -21,6 +21,8 @@ xcuserdata/
 */xcuserdata/
 **/xcuserdata/
 
+.vs/
+.vscode/
 *.opensdf
 *.sdf
 *.sln
