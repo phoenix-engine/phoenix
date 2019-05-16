@@ -1,0 +1,20 @@
+set(SDLInput_SRCS
+  sdl_input.cxx
+)
+
+add_library(SDLInput STATIC ${SDLInput_SRCS})
+
+target_include_directories(SDLInput PUBLIC
+  ${SDL2_INCLUDE_DIR}
+  ${Phoenix_INCLUDE_DIR}
+)
+
+target_link_libraries(SDLInput 
+  SDL2
+  Consumer
+)
+
+set_property(TARGET SDLInput PROPERTY POSITION_INDEPENDENT_CODE ON)
+
+set_property(TARGET SDLInput PROPERTY CXX_STANDARD 17)
+set_property(TARGET SDLInput PROPERTY CXX_STANDARD_REQUIRED ON)

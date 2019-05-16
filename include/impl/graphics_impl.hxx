@@ -9,8 +9,8 @@ void Graphics<Renderer, RenderPayload>::update() {
 }
 
 template <typename Renderer, typename RenderPayload>
-void Graphics<Renderer, RenderPayload>::draw(RenderPayload& payload) {
-    renderer.draw(payload);
+void Graphics<Renderer, RenderPayload>::draw(RenderPayload payload) {
+    renderer.draw(std::forward<RenderPayload>(payload));
 }
 
 template <typename Renderer, typename RenderPayload>

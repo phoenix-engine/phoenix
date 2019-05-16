@@ -10,7 +10,8 @@
 #include "init_video.hpp"
 #include "window.hpp"
 
-namespace sdl {
+namespace phx_sdl {
+
     class SDLUtil {
     public:
 	SDLUtil(const std::string& titleIn     = "Phoenix App",
@@ -32,6 +33,7 @@ namespace sdl {
 	Display   display;
 	Window    window;
     };
-} // namespace sdl
+
+} // namespace phx_sdl
 
 #endif

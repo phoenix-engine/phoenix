@@ -3,8 +3,15 @@
 
 #include <exception>
 #include <string>
+#include <string_view>
+#include <sstream>
+#include <vector>
 
 namespace phx_err {
+
+    namespace {
+	const static std::string_view unknown = "unknown error";
+    };
 
     class InitError : public std::exception {
     public:
@@ -13,14 +20,10 @@ namespace phx_err {
 	InitError(std::string&&);
 	InitError(std::stringstream&);
 
-	virtual const char* what() const noexcept;
+	virtual char const* what() const override;
 
     protected:
-	std::string msg;
-
-    private:
-	constexpr const static std::string_view unknown =
-	  "unknown error: ";
+	std::string message;
     };
 
 } // namespace phx_err

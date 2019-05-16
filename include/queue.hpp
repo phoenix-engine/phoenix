@@ -10,7 +10,7 @@ namespace event {
     template <typename Evt>
     class Queue {
     public:
-	Queue() noexcept = default;
+	Queue() = default;
 	Queue(Queue& qq) noexcept : m(), cv() {
 	    // Lock before cloning the queue.
 	    std::unique_lock<std::mutex> lock(qq.m);
@@ -42,7 +42,7 @@ namespace event {
 	    if (q.size() == 0) {
 		// Block the current thread and unlock the mutex until
 		// something arrives.  Then awaken, lock, and continue.
-		cv.wait(m, q.size() > 0);
+		cv.wait(lock, [&] { return q.size() > 0; });
 	    }
 
 	    auto e = q.front();

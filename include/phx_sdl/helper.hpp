@@ -3,7 +3,8 @@
 
 #include "SDL.h"
 
-namespace sdl {
+namespace phx_sdl {
+
     // Helper is a wrapper "namespace" for configuration, utilities,
     // etc. related to SDL and OpenGL.
     class Helper {
@@ -27,5 +28,6 @@ namespace sdl {
 	                         const std::string&) noexcept(false);
 	static int  getGLAttr(const SDL_GLattr what) noexcept(false);
     };
-} // namespace sdl
+
+} // namespace phx_sdl
 #endif

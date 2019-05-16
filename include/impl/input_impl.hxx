@@ -1,5 +1,5 @@
 template <class States>
-const event::EventQueue& Input<States>::queue_handle() noexcept {
+event::EventQueue& Input<States>::queue_handle() noexcept {
     return q;
 }
 

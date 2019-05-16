@@ -3,7 +3,8 @@
 
 #include "SDL.h"
 
-namespace sdl {
+namespace phx_sdl {
+
     class Display {
     public:
 	Display() noexcept(false);
@@ -16,6 +17,7 @@ namespace sdl {
     private:
 	SDL_DisplayMode display;
     };
-} // namespace sdl
+
+} // namespace phx_sdl
 
 #endif

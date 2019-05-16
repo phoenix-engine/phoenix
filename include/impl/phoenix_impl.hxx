@@ -6,10 +6,10 @@ Phoenix<Consumer, Renderer, RenderPayload>::Phoenix(
 
 template <typename Consumer, typename Renderer, typename RenderPayload>
 void Phoenix<Consumer, Renderer, RenderPayload>::render(
-  RenderPayload& payload) noexcept(false) {
+  RenderPayload payload) noexcept(false) {
     gf.clear();
     gf.update();
-    gf.draw(std::forward<RenderPayload&>(payload));
+    gf.draw(std::forward<RenderPayload>(payload));
 }
 
 template <typename Consumer, typename Renderer, typename RenderPayload>

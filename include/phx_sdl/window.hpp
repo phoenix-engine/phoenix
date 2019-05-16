@@ -3,23 +3,27 @@
 
 #include "SDL.h"
 
-namespace sdl {
+namespace phx_sdl {
+
     class Window {
     public:
-	Window(const char* title = "SDL Window",
+	Window(const char* title = "Phoenix app",
 	       int         x     = SDL_WINDOWPOS_CENTERED,
 	       int y = SDL_WINDOWPOS_CENTERED, int w = 640, int h = 480,
 	       Uint32 flags = 0) noexcept(false);
 
-	SDL_Window* handle();
+	SDL_Window* handle() const;
 
-	void show();
+	void        show();
+	const char* get_title() const;
 
 	~Window();
 
     private:
 	SDL_Window* window;
+	std::string title;
     };
-} // namespace sdl
+
+} // namespace phx_sdl
 
 #endif
