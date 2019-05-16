@@ -1,18 +1,17 @@
-#include <sstream>
+#include <iterator>
 #include <string>
 
 #include "init_error.hpp"
 
 namespace phx_err {
 
-    InitError::InitError() : exception() { msg.append(unknown); }
+    InitError::InitError() : InitError(unknown.data()) {}
 
     InitError::InitError(std::string&& s)
-        : exception(), msg(std::forward<std::string>(s)) {}
+        : exception(), message(std::move(s)) {}
 
-    InitError::InitError(std::stringstream& ss)
-        : exception(), msg(ss.str()) {}
+    InitError::InitError(std::stringstream& ss) : InitError(ss.str()) {}
 
-    const char* InitError::what() const noexcept { return msg.c_str(); }
+    char const* InitError::what() const { return message.c_str(); }
 
 } // namespace phx_err

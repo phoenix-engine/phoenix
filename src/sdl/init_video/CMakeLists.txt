@@ -6,8 +6,7 @@ add_library(SDLInitVideo STATIC ${SDLInitVideo_SRCS})
 
 target_include_directories(SDLInitVideo PUBLIC
   ${SDL2_INCLUDE_DIR}
-  ${Phoenix_INCLUDE_DIR}/error
-  ${Phoenix_INCLUDE_DIR}/sdl
+  ${Phoenix_INCLUDE_DIR}
 )
 
 target_link_libraries(SDLInitVideo

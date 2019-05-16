@@ -6,8 +6,7 @@ add_library(SDLTexture STATIC ${SDLTexture_SRCS})
 
 target_include_directories(SDLTexture PUBLIC
   ${SDL2_INCLUDE_DIR}/include
-  ${Phoenix_INCLUDE_DIR}/error
-  ${Phoenix_INCLUDE_DIR}/sdl
+  ${Phoenix_INCLUDE_DIR}
 )
 
 target_link_libraries(SDLTexture

@@ -3,9 +3,10 @@
 #include "SDL.h"
 
 #include "init_error.hpp"
-#include "texture.hpp"
+#include "phx_sdl/texture.hpp"
 
-namespace sdl {
+namespace phx_sdl {
+
     Texture::Texture(SDL_Renderer* renderer, int w,
                      int h) noexcept(false) {
 	texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888,
@@ -13,7 +14,7 @@ namespace sdl {
 	if (texture == NULL) {
 	    std::stringstream ss;
 	    ss << "SDL_CreateTexture failed: " << SDL_GetError();
-	    throw err::InitError(ss);
+	    throw phx_err::InitError(ss);
 	}
     }
 
@@ -24,9 +25,10 @@ namespace sdl {
 	    std::stringstream ss;
 	    ss << "SD_UpdateTexture failed with " << v << ": "
 	       << SDL_GetError();
-	    throw err::InitError(ss);
+	    throw phx_err::InitError(ss);
 	}
     }
 
     Texture::~Texture() { SDL_DestroyTexture(texture); }
-}; // namespace sdl
+
+}; // namespace phx_sdl

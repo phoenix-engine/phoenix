@@ -3,17 +3,18 @@
 
 #include "SDL.h"
 
-#include "helper.hpp"
 #include "init_error.hpp"
+#include "phx_sdl/helper.hpp"
 
-namespace sdl {
+namespace phx_sdl {
+
     int Helper::getGLAttr(const SDL_GLattr what) noexcept(false) {
 	int into = 0;
 	if (SDL_GL_GetAttribute(what, &into)) {
 	    std::stringstream ss;
 	    ss << "Failed to get attribute " << what << ": "
 	       << SDL_GetError();
-	    throw err::InitError(ss);
+	    throw phx_err::InitError(ss);
 	}
 
 	return into;
@@ -24,7 +25,7 @@ namespace sdl {
 	    std::stringstream ss;
 	    ss << "SDL_GL_LoadLibrary failed with code " << glOk << ": "
 	       << SDL_GetError();
-	    throw err::InitError(ss);
+	    throw phx_err::InitError(ss);
 	}
 
 	// Request a core OpenGL 4.1 Core context.
@@ -38,9 +39,7 @@ namespace sdl {
 
 	auto glVMaj = getGLAttr(SDL_GL_CONTEXT_MAJOR_VERSION);
 	auto glVMin = getGLAttr(SDL_GL_CONTEXT_MINOR_VERSION);
-
-	printf("SDL OpenGL API requested: %d.%d\n", glVMaj, glVMin);
-	// ? // Also request a depth buffer
+	// ? Also request a depth buffer
 	// SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	// SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
     }
@@ -69,11 +68,12 @@ namespace sdl {
 	    ss << "Setting GL attribute " << name << " to " << to
 	       << " failed with code " << ok << ": " << SDL_GetError();
 
-	    throw err::InitError(ss);
+	    throw phx_err::InitError(ss);
 	}
     }
 
     void Helper::setSDLGLAttr(SDL_GLattr a, int to) noexcept(false) {
 	setSDLGLAttr(a, to, glAttrNames[a]);
     }
-}; // namespace sdl
+
+}; // namespace phx_sdl
