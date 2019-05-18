@@ -1,28 +1,27 @@
-#include <sstream>
-#include <string_view>
+#include <iostream>
 
 #include "SDL.h"
 
 #include "init_error.hpp"
-#include "window.hpp"
+#include "phx_sdl/window.hpp"
+#include "sdl_init_error.hpp"
 
-namespace sdl {
+namespace phx_sdl {
+
     Window::Window(const char* title, int x, int y, int w, int h,
                    Uint32 flags) noexcept(false)
-        : window(SDL_CreateWindow(title, x, y, w, h, flags)) {
-
-	printf("Created SDL window\n");
-
+        : title(title),
+          window(SDL_CreateWindow(title, x, y, w, h, flags)) {
 	if (window == NULL) {
-	    std::stringstream ss;
-	    ss << "SDL_CreateWindow failed: " << SDL_GetError();
-	    throw err::InitError(ss);
+	    throw phx_err::SDLInitError("SDL_CreateWindow failed");
 	}
     }
 
-    SDL_Window* Window::handle() { return window; }
+    SDL_Window* Window::handle() const { return window; }
+    const char* Window::get_title() const { return title.c_str(); }
 
     void Window::show() { SDL_ShowWindow(window); }
 
     Window::~Window() { SDL_DestroyWindow(window); }
-}; // namespace sdl
+
+}; // namespace phx_sdl

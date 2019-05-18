@@ -24,9 +24,11 @@ namespace input {
     public:
 	// Have to support trivial default constructor since Objective-C
 	// frameworks require it.
-	Input() noexcept(true) : x(0), y(0), intent(false) {}
+	Input() noexcept(true)
+	    : x(0), y(0), intent(false), wants_quit(false) {}
 	Input(Consumer<States>* root) noexcept(true)
-	    : x(0), y(0), intent(false), next(root) {}
+	    : x(0), y(0), intent(false), next(root), wants_quit(false) {
+	}
 	Input(Input&&) = default;
 	// Input(Input&) = default;
 
@@ -42,7 +44,7 @@ namespace input {
 
 	friend States;
 
-	const event::EventQueue& queue_handle() noexcept;
+	event::EventQueue& queue_handle() noexcept;
 
     private:
 	Consumer<States>* next;

@@ -2,18 +2,20 @@
 
 #include "SDL.h"
 
-#include "display.hpp"
 #include "init_error.hpp"
+#include "phx_sdl/display.hpp"
+#include "sdl_init_error.hpp"
 
-namespace sdl {
+namespace phx_sdl {
+
     Display::Display() noexcept(false) {
-	std::stringstream ss;
-
 	int initOk = SDL_GetCurrentDisplayMode(0, &display);
 	if (initOk != 0) {
-	    ss << "SDL_GetCurrentDisplayMode failed with code "
-	       << initOk << ": " << SDL_GetError();
-	    throw err::InitError(ss);
+	    std::stringstream ss;
+	    ss << "SDL_GetCurrentDisplayMode failed"
+	       << " with code " << initOk;
+	    throw phx_err::SDLInitError(ss);
 	}
     }
-}; // namespace sdl
+
+}; // namespace phx_sdl

@@ -2,10 +2,13 @@
 	path = dep/SDL
 	url = git@github.com:phoenix-engine/SDL.git
 	branch = release-2.0.8-cmake-fix
-[submodule "dep/glad"]
-	path = dep/glad
-	url = git@github.com:phoenix-engine/glad-4.1-core.git
-	branch = master
 [submodule "dep/spdlog"]
 	path = dep/spdlog
 	url = git@github.com:phoenix-engine/spdlog.git
+[submodule "dep/glad"]
+	path = dep/glad
+	url = git@github.com:phoenix-engine/glad-vk-1.1-core.git
+        branch = cmake-master
+[submodule "dep/Vulkan-Hpp"]
+	path = dep/Vulkan-Hpp
+	url = git@github.com:phoenix-engine/Vulkan-Hpp.git

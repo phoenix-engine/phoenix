@@ -3,9 +3,14 @@ add_subdirectory(init_util)
 add_subdirectory(init_video)
 add_subdirectory(display)
 add_subdirectory(window)
+
 add_subdirectory(sdl_renderer)
 add_subdirectory(gl_renderer)
+add_subdirectory(vk_renderer)
+
 add_subdirectory(texture)
+
+add_subdirectory(sdl_input)
 
 set(SDLUtil_SRCS
   sdl_util.cxx
@@ -14,8 +19,7 @@ set(SDLUtil_SRCS
 add_library(SDLUtil STATIC ${SDLUtil_SRCS})
 
 target_include_directories(SDLUtil PUBLIC
-  ${Phoenix_INCLUDE_DIR}/error
-  ${Phoenix_INCLUDE_DIR}/sdl
+  ${Phoenix_INCLUDE_DIR}
 )
 
 target_link_libraries(SDLUtil

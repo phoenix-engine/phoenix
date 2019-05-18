@@ -3,7 +3,8 @@
 
 #include "SDL.h"
 
-namespace sdl {
+namespace phx_sdl {
+
     class Texture {
     public:
 	Texture(SDL_Renderer* renderer, int w = 640,
@@ -18,6 +19,7 @@ namespace sdl {
     private:
 	SDL_Texture* texture;
     };
-} // namespace sdl
+
+} // namespace phx_sdl
 
 #endif

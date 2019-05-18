@@ -3,11 +3,12 @@
 
 #include "SDL.h"
 
-#include "sdl_util.hpp"
+#include "phx_sdl/sdl_util.hpp"
 
-#include "display.hpp"
+#include "phx_sdl/display.hpp"
 
-namespace sdl {
+namespace phx_sdl {
+
     SDLUtil::SDLUtil(const std::string& titleIn, Uint32 windowFlags,
                      Uint32                SDLSubsystems,
                      std::function<void()> postHooks) noexcept(false)
@@ -20,4 +21,5 @@ namespace sdl {
 
 	window.show();
     }
-}; // namespace sdl
+
+}; // namespace phx_sdl

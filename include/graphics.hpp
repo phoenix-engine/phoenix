@@ -5,14 +5,14 @@
 
 namespace gfx {
 
-    template <class Renderer, class RenderPayload = void>
+    template <class Renderer, class RenderPayload = std::nullptr_t>//void>
     class Graphics {
     public:
 	Graphics() = default;
 	Graphics(Renderer&& r, int w, int h) noexcept(true);
 
 	void update();
-	void draw(RenderPayload&);
+	void draw(RenderPayload);
 	void clear();
 
 	// TODO: Build a better drawing API.

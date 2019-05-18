@@ -5,7 +5,8 @@
 
 #include "texture.hpp"
 
-namespace sdl {
+namespace phx_sdl {
+
     class SDLRenderer {
     public:
 	SDLRenderer(SDL_Window*, int w, int h) noexcept(false);
@@ -26,8 +27,9 @@ namespace sdl {
 	int           w, h;
 	SDL_Renderer* renderer;
 	Uint32*       pixels;
-	sdl::Texture  texture;
+	Texture       texture;
     };
-} // namespace sdl
+
+} // namespace phx_sdl
 
 #endif

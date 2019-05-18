@@ -3,12 +3,13 @@
 
 #include "SDL.h"
 
-#include "helper.hpp"
 #include "init_error.hpp"
-#include "sdl_renderer.hpp"
-#include "texture.hpp"
+#include "phx_sdl/helper.hpp"
+#include "phx_sdl/sdl_renderer.hpp"
+#include "phx_sdl/texture.hpp"
 
-namespace sdl {
+namespace phx_sdl {
+
     SDL_Renderer* makeRenderer(SDL_Window* win);
 
     const Uint32 SDLRenderer::windowFlags() noexcept(true) {
@@ -33,7 +34,7 @@ namespace sdl {
 	if (renderer == nullptr) {
 	    std::stringstream ss;
 	    ss << "SDL_CreateRenderer failed: " << SDL_GetError();
-	    throw err::InitError(ss);
+	    throw phx_err::InitError(ss);
 	}
 
 	memset(pixels, 0, w * h * sizeof(Uint32));
@@ -47,7 +48,7 @@ namespace sdl {
 	    // Bad code, but deprecated.
 	    std::stringstream ss;
 	    ss << "SDL_CreateRenderer failed: " << SDL_GetError();
-	    throw err::InitError(ss);
+	    throw phx_err::InitError(ss);
 	}
 
 	return renderer;
@@ -75,4 +76,5 @@ namespace sdl {
 	SDL_DestroyRenderer(renderer);
 	delete[] pixels;
     }
-} // namespace sdl
+
+} // namespace phx_sdl

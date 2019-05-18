@@ -7,9 +7,10 @@
 
 #include "SDL.h"
 
-#include "../graphics/graphics.hpp"
+#include "graphics.hpp"
 
-namespace sdl {
+namespace phx_sdl {
+
     class GLRenderer {
     public:
 	GLRenderer(SDL_Window*, int w, int h) noexcept(false);
@@ -18,9 +19,9 @@ namespace sdl {
 	static const Uint32 sdlDefaults() noexcept(true);
 	static void         postHooks() noexcept(true);
 
-	void update();
-	void draw();
 	void clear();
+	void update();
+	void draw(std::nullptr_t);
 
 	void drawPoint(int x, int y, int color);
 
@@ -34,6 +35,7 @@ namespace sdl {
 	GLuint vao;
 	GLuint vbo;
     };
-} // namespace sdl
+
+} // namespace phx_sdl
 
 #endif

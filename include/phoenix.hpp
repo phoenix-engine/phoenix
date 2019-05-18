@@ -19,7 +19,7 @@ namespace phx {
      * its other modules.
      */
     template <typename Consumer, typename Renderer,
-              typename RenderPayload = void>
+              typename RenderPayload = std::nullptr_t>
     class Phoenix {
 	using GP = gfx::Graphics<Renderer, RenderPayload>;
 
@@ -37,13 +37,10 @@ namespace phx {
 	// methods.
 	Phoenix(GP&& g, input::Input<Consumer>&& in) noexcept(true);
 
-	// Phoenix(Phoenix&) = delete;
-	// Phoenix(Phoenix&) = default;
-
 	// Only move, never copy, a Phoenix object.
 	inline Phoenix& operator=(Phoenix&&) = default;
 
-	void render(RenderPayload&) noexcept(false);
+	void render(RenderPayload) noexcept(false);
 	// void enqueue(event::Event&&) noexcept(true);
 
 	input::Input<Consumer>& input_handle() noexcept(true);

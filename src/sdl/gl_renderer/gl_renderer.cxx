@@ -4,11 +4,14 @@
 
 #include "SDL.h"
 
-#include "gl_renderer.hpp"
-#include "helper.hpp"
-#include "init_error.hpp"
+#include "phx_sdl/gl_renderer.hpp"
+#include "phx_sdl/helper.hpp"
 
-namespace sdl {
+#include "init_error.hpp"
+#include "sdl_init_error.hpp"
+
+namespace phx_sdl {
+
     float points[] = { 0.0f, 0.5f,  0.0f,  0.5f, -0.5f,
 	               0.0f, -0.5f, -0.5f, 0.0f };
 
@@ -31,9 +34,8 @@ void main() {
 	int into = 0;
 	if (SDL_GL_GetAttribute(what, &into)) {
 	    std::stringstream ss;
-	    ss << "Failed to get attribute " << what << ": "
-	       << SDL_GetError();
-	    throw err::InitError(ss);
+	    ss << "Failed to get attribute " << what;
+	    throw phx_err::InitError(ss);
 	}
 
 	return into;
@@ -51,7 +53,6 @@ void main() {
     }
 
     void GLRenderer::postHooks() noexcept(true) {
-	printf("Configuring SDL for OpenGL 4.1\n");
 	Helper::glPostHooks();
     }
 
@@ -60,18 +61,14 @@ void main() {
         : context(SDL_GL_CreateContext(win)), window(win) {
 
 	if (context == NULL) {
-	    std::stringstream ss;
-	    ss << "SDL_GL_CreateContext failed: " << SDL_GetError();
-	    throw err::InitError(ss);
+	    throw phx_err::SDLInitError("SDL_GL_CreateContext failed");
 	}
 
 	auto loader     = (GLADloadproc)SDL_GL_GetProcAddress;
 	int  gladInitOk = gladLoadGLLoader(loader);
 
 	if (!gladInitOk) {
-	    std::stringstream ss;
-	    ss << "gladLoadGLLoader failed: " << gladInitOk;
-	    throw err::InitError(ss);
+	    throw phx_err::SDLInitError("gladLoadGLLoader failed");
 	}
 
 	auto glVMaj = getGLAttr(SDL_GL_CONTEXT_MAJOR_VERSION);
@@ -114,7 +111,7 @@ void main() {
 
     void GLRenderer::update() {}
 
-    void GLRenderer::draw() {
+    void GLRenderer::draw(nullptr_t) {
 	glUseProgram(program);
 	glBindVertexArray(vao);
 	glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -129,4 +126,5 @@ void main() {
     void GLRenderer::drawPoint(int x, int y, int color) {}
 
     GLRenderer::~GLRenderer() { SDL_GL_DeleteContext(context); }
-}; // namespace sdl
+
+}; // namespace phx_sdl
