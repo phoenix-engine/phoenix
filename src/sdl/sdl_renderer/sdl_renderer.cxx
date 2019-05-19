@@ -3,10 +3,10 @@
 
 #include "SDL.h"
 
-#include "init_error.hpp"
 #include "phx_sdl/helper.hpp"
 #include "phx_sdl/sdl_renderer.hpp"
 #include "phx_sdl/texture.hpp"
+#include "sdl_init_error.hpp"
 
 namespace phx_sdl {
 
@@ -23,7 +23,6 @@ namespace phx_sdl {
     }
 
     void SDLRenderer::postHooks() noexcept(true) {
-	printf("Configuring SDL post-hooks\n");
 	Helper::sdlOnlyPostHooks();
     }
 
@@ -31,13 +30,7 @@ namespace phx_sdl {
                              int h) noexcept(false)
         : w(w), h(h), renderer(makeRenderer(win)),
           pixels(new Uint32[w * h]), texture(renderer, w, h) {
-	if (renderer == nullptr) {
-	    std::stringstream ss;
-	    ss << "SDL_CreateRenderer failed: " << SDL_GetError();
-	    throw phx_err::InitError(ss);
-	}
-
-	memset(pixels, 0, w * h * sizeof(Uint32));
+	clear();
     }
 
     SDL_Renderer* makeRenderer(SDL_Window* win) noexcept(false) {
@@ -46,9 +39,7 @@ namespace phx_sdl {
 	if (renderer == nullptr) {
 	    // Necessary because the caller can't check success yet.
 	    // Bad code, but deprecated.
-	    std::stringstream ss;
-	    ss << "SDL_CreateRenderer failed: " << SDL_GetError();
-	    throw phx_err::InitError(ss);
+	    throw phx_err::SDLInitError("SDL_CreateRenderer failed");
 	}
 
 	return renderer;
