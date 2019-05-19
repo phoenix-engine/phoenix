@@ -5,7 +5,6 @@ add_subdirectory(display)
 add_subdirectory(window)
 
 add_subdirectory(sdl_renderer)
-add_subdirectory(gl_renderer)
 add_subdirectory(vk_renderer)
 
 add_subdirectory(texture)
