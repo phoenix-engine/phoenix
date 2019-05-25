@@ -4,3 +4,9 @@ if(NOT(APPLE OR IOS))
 endif()
 
 add_subdirectory(spdlog/include)
+
+# GLM CMake configuration
+set(GLM_TEST_ENABLE_FAST_MATH   true)
+set(GLM_FORCE_RADIANS           true)
+set(GLM_FORCE_DEPTH_ZERO_TO_ONE true)
+add_subdirectory(glm)
