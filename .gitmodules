@@ -12,3 +12,7 @@
 [submodule "dep/Vulkan-Hpp"]
 	path = dep/Vulkan-Hpp
 	url = git@github.com:phoenix-engine/Vulkan-Hpp.git
+[submodule "dep/glm"]
+	path = dep/glm
+	url = git@github.com:phoenix-engine/glm.git
+        branch = master-cmake-defines
