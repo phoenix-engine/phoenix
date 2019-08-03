@@ -190,7 +190,8 @@ loading Vulkan and identifying graphics hardware.
 ## Metal
 
 Phoenix supports Metal platforms using a Cocoa ViewController class.
-Please see [../CocoaPhoenix/README.md] for further information.
+Please see [../CocoaPhoenix/README.md](../CocoaPhoenix/README.md) for
+further information.
 
 Xcode is suggested.
 
