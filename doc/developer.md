@@ -1,6 +1,6 @@
 # Developing Phoenix
 
-- [C++](#c++)
+- [C++](#c)
 - [Git](#git)
 - [CMake](#cmake)
 - [The `phx` CLI](#the-phx-cli)

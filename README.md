@@ -36,4 +36,5 @@ $ go get -u -v github.com/phoenix-engine/phx
 
 ## For Phoenix Developers
 
-Please see the developer documentation at [doc/developer.md].
+Please see the developer documentation at
+[doc/developer.md](doc/developer.md).
