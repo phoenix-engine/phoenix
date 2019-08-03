@@ -1,18 +1,25 @@
 [submodule "dep/SDL"]
 	path = dep/SDL
-	url = git@github.com:phoenix-engine/SDL.git
-	branch = release-2.0.8-cmake-fix
+	url = https://github.com/phoenix-engine/SDL.git
+	branch = 2.0.9
 [submodule "dep/spdlog"]
 	path = dep/spdlog
-	url = git@github.com:phoenix-engine/spdlog.git
+	url = https://github.com/phoenix-engine/spdlog.git
 [submodule "dep/glad"]
 	path = dep/glad
-	url = git@github.com:phoenix-engine/glad-vk-1.1-core.git
-        branch = cmake-master
+	url = https://github.com/phoenix-engine/glad-vk-1.1-core.git
 [submodule "dep/Vulkan-Hpp"]
 	path = dep/Vulkan-Hpp
-	url = git@github.com:phoenix-engine/Vulkan-Hpp.git
+	url = https://github.com/phoenix-engine/Vulkan-Hpp.git
+[submodule "dep/res/lz4"]
+	path = dep/res/lz4
+	url = https://github.com/phoenix-engine/lz4.git
+	branch = master-cmake
+[submodule "dep/eigen"]
+	path = dep/eigen
+	url = https://github.com/phoenix-engine/eigen-git-mirror.git
+        branch = master-cmake
 [submodule "dep/glm"]
 	path = dep/glm
-	url = git@github.com:phoenix-engine/glm.git
-        branch = master-cmake-defines
+	url = https://github.com/phoenix-engine/glm.git
+        branch = master-cmake
