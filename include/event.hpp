@@ -19,9 +19,9 @@ namespace event {
 
     struct EventFinishedBox : EventDraggingBox {};
 
-    typedef std::variant<EventWantsQuit, EventIntent, EventLostIntent,
-                         EventDraggingBox, EventFinishedBox>
-      Event;
+    using Event =
+      std::variant<EventWantsQuit, EventIntent, EventLostIntent,
+                   EventDraggingBox, EventFinishedBox>;
 
 }; // namespace event
 

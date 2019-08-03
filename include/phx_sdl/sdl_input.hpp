@@ -14,6 +14,7 @@ namespace phx_sdl {
 	input::Input<Consumer>& into;
     };
 
-    template class Input<input::Simple>;
+    // Specialized only for input::Simple.  To enable further
+    // specializations, add them to the implementation file.
 
 } // namespace phx_sdl

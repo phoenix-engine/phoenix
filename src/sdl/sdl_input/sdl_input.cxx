@@ -6,12 +6,33 @@
 
 namespace phx_sdl {
 
+    template class Input<input::Simple>;
+
     template <typename Consumer>
     void Input<Consumer>::poll() noexcept {
 	SDL_Event e;
 	while (true) {
 	    while (SDL_PollEvent(&e)) {
 		switch (e.type) {
+
+		/*
+		case SDL_WINDOWEVENT:
+		    switch (e.window.type) {
+		    case SDL_WINDOWEVENT_MINIMIZED:
+		        into.minimize();
+		        break;
+
+		    case SDL_WINDOWEVENT_MAXIMIZED:
+		        into.restore();
+		        break;
+
+		    default:
+		        // Something I didn't handle!
+		        break;
+		    }
+
+		    break;
+		*/
 
 		/* Keyboard events */
 		case SDL_KEYDOWN:

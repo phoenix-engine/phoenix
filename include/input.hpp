@@ -29,15 +29,17 @@ namespace input {
 	Input(Consumer<States>* root) noexcept(true)
 	    : x(0), y(0), intent(false), next(root), wants_quit(false) {
 	}
+
 	Input(Input&&) = default;
-	// Input(Input&) = default;
 
 	Input& operator=(Input&&) = default;
 
+	// Window lifecycle commands.
+	void quit_command();
+
+	// Intention commands.
 	void set_intent(int x, int y, bool intent);
 	void move_intent(int x, int y);
-
-	void quit_command();
 
 	int  x, y;
 	bool intent;
@@ -51,6 +53,7 @@ namespace input {
 	event::EventQueue q;
 
 	bool wants_quit;
+	bool toggle_pause;
     };
 
     template <typename States = Simple>
@@ -65,6 +68,10 @@ namespace input {
 	    return f->consume(in, eq);
 	}
 
+	Consumer<States>* reset(Input<States>* in) noexcept {
+	    return f->reset(in);
+	}
+
     private:
 	States* f;
     };
@@ -73,8 +80,10 @@ namespace input {
     public:
 	Simple() noexcept
 	    : Consumer(this), intent(false), box_begin({ 0, 0 }) {}
+
 	Consumer<Simple>* consume(Input<Simple>*,
 	                          event::Queue<et>&) noexcept;
+	Consumer<Simple>* reset(Input<Simple>*) noexcept;
 
     private:
 	bool               intent;

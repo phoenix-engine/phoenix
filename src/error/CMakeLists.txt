@@ -6,15 +6,13 @@ endif()
 
 add_library(Error STATIC ${Error_SRCS})
 
+if(NOT(APPLE OR IOS))
+  target_link_libraries(Error SDL2)
+endif()
+
 target_include_directories(Error PUBLIC
   ${Phoenix_INCLUDE_DIR}
 )
-
-if(NOT(APPLE OR IOS))
-  target_include_directories(Error PUBLIC
-    ${SDL2_INCLUDE_DIR}
-  )
-endif()
 
 set_property(TARGET Error PROPERTY POSITION_INDEPENDENT_CODE ON)
 

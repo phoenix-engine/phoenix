@@ -1,6 +1,3 @@
-Phoenix-version.cmake
-PhoenixConfig.cmake
-
 cmake_install.cmake
 CMakeCache.txt
 CMakeFiles/
@@ -10,21 +7,14 @@ lib/
 !src/lib
 target/
 
-# Emacs tempfiles, etc.
-\#*
 *.sw[nop]
 *~
+\#*
+*#
 
 *.so
 *.a
 
-# Xcode build / user data
-xcuserdata/
-*/xcuserdata/
-**/xcuserdata/
-
-.vs/
-.vscode/
 *.opensdf
 *.sdf
 *.sln

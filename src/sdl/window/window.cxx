@@ -22,6 +22,9 @@ namespace phx_sdl {
 
     void Window::show() { SDL_ShowWindow(window); }
 
-    Window::~Window() { SDL_DestroyWindow(window); }
+    Window::~Window() {
+	SDL_DestroyWindow(window);
+	SDL_Quit();
+    }
 
 }; // namespace phx_sdl
