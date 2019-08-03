@@ -4,14 +4,13 @@ set(SDLInput_SRCS
 
 add_library(SDLInput STATIC ${SDLInput_SRCS})
 
-target_include_directories(SDLInput PUBLIC
-  ${SDL2_INCLUDE_DIR}
-  ${Phoenix_INCLUDE_DIR}
-)
-
 target_link_libraries(SDLInput 
   SDL2
   Consumer
+)
+
+target_include_directories(SDLInput PUBLIC
+  ${Phoenix_INCLUDE_DIR}
 )
 
 set_property(TARGET SDLInput PROPERTY POSITION_INDEPENDENT_CODE ON)

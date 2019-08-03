@@ -4,14 +4,13 @@ set(SDLInitVideo_SRCS
 
 add_library(SDLInitVideo STATIC ${SDLInitVideo_SRCS})
 
-target_include_directories(SDLInitVideo PUBLIC
-  ${SDL2_INCLUDE_DIR}
-  ${Phoenix_INCLUDE_DIR}
-)
-
 target_link_libraries(SDLInitVideo
   SDL2
   Error
+)
+
+target_include_directories(SDLInitVideo PUBLIC
+  ${Phoenix_INCLUDE_DIR}
 )
 
 set_property(TARGET SDLInitVideo PROPERTY POSITION_INDEPENDENT_CODE ON)

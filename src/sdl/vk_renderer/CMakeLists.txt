@@ -6,19 +6,20 @@ add_library(SDLVKRenderer STATIC ${SDLVKRenderer_SRCS})
 
 find_package(Vulkan REQUIRED)
 
-target_include_directories(SDLVKRenderer PUBLIC
-  ${GLAD_INCLUDE_DIR}
-  ${Vulkan_INCLUDE_DIR}
-  ${SDL2_INCLUDE_DIR}
-)
-
 target_link_libraries(SDLVKRenderer
   GLAD
   SDL2
+  # Eigen3::Eigen
+  glm
   Vulkan::Vulkan
   Error
   SDLHelper
+  Resource
 )
+
+# target_include_directories(SDLVKRenderer PUBLIC
+#   ${GLAD_INCLUDE_DIR}
+# )
 
 set_property(TARGET SDLVKRenderer PROPERTY POSITION_INDEPENDENT_CODE ON)
 
