@@ -1,7 +1,9 @@
 template <typename Renderer, typename RenderPayload>
 Graphics<Renderer, RenderPayload>::Graphics(Renderer&& r, int wIn,
                                             int hIn) noexcept(true)
-    : w(wIn), h(hIn), renderer(r) {}
+    : w(wIn), h(hIn), renderer(std::forward<Renderer&&>(r)) {
+    renderer.post_hooks();
+}
 
 template <typename Renderer, typename RenderPayload>
 void Graphics<Renderer, RenderPayload>::update() {

@@ -5,11 +5,12 @@
 
 namespace gfx {
 
-    template <class Renderer, class RenderPayload = std::nullptr_t>//void>
+    template <class Renderer,
+              class RenderPayload = std::nullptr_t> // void>
     class Graphics {
     public:
 	Graphics() = default;
-	Graphics(Renderer&& r, int w, int h) noexcept(true);
+	Graphics(Renderer&& r, int width, int height) noexcept(true);
 
 	void update();
 	void draw(RenderPayload);

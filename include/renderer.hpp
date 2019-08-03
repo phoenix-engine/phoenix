@@ -13,7 +13,7 @@ namespace gfx {
      */
     class Renderer {
     public:
-	Renderer(int w, int h) noexcept(false);
+	Renderer() noexcept(false);
 
 	// postHooks defines the post-setup hooks to call, e.g. for
 	// configuring OpenGL / Vulkan context, loading function

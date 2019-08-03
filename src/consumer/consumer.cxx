@@ -9,6 +9,11 @@ namespace input {
     // Make a singleton in case that's what the user wants.
     Simple simple = Simple();
 
+    Consumer<Simple>* Simple::reset(input::Input<Simple>* in) noexcept {
+	intent = false;
+	return this;
+    }
+
     Consumer<Simple>*
     Simple::consume(input::Input<Simple>*       in,
                     event::Queue<event::Event>& eq) noexcept {
@@ -16,9 +21,10 @@ namespace input {
 	auto x_in = in->x;
 	auto y_in = in->y;
 
-	auto had_intent = intent;
-	auto has_intent = in->intent;
-	auto wants_quit = in->wants_quit;
+	auto had_intent  = intent;
+	auto has_intent  = in->intent;
+	auto wants_quit  = in->wants_quit;
+	auto wants_pause = in->toggle_pause;
 
 	if (wants_quit) {
 	    // User wants to quit.
