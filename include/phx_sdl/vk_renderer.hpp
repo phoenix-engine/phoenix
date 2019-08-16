@@ -1,6 +1,7 @@
 #ifndef PHX_SDL_VK_RENDERER
 #define PHX_SDL_VK_RENDERER
 
+#include <chrono>
 #include <memory>
 #include <type_traits>
 
@@ -18,6 +19,7 @@ namespace phx_sdl {
     class VKRenderer;
 
     namespace cleanup {
+
 	template <bool debugging>
 	void destroy_vk(VKRenderer<debugging>*);
 
@@ -27,6 +29,7 @@ namespace phx_sdl {
 	                             decltype(&destroy_vk<debugging>)> {
 	    VKDestroyer(VKRenderer<debugging>*);
 	};
+
     } // namespace cleanup
 
     template <bool debugging = false>
