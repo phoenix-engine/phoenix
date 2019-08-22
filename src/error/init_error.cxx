@@ -12,6 +12,8 @@ namespace phx_err {
 
     InitError::InitError(std::stringstream& ss) : InitError(ss.str()) {}
 
-    char const* InitError::what() const { return message.c_str(); }
+    char const* InitError::what() const noexcept {
+	return message.c_str();
+    }
 
 } // namespace phx_err
