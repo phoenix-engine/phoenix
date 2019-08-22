@@ -12,7 +12,7 @@ namespace phx_err {
 
     struct Retry : public std::exception {
     public:
-	virtual char const* what() const override {
+	virtual char const* what() const noexcept override {
 	    return retry_what.data();
 	}
 

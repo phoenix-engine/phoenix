@@ -20,7 +20,7 @@ namespace phx_err {
 	InitError(std::string&&);
 	InitError(std::stringstream&);
 
-	virtual char const* what() const override;
+	virtual char const* what() const noexcept override;
 
     protected:
 	std::string message;

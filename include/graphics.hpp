@@ -1,6 +1,8 @@
 #ifndef PHX_GFX_GRAPHICS_HPP
 #define PHX_GFX_GRAPHICS_HPP
 
+#include <cmath>
+
 #include "init_error.hpp"
 
 namespace gfx {

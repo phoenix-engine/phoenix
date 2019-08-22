@@ -1,4 +1,5 @@
 #include <cstddef>
+#include <cstring>
 #include <sstream>
 
 #include "SDL.h"
@@ -60,7 +61,7 @@ namespace phx_sdl {
     }
 
     void SDLRenderer::clear() {
-	memset(pixels, 0, w * h * sizeof(Uint32));
+	std::memset(pixels, 0, w * h * sizeof(Uint32));
     }
 
     SDLRenderer::~SDLRenderer() {

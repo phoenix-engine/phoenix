@@ -236,78 +236,6 @@ namespace phx_sdl {
 	    };
 	}
 
-	template <typename ST>
-	void render_available_devices(
-	  ST& estr, const std::vector<vk::PhysicalDevice>& devices,
-	  const vk::SurfaceKHR&            surface,
-	  const vk::DispatchLoaderDynamic& loader) {
-
-	    estr << "Physical graphics devices:" << std::endl;
-
-	    size_t maxw = 0;
-
-	    std::vector<device_info> info;
-
-	    // Insert the device metadata into the info vector.
-	    for (auto i = 0; i < devices.size(); i++) {
-		const auto& dev = devices[i];
-
-		auto extn_props =
-		  dev.enumerateDeviceExtensionProperties();
-
-		std::sort(extn_props.begin(), extn_props.end(),
-		          [&](const auto& str1, const auto& str2) {
-		              return (strcmp(str1.extensionName,
-		                             str2.extensionName) < 0);
-		          });
-
-		info.emplace_back(device_info{
-		  rank_physical_device(dev, surface, loader),
-		  dev.getFeatures2().features,
-		  dev.getProperties2().properties,
-		  dev.getQueueFamilyProperties2(),
-		  extn_props,
-		});
-	    }
-
-	    // Find the largest name to set the column width later.
-	    for (const auto& i : info) {
-		if (auto nw = strlen(i.props.deviceName); maxw < nw) {
-		    maxw = nw;
-		}
-	    }
-
-	    // Sort the info list alphabetically by device name.
-	    std::sort(info.begin(), info.end(),
-	              [&](const auto& i1, const auto& i2) {
-		          return (strcmp(i1.props.deviceName,
-		                         i2.props.deviceName) < 0);
-	              });
-
-	    // Render the list.
-	    // TODO: Render more properties.
-	    for (const auto& i : info) {
-		estr << "  " << std::setw(maxw) << std::left
-		     << i.props.deviceName << " | (rank " << i.rank
-		     << ") " << vk::to_string(i.props.deviceType)
-		     << std::endl;
-	    }
-
-	    for (const auto& i : info) {
-		estr << std::endl
-		     << "Supported extensions (" << i.props.deviceName
-		     << "): " << std::endl;
-
-		for (const auto& ep : i.extn_props) {
-		    estr << "  " << ep.extensionName << std::endl;
-		}
-
-		estr << std::endl;
-	    }
-
-	    estr << std::endl;
-	}
-
 	uint16_t
 	rank_physical_device(const vk::PhysicalDevice&        device,
 	                     const vk::SurfaceKHR&            surface,
@@ -395,6 +323,78 @@ namespace phx_sdl {
 	    }
 
 	    return rank;
+	}
+
+	template <typename ST>
+	void render_available_devices(
+	  ST& estr, const std::vector<vk::PhysicalDevice>& devices,
+	  const vk::SurfaceKHR&            surface,
+	  const vk::DispatchLoaderDynamic& loader) {
+
+	    estr << "Physical graphics devices:" << std::endl;
+
+	    size_t maxw = 0;
+
+	    std::vector<device_info> info;
+
+	    // Insert the device metadata into the info vector.
+	    for (auto i = 0; i < devices.size(); i++) {
+		const auto& dev = devices[i];
+
+		auto extn_props =
+		  dev.enumerateDeviceExtensionProperties();
+
+		std::sort(extn_props.begin(), extn_props.end(),
+		          [&](const auto& str1, const auto& str2) {
+		              return (strcmp(str1.extensionName,
+		                             str2.extensionName) < 0);
+		          });
+
+		info.emplace_back(device_info{
+		  rank_physical_device(dev, surface, loader),
+		  dev.getFeatures2().features,
+		  dev.getProperties2().properties,
+		  dev.getQueueFamilyProperties2(),
+		  extn_props,
+		});
+	    }
+
+	    // Find the largest name to set the column width later.
+	    for (const auto& i : info) {
+		if (auto nw = strlen(i.props.deviceName); maxw < nw) {
+		    maxw = nw;
+		}
+	    }
+
+	    // Sort the info list alphabetically by device name.
+	    std::sort(info.begin(), info.end(),
+	              [&](const auto& i1, const auto& i2) {
+		          return (strcmp(i1.props.deviceName,
+		                         i2.props.deviceName) < 0);
+	              });
+
+	    // Render the list.
+	    // TODO: Render more properties.
+	    for (const auto& i : info) {
+		estr << "  " << std::setw(maxw) << std::left
+		     << i.props.deviceName << " | (rank " << i.rank
+		     << ") " << vk::to_string(i.props.deviceType)
+		     << std::endl;
+	    }
+
+	    for (const auto& i : info) {
+		estr << std::endl
+		     << "Supported extensions (" << i.props.deviceName
+		     << "): " << std::endl;
+
+		for (const auto& ep : i.extn_props) {
+		    estr << "  " << ep.extensionName << std::endl;
+		}
+
+		estr << std::endl;
+	    }
+
+	    estr << std::endl;
 	}
 
 	template <bool debugging,
@@ -571,7 +571,7 @@ namespace phx_sdl {
 	    }
 	}
 
-	template <int n>
+	template <long unsigned int n>
 	void destroy_semaphores(const vk::Device&             device,
 	                        std::array<vk::Semaphore, n>& sems) {
 	    for (int i = 0; i < n; i++) {
@@ -579,7 +579,7 @@ namespace phx_sdl {
 	    }
 	}
 
-	template <int n>
+	template <long unsigned int n>
 	void destroy_fences(const vk::Device&         device,
 	                    std::array<vk::Fence, n>& fences) {
 	    for (int i = 0; i < n; i++) {
@@ -763,7 +763,6 @@ namespace phx_sdl {
 	      debug_utils_severity, debug_utils_msgtype,
 	      &debug_utils_log_message, nullptr);
 
-	    vk::DebugUtilsMessengerEXT msgr;
 	    debug_messenger = instance.createDebugUtilsMessengerEXT(
 	      msgr_props, nullptr, dyn_loader);
 	}
