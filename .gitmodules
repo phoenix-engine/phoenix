@@ -1,7 +1,7 @@
 [submodule "dep/SDL"]
 	path = dep/SDL
 	url = https://github.com/phoenix-engine/SDL.git
-	branch = 2.0.9
+	branch = 2.0.10-vs2019-patch
 [submodule "dep/spdlog"]
 	path = dep/spdlog
 	url = https://github.com/phoenix-engine/spdlog.git
