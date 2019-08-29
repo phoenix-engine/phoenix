@@ -651,6 +651,12 @@ namespace phx_sdl {
     }
 
     template <bool debugging>
+    const Uint32 VKRenderer<debugging>::debug_window_flags() noexcept {
+	return SDL_WINDOW_SHOWN | SDL_WINDOW_ALLOW_HIGHDPI |
+	       SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE;
+    }
+
+    template <bool debugging>
     void VKRenderer<debugging>::post_hooks() noexcept {
 	if constexpr (!debugging) {
 	    SDL_ShowCursor(false);
@@ -660,12 +666,6 @@ namespace phx_sdl {
     template <bool debugging>
     gfx::extent VKRenderer<debugging>::extent() noexcept {
 	return gfx::extent{ width, height };
-    }
-
-    template <bool debugging>
-    const Uint32 VKRenderer<debugging>::debug_window_flags() noexcept {
-	return SDL_WINDOW_SHOWN | SDL_WINDOW_ALLOW_HIGHDPI |
-	       SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE;
     }
 
     template <bool debugging>
@@ -867,7 +867,10 @@ namespace phx_sdl {
 	// swapchain.
 	if (width == 0 || height == 0) {
 	    // TODO: Get rid of stupid throws.
-	    throw "uh oh";
+	    std::stringstream ss;
+	    ss << "SDL_Vulkan_GetDrawableSize got zero-sized drawable: "
+	       << "(" << width << ", " << height << ")";
+	    throw phx_err::InitError(ss);
 	}
 
 	// create_swapchain returns a tuple with the swapchain along
