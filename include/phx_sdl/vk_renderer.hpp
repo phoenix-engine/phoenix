@@ -5,13 +5,13 @@
 #include <memory>
 #include <type_traits>
 
+#include "lifetime.hpp"
+#include "phx_sdl/window.hpp"
+#include "prelude.hpp"
+
 #include <SDL.h>
 
 #include <vulkan/vulkan.hpp>
-
-#include "prelude.hpp"
-
-#include "phx_sdl/window.hpp"
 
 namespace phx_sdl {
 
@@ -24,18 +24,19 @@ namespace phx_sdl {
 	void destroy_vk(VKRenderer<debugging>*);
 
 	template <bool debugging>
-	struct VKDestroyer
-	    : public std::unique_ptr<VKRenderer<debugging>,
-	                             decltype(&destroy_vk<debugging>)> {
-	    VKDestroyer(VKRenderer<debugging>*);
-	};
+	using VKKeeper = phx::ResourceKeeper<VKRenderer<debugging>,
+	                                     destroy_vk<debugging>>;
 
     } // namespace cleanup
 
     template <bool debugging = false>
     class VKRenderer {
     public:
-	VKRenderer(const Window&);
+	// Default and copy constructors disabled.
+	VKRenderer()            = delete;
+	VKRenderer(VKRenderer&) = delete;
+
+	VKRenderer(Window&&);
 	VKRenderer(VKRenderer&&) noexcept;
 
 	static const Uint32 window_flags() noexcept;
@@ -48,7 +49,7 @@ namespace phx_sdl {
 
     private:
 	// SDL Window handle.
-	const Window& window;
+	Window window;
 
 	// Vulkan instance handle.
 	vk::Instance instance;
@@ -144,7 +145,8 @@ namespace phx_sdl {
 	// first called.)  Therefore, the destroyer will call its
 	// deleter (teardown) before the destructors of any other
 	// member, as long as it is declared last.
-	cleanup::VKDestroyer<debugging> destroyer;
+
+	cleanup::VKKeeper<debugging> destroyer;
     };
 
 } // namespace phx_sdl

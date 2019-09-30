@@ -8,6 +8,11 @@
 #include <set>
 #include <vector>
 
+#include "errors.hpp"
+#include "phx_sdl/vk_renderer.hpp"
+#include "phx_sdl/window.hpp"
+#include "sdl_init_error.hpp"
+
 #include <SDL.h>
 #include <SDL_vulkan.h>
 
@@ -21,27 +26,14 @@
 #include <mapper.hpp>
 #include <resource.hpp>
 
-#include "errors.hpp"
-#include "phx_sdl/vk_renderer.hpp"
-#include "phx_sdl/window.hpp"
-#include "sdl_init_error.hpp"
-
 namespace phx_sdl {
 
     namespace cleanup {
 
-	// TODO: Refactor this into a general-purpose resource
-	// destroyer.
 	template <bool debugging>
 	void destroy_vk(VKRenderer<debugging>* r) {
 	    r->teardown();
 	}
-
-	template <bool debugging>
-	VKDestroyer<debugging>::VKDestroyer(VKRenderer<debugging>* r)
-	    : std::unique_ptr<VKRenderer<debugging>,
-	                      decltype(&destroy_vk<debugging>)>(
-	        r, &destroy_vk<debugging>) {}
 
     } // namespace cleanup
 
@@ -669,8 +661,9 @@ namespace phx_sdl {
     }
 
     template <bool debugging>
-    VKRenderer<debugging>::VKRenderer(const Window& w)
-        : window(w), queue_priority(std::make_unique<float>(1.0f)),
+    VKRenderer<debugging>::VKRenderer(Window&& w)
+        : window(std::move(w)),
+          queue_priority(std::make_unique<float>(1.0f)),
           app_info(
             std::make_unique<vk::ApplicationInfo>(vk::ApplicationInfo(
               w.get_title(), VK_MAKE_VERSION(0, 0, 1), "Phoenix Engine",
@@ -679,13 +672,12 @@ namespace phx_sdl {
 
 	// TODO: Refactor into "proper RAII" (yikes)
 
-	auto whandle = w.handle();
-	auto get_ex  = SDL_Vulkan_GetInstanceExtensions;
+	auto get_ex = SDL_Vulkan_GetInstanceExtensions;
 
 	uint32_t num_extns = 0;
 
 	// Get the number of required extensions.
-	if (auto ok = get_ex(whandle, &num_extns, nullptr); !ok) {
+	if (auto ok = get_ex(window, &num_extns, nullptr); !ok) {
 	    throw phx_err::SDLInitError(
 	      "SDL_Vulkan_GetInstanceExtensions failed (get "
 	      "count)");
@@ -693,7 +685,7 @@ namespace phx_sdl {
 
 	// Get the required extensions.
 	std::vector<const char*> extns(num_extns);
-	if (auto ok = get_ex(whandle, &num_extns, extns.data()); !ok) {
+	if (auto ok = get_ex(window, &num_extns, extns.data()); !ok) {
 	    throw phx_err::SDLInitError(
 	      "SDL_Vulkan_GetInstanceExtensions failed (get data)");
 	}
@@ -775,7 +767,7 @@ namespace phx_sdl {
 	}
 
 	VkSurfaceKHR vksfc;
-	auto ok = SDL_Vulkan_CreateSurface(whandle, instance, &vksfc);
+	auto ok = SDL_Vulkan_CreateSurface(window, instance, &vksfc);
 	if (!ok) {
 	    throw phx_err::SDLInitError(
 	      "SDL_Vulkan_CreateSurface failed");
@@ -861,7 +853,7 @@ namespace phx_sdl {
 	// grph_queue, and that's ok.
 	pres_queue = device.getQueue(presentation_queue_index, 0);
 
-	SDL_Vulkan_GetDrawableSize(w.handle(), &width, &height);
+	SDL_Vulkan_GetDrawableSize(window, &width, &height);
 
 	// If the drawable is zero-sized, we can't set up a sane
 	// swapchain.
@@ -1065,7 +1057,8 @@ namespace phx_sdl {
     VKRenderer<debugging>::VKRenderer(VKRenderer&& from) noexcept
         : destroyer(std::move(from.destroyer)),
 
-          window(from.window), instance(std::move(from.instance)),
+          window(std::move(from.window)),
+          instance(std::move(from.instance)),
 
           phys_device(std::move(from.phys_device)),
           device(std::move(from.device)),
@@ -1272,8 +1265,7 @@ namespace phx_sdl {
 	    try {
 		int width  = 0;
 		int height = 0;
-		SDL_Vulkan_GetDrawableSize(window.handle(), &width,
-		                           &height);
+		SDL_Vulkan_GetDrawableSize(window, &width, &height);
 		if (width == 0 || height == 0) {
 		    // If the drawable is zero-sized, we can't set up a
 		    // sane swapchain.
