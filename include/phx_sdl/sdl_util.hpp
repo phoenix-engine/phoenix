@@ -20,6 +20,8 @@ namespace phx_sdl {
 	        std::function<void()> postHooks =
 	          Helper::noop) noexcept(false);
 
+	SDLUtil(SDLUtil&&) = default;
+
 	int w() { return display.w(); }
 	int h() { return display.h(); }
 

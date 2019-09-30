@@ -1,26 +1,39 @@
 #ifndef PHX_SDL_WINDOW_H
 #define PHX_SDL_WINDOW_H
 
+#include <string>
+
+#include "lifetime.hpp"
+
 #include "SDL.h"
 
 namespace phx_sdl {
 
+    namespace {
+
+	void destroy(SDL_Window*);
+
+	using WindowKeeper = phx::ResourceKeeper<SDL_Window, destroy>;
+
+    } // namespace
+
     class Window {
     public:
-	Window(const char* title = "Phoenix app",
+	Window(std::string title = "Phoenix app",
 	       int         x     = SDL_WINDOWPOS_CENTERED,
 	       int y = SDL_WINDOWPOS_CENTERED, int w = 640, int h = 480,
 	       Uint32 flags = 0) noexcept(false);
 
-	SDL_Window* handle() const;
+	Window(Window&&) = default;
+
+	operator SDL_Window*() const;
 
 	void        show();
 	const char* get_title() const;
 
-	~Window();
-
     private:
-	SDL_Window* window;
+	WindowKeeper window;
+
 	std::string title;
     };
 
