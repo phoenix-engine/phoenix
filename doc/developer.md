@@ -173,7 +173,7 @@ using the following commands:
 $ cd phoenix/res
 $ glslangValidator --help
 # ...
-$ glslangValidator -V vk_renderer.vert.glsl -o verg.spv
+$ glslangValidator -V vk_renderer.vert.glsl -o vert.spv
 $ glslangValidator -V vk_renderer.frag.glsl -o frag.spv
 ```
 

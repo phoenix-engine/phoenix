@@ -1128,6 +1128,8 @@ namespace phx_sdl {
 
 	// TODO: Refactor to avoid giant try/catch.
 	// TODO: Understand why this is slow.
+	// TODO: Understand why Intel integrated GPU does not invalidate
+	// on resize.
 	try {
 	    // Get the index of the swapchain image to use.
 	    const auto& result = device.acquireNextImage2KHR(
