@@ -8,17 +8,17 @@ add_library(Resource STATIC
   mapper.cxx
   mappings.cxx
   resource.cxx
-  res/frag_spv_decl.cxx
-  res/vert_spv_decl.cxx
-  res/vk_renderer_frag_decl.cxx
-  res/vk_renderer_vert_decl.cxx
+  res/triangle_frag_spv_decl.cxx
+  res/triangle_vert_spv_decl.cxx
+  res/world2d_frag_spv_decl.cxx
+  res/world2d_vert_spv_decl.cxx
 )
-
-target_link_libraries(Resource LZ4F)
 
 target_include_directories(Resource PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}
 )
 
-set_property(TARGET Resource PROPERTY CXX_STANDARD 17)
+target_link_libraries(Resource LZ4F)
+
+set_property(TARGET Resource PROPERTY CXX_STANDARD 11)
 set_property(TARGET Resource PROPERTY CXX_STANDARD_REQUIRED ON)

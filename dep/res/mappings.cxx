@@ -4,28 +4,28 @@
 namespace res {
     std::map<ID, const Mapper::resDefn> Mapper::mappings{
 
-	// frag.spv
+	// triangle.frag.spv
 	{
-		ID::frag_spv,
-		{ 415, frag_spv_len, frag_spv },
+		ID::triangle_frag_spv,
+		{ 415, triangle_frag_spv_len, triangle_frag_spv },
 	},
 
-	// vert.spv
+	// triangle.vert.spv
 	{
-		ID::vert_spv,
-		{ 992, vert_spv_len, vert_spv },
+		ID::triangle_vert_spv,
+		{ 992, triangle_vert_spv_len, triangle_vert_spv },
 	},
 
-	// vk_renderer.frag
+	// world2d.frag.spv
 	{
-		ID::vk_renderer_frag,
-		{ 187, vk_renderer_frag_len, vk_renderer_frag },
+		ID::world2d_frag_spv,
+		{ 415, world2d_frag_spv_len, world2d_frag_spv },
 	},
 
-	// vk_renderer.vert
+	// world2d.vert.spv
 	{
-		ID::vk_renderer_vert,
-		{ 336, vk_renderer_vert_len, vk_renderer_vert },
+		ID::world2d_vert_spv,
+		{ 979, world2d_vert_spv_len, world2d_vert_spv },
 	},
     };
 }; // namespace res
