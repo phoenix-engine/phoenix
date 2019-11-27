@@ -661,9 +661,9 @@ namespace phx_sdl {
     }
 
     template <bool debugging>
-    VKRenderer<debugging>::VKRenderer(Window&& w)
+    VKRenderer<debugging>::VKRenderer(Window&& w, const Scene& scene)
         : window(std::move(w)),
-          queue_priority(std::make_unique<float>(1.0f)),
+          queue_priority(std::make_unique<float>(1.0f)), scene(scene),
           app_info(
             std::make_unique<vk::ApplicationInfo>(vk::ApplicationInfo(
               w.get_title(), VK_MAKE_VERSION(0, 0, 1), "Phoenix Engine",
@@ -875,8 +875,8 @@ namespace phx_sdl {
 	swc_image_views = make_image_views(device, swc_images,
 	                                   swc_format);
 
-	const auto& frag_data   = read_all(res::ID::frag_spv);
-	const auto& vert_data   = read_all(res::ID::vert_spv);
+	const auto& frag_data   = read_all(scene.shader.frag);
+	const auto& vert_data   = read_all(scene.shader.vert);
 	const auto& frag_module = create_module(device, frag_data);
 	const auto& vert_module = create_module(device, vert_data);
 
@@ -1092,8 +1092,12 @@ namespace phx_sdl {
           last_frame_time(std::move(from.last_frame_time)),
           frame_count(std::move(from.frame_count)),
 
+          // Resources that need dynamic lifetime and constant address.
           queue_priority(std::move(from.queue_priority)),
           app_info(std::move(from.app_info)),
+
+          // Resources that exist outside of the Renderer's lifetime.
+          scene(from.scene),
 
           width(std::move(from.width)), height(std::move(from.height)),
 
@@ -1294,8 +1298,8 @@ namespace phx_sdl {
 	swc_image_views = make_image_views(device, swc_images,
 	                                   swc_format);
 
-	const auto& frag_data   = read_all(res::ID::frag_spv);
-	const auto& vert_data   = read_all(res::ID::vert_spv);
+	const auto& frag_data   = read_all(scene.shader.frag);
+	const auto& vert_data   = read_all(scene.shader.vert);
 	const auto& frag_module = create_module(device, frag_data);
 	const auto& vert_module = create_module(device, vert_data);
 

@@ -6,6 +6,7 @@
 #include <type_traits>
 
 #include "lifetime.hpp"
+#include "phx_sdl/scene.hpp"
 #include "phx_sdl/window.hpp"
 #include "prelude.hpp"
 
@@ -36,7 +37,7 @@ namespace phx_sdl {
 	VKRenderer()            = delete;
 	VKRenderer(VKRenderer&) = delete;
 
-	VKRenderer(Window&&);
+	VKRenderer(Window&&, const Scene& = Scene::Defaults::triangle);
 	VKRenderer(VKRenderer&&) noexcept;
 
 	static const Uint32 window_flags() noexcept;
@@ -103,6 +104,9 @@ namespace phx_sdl {
 	// Resources that need dynamic lifetime and constant address.
 	std::unique_ptr<float>               queue_priority;
 	std::unique_ptr<vk::ApplicationInfo> app_info;
+
+	// Resources that exist outside of the lifetime of the Renderer.
+	const phx_sdl::Scene& scene;
 
 	// TODO: Refactor into a usable debugger harness or API, e.g.
 	// with auto extension config + dynamic loader built-in exposing

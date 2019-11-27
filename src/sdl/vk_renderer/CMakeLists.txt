@@ -15,11 +15,12 @@ target_link_libraries(SDLVKRenderer
   Error
   SDLHelper
   Resource
+  SDLScene
 )
 
-# target_include_directories(SDLVKRenderer PUBLIC
-#   ${GLAD_INCLUDE_DIR}
-# )
+target_include_directories(SDLVKRenderer PUBLIC
+  ${Phoenix_INCLUDE_DIR}
+)
 
 set_property(TARGET SDLVKRenderer PROPERTY POSITION_INDEPENDENT_CODE ON)
 
