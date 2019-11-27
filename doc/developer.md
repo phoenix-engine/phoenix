@@ -86,7 +86,7 @@ $ phx help gen
 
 # ...
 
-$ phx gen -l 9 --to ../dep/res
+$ phx gen -l 9 --to ../dep/res --match ".*\.(jpg|spv|wav)"
 ```
 
 Now a customized compressed streaming asset library is included in the
