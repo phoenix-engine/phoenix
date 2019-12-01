@@ -661,9 +661,10 @@ namespace phx_sdl {
     }
 
     template <bool debugging>
-    VKRenderer<debugging>::VKRenderer(Window&& w, const Scene& scene)
+    VKRenderer<debugging>::VKRenderer(Window&& w, const Scene& scene_in)
         : window(std::move(w)),
-          queue_priority(std::make_unique<float>(1.0f)), scene(scene),
+          queue_priority(std::make_unique<float>(1.0f)),
+          scene(scene_in),
           app_info(
             std::make_unique<vk::ApplicationInfo>(vk::ApplicationInfo(
               w.get_title(), VK_MAKE_VERSION(0, 0, 1), "Phoenix Engine",
@@ -875,8 +876,46 @@ namespace phx_sdl {
 	swc_image_views = make_image_views(device, swc_images,
 	                                   swc_format);
 
-	const auto& frag_data   = read_all(scene.shader.frag);
-	const auto& vert_data   = read_all(scene.shader.vert);
+	///////////////////// SHADER DEPENDENT /////////////////////////
+	// Load shader data and create modules.
+	////////////////////////////////////////////////////////////////
+	// Make fragment and vertex stage configs using these modules.
+	// Make list of shader stage configs for the shader pipeline.
+	// Make vertex input config with bindings and attributes.
+	//  (Not used for static scenes.)
+	// Make input assembly state config, with vertex primitive
+	//   topology.  This controls how the pipeline will assemble
+	//   primitives (such as triangles) from vertices.
+	// Make the viewport state config with fullscreen scissor.
+	// Make the rasterization state config with optional depth clamp
+	//   and discard, poly mode, cull mode, front face mode, etc.
+	// Make the multisample state config.
+	// Make the color blend attachment and state configs.
+	// Create the pipeline layout on the device.
+	// Get the Vulkan dynamic dispatch handle from the instance.
+	// Make the render pass config.
+	//   - Make the color attachment description & reference configs
+	//   - Make the subpass config
+	//   - Make the subpass dependencies config
+	// Create the render pass on the device.
+	// Create the pipeline cache on the device.
+	// Create the pipeline on the device, caching it.
+	//   - Shader stages
+	//   - Vertex input config
+	//   - Input assembly config
+	//   - Viewport config
+	//   - Rasterizer config
+	//   - Multisampling config
+	//   - Color blending config
+	//   - Pipeline layout
+	//   - Render pass
+	// For each swapchain image view, create a new framebuffer on
+	//   the device using the render pass.
+	// Create a command pool and allocate command buffers on the
+	//   device, on its graphics queue.
+	// For each command buffer, encode a new draw command.
+	const auto& frag_data   = read_all(scene.shader().frag);
+	const auto& vert_data   = read_all(scene.shader().vert);
 	const auto& frag_module = create_module(device, frag_data);
 	const auto& vert_module = create_module(device, vert_data);
 
@@ -973,6 +1012,7 @@ namespace phx_sdl {
 
 	vk::AttachmentReference2KHR color_attachment_ref(
 	  0, vk::ImageLayout::eColorAttachmentOptimal);
+
 	vk::SubpassDescription2KHR subpass(
 	  vk::SubpassDescriptionFlags(),
 	  vk::PipelineBindPoint::eGraphics, 0, 0, nullptr, 1,
@@ -1022,23 +1062,16 @@ namespace phx_sdl {
 
 	for (int i = 0; i < swc_framebuffers.size(); i++) {
 	    const auto& cb = cmd_buffers[i];
+
+	    // Begin a new command.
 	    cb.begin(vk::CommandBufferBeginInfo(
 	      vk::CommandBufferUsageFlagBits::eSimultaneousUse));
 
-	    vk::ClearValue ccol(vk::ClearColorValue(
-	      std::array<float, 4>{ 0.0f, 0.0f, 0.0f, 1.0f }));
+	    // Use the scene's renderpass encoder.
+	    scene.encode_renderpass(cb, dyn_loader, render_pass,
+	                            swc_framebuffers[i], swc_extent,
+	                            pipeline, DEVICE_MASK);
 
-	    cb.setDeviceMaskKHR(DEVICE_MASK, dyn_loader);
-
-	    cb.beginRenderPass(
-	      vk::RenderPassBeginInfo(render_pass, swc_framebuffers[i],
-	                              vk::Rect2D({ 0, 0 }, swc_extent),
-	                              1, &ccol),
-	      vk::SubpassContents::eInline);
-
-	    cb.bindPipeline(vk::PipelineBindPoint::eGraphics, pipeline);
-	    cb.draw(3, 1, 0, 0);
-	    cb.endRenderPass();
 	    cb.end();
 	}
 
@@ -1298,8 +1331,8 @@ namespace phx_sdl {
 	swc_image_views = make_image_views(device, swc_images,
 	                                   swc_format);
 
-	const auto& frag_data   = read_all(scene.shader.frag);
-	const auto& vert_data   = read_all(scene.shader.vert);
+	const auto& frag_data   = read_all(scene.shader().frag);
+	const auto& vert_data   = read_all(scene.shader().vert);
 	const auto& frag_module = create_module(device, frag_data);
 	const auto& vert_module = create_module(device, vert_data);
 
@@ -1438,23 +1471,15 @@ namespace phx_sdl {
 
 	for (int i = 0; i < swc_framebuffers.size(); i++) {
 	    const auto& cb = cmd_buffers[i];
+
 	    cb.begin(vk::CommandBufferBeginInfo(
 	      vk::CommandBufferUsageFlagBits::eSimultaneousUse));
 
-	    vk::ClearValue ccol(vk::ClearColorValue(
-	      std::array<float, 4>{ 0.0f, 0.0f, 0.0f, 1.0f }));
+	    // Use the scene's renderpass encoder.
+	    scene.encode_renderpass(cb, dyn_loader, render_pass,
+	                            swc_framebuffers[i], swc_extent,
+	                            pipeline, DEVICE_MASK);
 
-	    cb.setDeviceMaskKHR(DEVICE_MASK, dyn_loader);
-
-	    cb.beginRenderPass(
-	      vk::RenderPassBeginInfo(render_pass, swc_framebuffers[i],
-	                              vk::Rect2D({ 0, 0 }, swc_extent),
-	                              1, &ccol),
-	      vk::SubpassContents::eInline);
-
-	    cb.bindPipeline(vk::PipelineBindPoint::eGraphics, pipeline);
-	    cb.draw(3, 1, 0, 0);
-	    cb.endRenderPass();
 	    cb.end();
 	}
 

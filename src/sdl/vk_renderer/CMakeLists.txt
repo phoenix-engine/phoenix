@@ -14,8 +14,8 @@ target_link_libraries(SDLVKRenderer
   Vulkan::Vulkan
   Error
   SDLHelper
-  Resource
   SDLScene
+  Resource
 )
 
 target_include_directories(SDLVKRenderer PUBLIC

@@ -1,9 +1,13 @@
 #ifndef PHX_SDL_SCENE_HPP
 #define PHX_SDL_SCENE_HPP
 
+#include <memory>
 #include <vector>
 
+#include <vulkan/vulkan.hpp>
+
 #include <glm/vec2.hpp>
+
 #include <id.hpp>
 
 namespace phx_sdl {
@@ -20,14 +24,51 @@ namespace phx_sdl {
 	    res::ID vert;
 	};
 
-	// Defaults has some predefined Scenes.
-	struct Defaults {
-	    static const Scene triangle;
-	    static const Scene world2d;
-	};
-
 	Surface surface;
-	Shader  shader;
+
+	virtual Shader shader(void) const noexcept = 0;
+
+	virtual void
+	encode_renderpass(const vk::CommandBuffer&   into,
+	                  vk::DispatchLoaderDynamic& loader,
+	                  vk::RenderPass& pass, vk::Framebuffer& fb,
+	                  vk::Extent2D& extent, vk::Pipeline& pipeline,
+	                  const uint32_t device_mask) const
+	  noexcept = 0;
+    };
+
+    class Triangle : public Scene {
+    public:
+	Shader shader(void) const noexcept override;
+
+	void
+	encode_renderpass(const vk::CommandBuffer&   into,
+	                  vk::DispatchLoaderDynamic& loader,
+	                  vk::RenderPass& pass, vk::Framebuffer& fb,
+	                  vk::Extent2D& extent, vk::Pipeline& pipeline,
+	                  const uint32_t device_mask) const
+	  noexcept override;
+    };
+
+    class World2d : public Scene {
+    public:
+	Shader shader(void) const noexcept override;
+
+	void
+	encode_renderpass(const vk::CommandBuffer&   into,
+	                  vk::DispatchLoaderDynamic& loader,
+	                  vk::RenderPass& pass, vk::Framebuffer& fb,
+	                  vk::Extent2D& extent, vk::Pipeline& pipeline,
+	                  const uint32_t device_mask) const
+	  noexcept override;
+    };
+
+    class DefaultScenes {
+    public:
+	DefaultScenes() = delete;
+
+	static const Triangle triangle;
+	static const World2d  world2d;
     };
 
 } // namespace phx_sdl

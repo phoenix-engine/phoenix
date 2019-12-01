@@ -37,7 +37,7 @@ namespace phx_sdl {
 	VKRenderer()            = delete;
 	VKRenderer(VKRenderer&) = delete;
 
-	VKRenderer(Window&&, const Scene& = Scene::Defaults::triangle);
+	VKRenderer(Window&&, const Scene& = DefaultScenes::triangle);
 	VKRenderer(VKRenderer&&) noexcept;
 
 	static const Uint32 window_flags() noexcept;
@@ -106,7 +106,7 @@ namespace phx_sdl {
 	std::unique_ptr<vk::ApplicationInfo> app_info;
 
 	// Resources that exist outside of the lifetime of the Renderer.
-	const phx_sdl::Scene& scene;
+	const Scene& scene;
 
 	// TODO: Refactor into a usable debugger harness or API, e.g.
 	// with auto extension config + dynamic loader built-in exposing

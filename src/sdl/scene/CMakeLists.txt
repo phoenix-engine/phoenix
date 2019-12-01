@@ -2,11 +2,14 @@ set(SDLScene_SRCS
   scene.cxx
 )
 
+find_package(Vulkan REQUIRED)
+
 add_library(SDLScene STATIC ${SDLScene_SRCS})
 
 target_link_libraries(SDLScene
   Resource
   glm
+  Vulkan::Vulkan
 )
 
 target_include_directories(SDLScene PUBLIC
