@@ -1,3 +1,5 @@
+cmake_policy(SET CMP0058 NEW)
+
 find_program(
     PHX_CLI "phx"
     DOC "The Phoenix CLI: https://github.com/phoenix-engine/phx"
@@ -47,11 +49,31 @@ add_custom_command(
 add_custom_target(
     GenerateShaderResources
     DEPENDS
-	# vk_renderer_triangle.vert.glsl vk_renderer_triangle.frag.glsl
-	# vk_renderer_world2d.vert.glsl vk_renderer_world2d.frag.glsl
+	triangle.vert.spv triangle.frag.spv
+	world2d.vert.spv world2d.frag.spv
+    BYPRODUCTS
+	../dep/res/res/triangle_frag_spv_decl.cxx ../dep/res/res/triangle_frag_spv_real.cxx
+	../dep/res/res/triangle_vert_spv_decl.cxx ../dep/res/res/triangle_vert_spv_real.cxx
+	../dep/res/res/world2d_frag_spv_decl.cxx  ../dep/res/res/world2d_frag_spv_real.cxx
+	../dep/res/res/world2d_vert_spv_decl.cxx  ../dep/res/res/world2d_vert_spv_real.cxx
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMAND ${PHX_CLI} gen --skip-finalize -l 9 --from . --to ../dep/res --match ".*\.spv"
+    VERBATIM
+    COMMENT "Generating assets..."
+)
+
+#[[
+add_custom_command(
+    OUTPUT
+	../dep/res/res/triangle_frag_spv_decl.cxx ../dep/res/res/triangle_frag_spv_real.cxx
+	../dep/res/res/triangle_vert_spv_decl.cxx ../dep/res/res/triangle_vert_spv_real.cxx
+	../dep/res/res/world2d_frag_spv_decl.cxx  ../dep/res/res/world2d_frag_spv_real.cxx
+	../dep/res/res/world2d_vert_spv_decl.cxx  ../dep/res/res/world2d_vert_spv_real.cxx
+    DEPENDS
 	triangle.vert.spv triangle.frag.spv
 	world2d.vert.spv world2d.frag.spv
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     COMMAND ${PHX_CLI} gen --skip-finalize -l 9 --from . --to ../dep/res --match ".*\.spv"
     COMMENT "Generating assets..."
 )
+]]
