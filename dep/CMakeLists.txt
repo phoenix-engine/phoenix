@@ -11,8 +11,8 @@ endif()
 add_subdirectory(spdlog/include)
 
 add_subdirectory(res)
-# TODO: Make this codegen process smoother (don't touch CMakeLists.txt?)
-# # Regenerate shaders before building Resource if necessary.
+## TODO: Make this codegen process smoother (dep chain incorrect!)
+## Regenerate shaders before building Resource if necessary.
 # add_dependencies(Resource GenerateShaderResources)
 
 add_subdirectory(eigen)
