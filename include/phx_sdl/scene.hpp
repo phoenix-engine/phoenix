@@ -28,25 +28,25 @@ namespace phx_sdl {
 
 	virtual Shader shader(void) const noexcept = 0;
 
-	virtual void
-	encode_renderpass(const vk::CommandBuffer&   into,
-	                  vk::DispatchLoaderDynamic& loader,
-	                  vk::RenderPass& pass, vk::Framebuffer& fb,
-	                  vk::Extent2D& extent, vk::Pipeline& pipeline,
-	                  const uint32_t device_mask) const
-	  noexcept = 0;
+	virtual void encode_renderpass(
+	  const vk::CommandBuffer&         into,
+	  const vk::DispatchLoaderDynamic& loader,
+	  const vk::RenderPass& pass, const vk::Framebuffer& fb,
+	  const vk::Extent2D& extent, const vk::Pipeline& pipeline,
+	  const uint32_t device_mask) const noexcept = 0;
     };
 
     class Triangle : public Scene {
     public:
 	Shader shader(void) const noexcept override;
 
-	void
-	encode_renderpass(const vk::CommandBuffer&   into,
-	                  vk::DispatchLoaderDynamic& loader,
-	                  vk::RenderPass& pass, vk::Framebuffer& fb,
-	                  vk::Extent2D& extent, vk::Pipeline& pipeline,
-	                  const uint32_t device_mask) const
+	void encode_renderpass(const vk::CommandBuffer&         into,
+	                       const vk::DispatchLoaderDynamic& loader,
+	                       const vk::RenderPass&            pass,
+	                       const vk::Framebuffer&           fb,
+	                       const vk::Extent2D&              extent,
+	                       const vk::Pipeline& pipeline,
+	                       const uint32_t      device_mask) const
 	  noexcept override;
     };
 
@@ -54,12 +54,13 @@ namespace phx_sdl {
     public:
 	Shader shader(void) const noexcept override;
 
-	void
-	encode_renderpass(const vk::CommandBuffer&   into,
-	                  vk::DispatchLoaderDynamic& loader,
-	                  vk::RenderPass& pass, vk::Framebuffer& fb,
-	                  vk::Extent2D& extent, vk::Pipeline& pipeline,
-	                  const uint32_t device_mask) const
+	void encode_renderpass(const vk::CommandBuffer&         into,
+	                       const vk::DispatchLoaderDynamic& loader,
+	                       const vk::RenderPass&            pass,
+	                       const vk::Framebuffer&           fb,
+	                       const vk::Extent2D&              extent,
+	                       const vk::Pipeline& pipeline,
+	                       const uint32_t      device_mask) const
 	  noexcept override;
     };
 

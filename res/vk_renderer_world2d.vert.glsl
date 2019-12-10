@@ -2,6 +2,7 @@
 #extension GL_ARB_separate_shader_objects : enable
 
 layout(location = 0) out vec3 fragColor;
+layout(location = 1) out vec2 texCoord;
 
 vec2 positions[6] = vec2[](
     // Top-left triangle
@@ -30,4 +31,5 @@ void main() {
     );
 
     fragColor = colors[gl_VertexIndex];
+    texCoord = positions[gl_VertexIndex];
 }

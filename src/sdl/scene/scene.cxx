@@ -5,10 +5,11 @@
 namespace phx_sdl {
 
     void Triangle::encode_renderpass(
-      const vk::CommandBuffer& into, vk::DispatchLoaderDynamic& loader,
-      vk::RenderPass& pass, vk::Framebuffer& fb, vk::Extent2D& extent,
-      vk::Pipeline& pipeline, const uint32_t device_mask) const
-      noexcept {
+      const vk::CommandBuffer&         into,
+      const vk::DispatchLoaderDynamic& loader,
+      const vk::RenderPass& pass, const vk::Framebuffer& fb,
+      const vk::Extent2D& extent, const vk::Pipeline& pipeline,
+      const uint32_t device_mask) const noexcept {
 
 	// Make a clearcolor config.
 	vk::ClearValue ccol(vk::ClearColorValue(
@@ -37,10 +38,11 @@ namespace phx_sdl {
     };
 
     void World2d::encode_renderpass(
-      const vk::CommandBuffer& into, vk::DispatchLoaderDynamic& loader,
-      vk::RenderPass& pass, vk::Framebuffer& fb, vk::Extent2D& extent,
-      vk::Pipeline& pipeline, const uint32_t device_mask) const
-      noexcept {
+      const const vk::CommandBuffer&   into,
+      const vk::DispatchLoaderDynamic& loader,
+      const vk::RenderPass& pass, const vk::Framebuffer& fb,
+      const vk::Extent2D& extent, const vk::Pipeline& pipeline,
+      const uint32_t device_mask) const noexcept {
 
 	// Make a clearcolor config.
 	vk::ClearValue ccol(vk::ClearColorValue(

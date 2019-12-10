@@ -6,8 +6,9 @@ Graphics<Renderer, RenderPayload>::Graphics(Renderer&& r, int wIn,
 }
 
 template <typename Renderer, typename RenderPayload>
-void Graphics<Renderer, RenderPayload>::update() {
-    renderer.update();
+void Graphics<Renderer, RenderPayload>::update(
+  const event::EventIntent& in) {
+    renderer.update(in);
 }
 
 template <typename Renderer, typename RenderPayload>
@@ -47,4 +48,12 @@ void Graphics<Renderer, RenderPayload>::drawBlob(int x, int y, int r,
 	    }
 	}
     }
+}
+
+template <typename Renderer, typename RenderPayload>
+typename Graphics<Renderer, RenderPayload>::Metrics
+Graphics<Renderer, RenderPayload>::get_metrics() noexcept {
+    return typename Graphics<Renderer, RenderPayload>::Metrics{
+	renderer.get_metrics()
+    };
 }
