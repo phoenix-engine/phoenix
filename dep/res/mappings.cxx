@@ -4,6 +4,18 @@
 namespace res {
     std::map<ID, const Mapper::resDefn> Mapper::mappings{
 
+	// pushconstants.frag.spv
+	{
+		ID::pushconstants_frag_spv,
+		{ 1127, pushconstants_frag_spv_len, pushconstants_frag_spv },
+	},
+
+	// pushconstants.vert.spv
+	{
+		ID::pushconstants_vert_spv,
+		{ 1096, pushconstants_vert_spv_len, pushconstants_vert_spv },
+	},
+
 	// triangle.frag.spv
 	{
 		ID::triangle_frag_spv,
@@ -14,18 +26,6 @@ namespace res {
 	{
 		ID::triangle_vert_spv,
 		{ 992, triangle_vert_spv_len, triangle_vert_spv },
-	},
-
-	// world2d.frag.spv
-	{
-		ID::world2d_frag_spv,
-		{ 415, world2d_frag_spv_len, world2d_frag_spv },
-	},
-
-	// world2d.vert.spv
-	{
-		ID::world2d_vert_spv,
-		{ 979, world2d_vert_spv_len, world2d_vert_spv },
 	},
     };
 }; // namespace res

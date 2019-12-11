@@ -35,6 +35,14 @@ namespace res {
 	// Here, all names of assets are defined.  Each must have an ID
 	// associated with it.
 
+	// pushconstants.frag.spv
+	static const size_t        pushconstants_frag_spv_len;
+	static const unsigned char pushconstants_frag_spv[];
+
+	// pushconstants.vert.spv
+	static const size_t        pushconstants_vert_spv_len;
+	static const unsigned char pushconstants_vert_spv[];
+
 	// triangle.frag.spv
 	static const size_t        triangle_frag_spv_len;
 	static const unsigned char triangle_frag_spv[];
@@ -42,14 +50,6 @@ namespace res {
 	// triangle.vert.spv
 	static const size_t        triangle_vert_spv_len;
 	static const unsigned char triangle_vert_spv[];
-
-	// world2d.frag.spv
-	static const size_t        world2d_frag_spv_len;
-	static const unsigned char world2d_frag_spv[];
-
-	// world2d.vert.spv
-	static const size_t        world2d_vert_spv_len;
-	static const unsigned char world2d_vert_spv[];
     };
 }; // namespace res
 
