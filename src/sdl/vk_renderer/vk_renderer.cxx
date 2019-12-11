@@ -713,14 +713,18 @@ namespace phx_sdl {
     TransientCommand::status
     TransientCommand::update_status(const vk::Device& device) {
 	if (stat == status::ready) {
+	    // The command is known to be ready.
 	    return status::ready;
 	}
 
 	const auto& vkStatus = device.getEventStatus(evt);
+
+	// If it was set, the command has been signaled.
 	if (vkStatus == vk::Result::eEventSet) {
 	    return stat = status::signaled;
 	}
 
+	// If it was unset but pending, assume it is still pending.
 	return stat;
     }
 
@@ -1163,7 +1167,8 @@ namespace phx_sdl {
 	      vk::CommandPoolCreateFlagBits::eResetCommandBuffer,
 	    graphics_queue_index));
 
-	// Create the first push-constant transient command / event.
+	// Create the first two push-constant transient commands.
+	push_tmp_cmd(device, tmp_cmd_pool, tmp_cmds);
 	push_tmp_cmd(device, tmp_cmd_pool, tmp_cmds);
 
 	for (int i = 0; i < max_frames_inflight; i++) {
@@ -1218,7 +1223,6 @@ namespace phx_sdl {
           inflight_fences(std::move(from.inflight_fences)),
 
           metrics(std::move(from.metrics)),
-          prev_frame_time(std::move(from.prev_frame_time)),
 
           // Resources that need dynamic lifetime and constant address.
           queue_priority(std::move(from.queue_priority)),
@@ -1418,17 +1422,7 @@ namespace phx_sdl {
 
 	// If everything succeeded, update frame metrics.
 	if constexpr (debugging) {
-	    const auto& t  = Metrics::clock::now();
-	    const auto& dt = t - prev_frame_time;
-	    if (dt > metrics.max_frame_time) {
-		metrics.max_frame_time = dt;
-	    }
-
-	    prev_frame_time = t;
-
-	    metrics.avg_frame_time = Metrics::dur(Metrics::dur::rep(
-	      (dt.count() * alpha) +
-	      (1.0 - alpha) * metrics.avg_frame_time.count()));
+	    metrics.update();
 	}
 
 	current_frame = (c + 1) % max_frames_inflight;
@@ -1439,6 +1433,27 @@ namespace phx_sdl {
     typename VKRenderer<debugging>::Metrics
     VKRenderer<debugging>::get_metrics() noexcept {
 	return metrics;
+    }
+
+    template <bool debugging>
+    void VKRenderer<debugging>::Metrics::update() noexcept {
+	const auto& t = clock::now();
+	if (prev_frame_time.time_since_epoch().count() == 0) {
+	    prev_frame_time = t;
+	    avg_frame_time  = dur::zero();
+	    return;
+	}
+
+	const auto& dt = t - prev_frame_time;
+	if (dt > max_frame_time) {
+	    max_frame_time = dt;
+	}
+
+	prev_frame_time = t;
+
+	avg_frame_time = dur(
+	  dur::rep((dt.count() * alpha) +
+	           (1.0 - alpha) * avg_frame_time.count()));
     }
 
     template <bool debugging>

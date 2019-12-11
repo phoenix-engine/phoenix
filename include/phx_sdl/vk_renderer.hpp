@@ -94,8 +94,16 @@ namespace phx_sdl {
 	    using period = clock::period;
 	    using ms     = std::chrono::duration<double, std::milli>;
 
-	    dur avg_frame_time;
-	    dur max_frame_time;
+	    dur  avg_frame_time;
+	    dur  max_frame_time;
+	    time prev_frame_time;
+
+	    // Decay constant for moving average.
+	    inline static const double alpha = 0.8;
+
+	    // update refreshes the metrics with the latest current
+	    // time.
+	    void update() noexcept;
 	};
 
 	Metrics get_metrics() noexcept;
@@ -150,11 +158,7 @@ namespace phx_sdl {
 
 	size_t current_frame;
 
-	// Metrics stuff.
-	inline static const double alpha = 0.8;
-
-	Metrics                metrics;
-	typename Metrics::time prev_frame_time;
+	Metrics metrics;
 
 	// img_ready is signaled when the swapchain image has been
 	// acquired during the draw call.
