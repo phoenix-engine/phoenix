@@ -3,10 +3,10 @@
 
 namespace res {
     enum class ID {
-	frag_spv, // frag.spv
-	vert_spv, // vert.spv
-	vk_renderer_frag, // vk_renderer.frag
-	vk_renderer_vert, // vk_renderer.vert
+	pushconstants_frag_spv, // pushconstants.frag.spv
+	pushconstants_vert_spv, // pushconstants.vert.spv
+	triangle_frag_spv, // triangle.frag.spv
+	triangle_vert_spv, // triangle.vert.spv
     };
 };
 

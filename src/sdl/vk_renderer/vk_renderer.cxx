@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "errors.hpp"
+#include "input.hpp"
 #include "phx_sdl/vk_renderer.hpp"
 #include "phx_sdl/window.hpp"
 #include "sdl_init_error.hpp"
@@ -624,51 +625,124 @@ namespace phx_sdl {
 	        reinterpret_cast<const uint32_t*>(data.data()))));
 	}
 
+	void encode_renderpass(const Scene&                     scene,
+	                       const vk::CommandBuffer&         into,
+	                       const vk::DispatchLoaderDynamic& loader,
+	                       const vk::RenderPass&            pass,
+	                       const vk::Framebuffer&           fb,
+	                       const vk::Extent2D&              extent,
+	                       const vk::Pipeline& pipeline) {
+
+	    into.begin(vk::CommandBufferBeginInfo(
+	      vk::CommandBufferUsageFlagBits::eSimultaneousUse));
+
+	    // Use the scene's renderpass encoder.
+	    scene.encode_renderpass(into, loader, pass, fb, extent,
+	                            pipeline, DEVICE_MASK);
+
+	    into.end();
+	}
+
+	// push_tmp_command allocates a new transient command buffer on
+	// the device, creates an Event on the device, assigns the Event
+	// to the buffer, and pushes the buffer and event onto the ends
+	// of the given deques.
+	auto& push_tmp_cmd(const vk::Device&             device,
+	                   const vk::CommandPool&        pool,
+	                   std::deque<TransientCommand>& bufs) {
+	    bufs.emplace_front(TransientCommand{
+	      // Allocate a new command buffer.
+	      device.allocateCommandBuffers(
+	        vk::CommandBufferAllocateInfo(
+	          pool, vk::CommandBufferLevel::ePrimary, 1))[0],
+
+	      // Create a new event for the command to signal.
+	      // https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#synchronization-events
+	      device.createEvent(
+	        vk::EventCreateInfo(vk::EventCreateFlags())),
+
+	      // Commands are always ready when first created.
+	      TransientCommand::status::ready,
+	    });
+
+	    return bufs.front();
+	}
+
+	template <typename Element>
+	auto& move_first_to_end(std::deque<Element>& dq) {
+	    if (dq.size() <= 1) {
+		return dq;
+	    }
+
+	    dq.push_back(std::move(dq.front()));
+	    dq.pop_front();
+
+	    return dq;
+	}
+
+	auto& first_ready_cmd(const vk::Device&             device,
+	                      const vk::CommandPool&        pool,
+	                      std::deque<TransientCommand>& cmds) {
+	    auto& tc = cmds.front();
+
+	    using tc_status = TransientCommand::status;
+
+	    // Check whether we need to allocate a new transient
+	    // command buffer for UBOs / push constants.
+	    switch (tc.update_status(device)) {
+	    case tc_status::ready:
+		// It's already ready to use.
+		return tc;
+
+	    case tc_status::signaled:
+		// It's been set, so we can reset and reuse it.
+		device.resetEvent(tc.evt);
+		return tc;
+	    }
+
+	    // case tc_status::pending:
+
+	    // It hasn't been set yet, so we need to move it to the
+	    // end and make a new event and transient command
+	    // buffer.
+	    return push_tmp_cmd(device, pool, move_first_to_end(cmds));
+	}
+
     }; // namespace
+
+    TransientCommand::status
+    TransientCommand::update_status(const vk::Device& device) {
+	if (stat == status::ready) {
+	    // The command is known to be ready.
+	    return status::ready;
+	}
+
+	const auto& vkStatus = device.getEventStatus(evt);
+
+	// If it was set, the command has been signaled.
+	if (vkStatus == vk::Result::eEventSet) {
+	    return stat = status::signaled;
+	}
+
+	// If it was unset but pending, assume it is still pending.
+	return stat;
+    }
 
     // TODO: Refactor to static "builder" and initializer list.
     template class VKRenderer<true>;
     template class VKRenderer<false>;
 
     template <bool debugging>
-    const Uint32 VKRenderer<debugging>::window_flags() noexcept {
-	if constexpr (debugging) {
-	    return debug_window_flags();
-	}
-
-	return SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_SHOWN |
-	       SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_VULKAN |
-	       SDL_WINDOW_INPUT_GRABBED | SDL_WINDOW_INPUT_FOCUS |
-	       SDL_WINDOW_MOUSE_CAPTURE | SDL_WINDOW_MOUSE_FOCUS;
-    }
-
-    template <bool debugging>
-    const Uint32 VKRenderer<debugging>::debug_window_flags() noexcept {
-	return SDL_WINDOW_SHOWN | SDL_WINDOW_ALLOW_HIGHDPI |
-	       SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE;
-    }
-
-    template <bool debugging>
-    void VKRenderer<debugging>::post_hooks() noexcept {
-	if constexpr (!debugging) {
-	    SDL_ShowCursor(false);
-	}
-    }
-
-    template <bool debugging>
-    gfx::extent VKRenderer<debugging>::extent() noexcept {
-	return gfx::extent{ width, height };
-    }
-
-    template <bool debugging>
-    VKRenderer<debugging>::VKRenderer(Window&& w)
+    VKRenderer<debugging>::VKRenderer(Window&& w, const Scene& scene_in)
         : window(std::move(w)),
           queue_priority(std::make_unique<float>(1.0f)),
+          scene(scene_in),
+          intent(bridge::Intent{ glm::vec2{ 0.0, 0.0 } }),
           app_info(
             std::make_unique<vk::ApplicationInfo>(vk::ApplicationInfo(
               w.get_title(), VK_MAKE_VERSION(0, 0, 1), "Phoenix Engine",
               VK_MAKE_VERSION(0, 0, 1), VK_VERSION_1_1))),
-          current_frame(0), frame_count(0), destroyer(this) {
+          current_frame(0), destroyer(this) {
 
 	// TODO: Refactor into "proper RAII" (yikes)
 
@@ -723,6 +797,9 @@ namespace phx_sdl {
 	    // Add the comprehensive Khronos validation combo layer.
 	    layers.push_back("VK_LAYER_KHRONOS_validation");
 	    // layers.push_back("VK_LAYER_LUNARG_standard_validation");
+
+	    // Lots of debugging.
+	    // layers.push_back("VK_LAYER_LUNARG_api_dump");
 
 	    // Add the debug utils extension for error callbacks.
 	    extns.push_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
@@ -875,8 +952,46 @@ namespace phx_sdl {
 	swc_image_views = make_image_views(device, swc_images,
 	                                   swc_format);
 
-	const auto& frag_data   = read_all(res::ID::frag_spv);
-	const auto& vert_data   = read_all(res::ID::vert_spv);
+	///////////////////// SHADER DEPENDENT /////////////////////////
+	// Load shader data and create modules.
+	////////////////////////////////////////////////////////////////
+	// Make fragment and vertex stage configs using these modules.
+	// Make list of shader stage configs for the shader pipeline.
+	// Make vertex input config with bindings and attributes.
+	//  (Not used for static scenes.)
+	// Make input assembly state config, with vertex primitive
+	//   topology.  This controls how the pipeline will assemble
+	//   primitives (such as triangles) from vertices.
+	// Make the viewport state config with fullscreen scissor.
+	// Make the rasterization state config with optional depth clamp
+	//   and discard, poly mode, cull mode, front face mode, etc.
+	// Make the multisample state config.
+	// Make the color blend attachment and state configs.
+	// Create the pipeline layout on the device.
+	// Get the Vulkan dynamic dispatch handle from the instance.
+	// Make the render pass config.
+	//   - Make the color attachment description & reference configs
+	//   - Make the subpass config
+	//   - Make the subpass dependencies config
+	// Create the render pass on the device.
+	// Create the pipeline cache on the device.
+	// Create the pipeline on the device, caching it.
+	//   - Shader stages
+	//   - Vertex input config
+	//   - Input assembly config
+	//   - Viewport config
+	//   - Rasterizer config
+	//   - Multisampling config
+	//   - Color blending config
+	//   - Pipeline layout
+	//   - Render pass
+	// For each swapchain image view, create a new framebuffer on
+	//   the device using the render pass.
+	// Create a command pool and allocate command buffers on the
+	//   device, on its graphics queue.
+	// For each command buffer, encode a new draw command.
+	const auto& frag_data   = read_all(scene.shader().frag);
+	const auto& vert_data   = read_all(scene.shader().vert);
 	const auto& frag_module = create_module(device, frag_data);
 	const auto& vert_module = create_module(device, vert_data);
 
@@ -930,16 +1045,13 @@ namespace phx_sdl {
 	// vk::PipelineDepthStencilStateCreateInfo();
 
 	// Configure color blending.
-	auto f0    = vk::BlendFactor::eZero;
-	auto f1    = vk::BlendFactor::eOne;
-	auto fsa   = vk::BlendFactor::eSrcAlpha;
-	auto f1msa = vk::BlendFactor::eOneMinusSrcAlpha;
-	auto add   = vk::BlendOp::eAdd;
-	auto all_color_components =
-	  vk::FlagTraits<vk::ColorComponentFlagBits>::allFlags;
 	vk::PipelineColorBlendAttachmentState color_blend_attachment(
-	  true, fsa, f1msa, add, f1, f0, add,
-	  vk::ColorComponentFlags(all_color_components));
+	  true, vk::BlendFactor::eSrcAlpha,
+	  vk::BlendFactor::eOneMinusSrcAlpha, vk::BlendOp::eAdd,
+	  vk::BlendFactor::eOne, vk::BlendFactor::eZero,
+	  vk::BlendOp::eAdd,
+	  vk::ColorComponentFlags(
+	    vk::FlagTraits<vk::ColorComponentFlagBits>::allFlags));
 
 	vk::PipelineColorBlendStateCreateInfo blend_config(
 	  vk::PipelineColorBlendStateCreateFlags(), false,
@@ -953,15 +1065,35 @@ namespace phx_sdl {
 	  vk::PipelineDynamicStateCreateFlags(), 2, dyn_states.data());
 	*/
 
-	pl_layout = device.createPipelineLayout(
-	  vk::PipelineLayoutCreateInfo(vk::PipelineLayoutCreateFlags()),
-	  nullptr, dyn_loader);
-
+	// We need to use the dynamic loader for creating device-local
+	// resources, so make sure it's using the device-internal
+	// loader.
 	dyn_loader = vk::DispatchLoaderDynamic(
-	  instance.operator VkInstance(),
+	  instance,
 	  PFN_vkGetInstanceProcAddr(
 	    SDL_Vulkan_GetVkGetInstanceProcAddr()),
 	  device, vkGetDeviceProcAddr);
+
+	// Pipeline layout includes information about uniform buffers
+	// and push constants. etc.
+	vk::DescriptorSetLayoutBinding uboBindings(
+	  0, vk::DescriptorType::eUniformBuffer, 1,
+	  vk::ShaderStageFlagBits::eAll);
+
+	// The descriptor set layout is necessary for using push
+	// constants and UBOs.
+	descriptor_set_layout = device.createDescriptorSetLayout(
+	  vk::DescriptorSetLayoutCreateInfo(
+	    vk::DescriptorSetLayoutCreateFlags(), 1, &uboBindings));
+
+	const auto& pcrange = vk::PushConstantRange(
+	  vk::ShaderStageFlagBits::eAll, 0,
+	  sizeof(bridge::PushConstants));
+	pl_layout = device.createPipelineLayout(
+	  vk::PipelineLayoutCreateInfo(vk::PipelineLayoutCreateFlags(),
+	                               1, &descriptor_set_layout, 1,
+	                               &pcrange),
+	  nullptr, dyn_loader);
 
 	vk::AttachmentDescription2KHR color_attachment_descr(
 	  vk::AttachmentDescriptionFlags(), swc_format.format,
@@ -973,6 +1105,7 @@ namespace phx_sdl {
 
 	vk::AttachmentReference2KHR color_attachment_ref(
 	  0, vk::ImageLayout::eColorAttachmentOptimal);
+
 	vk::SubpassDescription2KHR subpass(
 	  vk::SubpassDescriptionFlags(),
 	  vk::PipelineBindPoint::eGraphics, 0, 0, nullptr, 1,
@@ -1021,26 +1154,22 @@ namespace phx_sdl {
 	    static_cast<uint32_t>(swc_framebuffers.size())));
 
 	for (int i = 0; i < swc_framebuffers.size(); i++) {
-	    const auto& cb = cmd_buffers[i];
-	    cb.begin(vk::CommandBufferBeginInfo(
-	      vk::CommandBufferUsageFlagBits::eSimultaneousUse));
-
-	    vk::ClearValue ccol(vk::ClearColorValue(
-	      std::array<float, 4>{ 0.0f, 0.0f, 0.0f, 1.0f }));
-
-	    cb.setDeviceMaskKHR(DEVICE_MASK, dyn_loader);
-
-	    cb.beginRenderPass(
-	      vk::RenderPassBeginInfo(render_pass, swc_framebuffers[i],
-	                              vk::Rect2D({ 0, 0 }, swc_extent),
-	                              1, &ccol),
-	      vk::SubpassContents::eInline);
-
-	    cb.bindPipeline(vk::PipelineBindPoint::eGraphics, pipeline);
-	    cb.draw(3, 1, 0, 0);
-	    cb.endRenderPass();
-	    cb.end();
+	    encode_renderpass(scene, cmd_buffers[i], dyn_loader,
+	                      render_pass, swc_framebuffers[i],
+	                      swc_extent, pipeline);
 	}
+
+	// Create the transient command pool to be used for UBOs and
+	// push constants.
+	tmp_cmd_pool = device.createCommandPool(
+	  vk::CommandPoolCreateInfo(
+	    vk::CommandPoolCreateFlagBits::eTransient |
+	      vk::CommandPoolCreateFlagBits::eResetCommandBuffer,
+	    graphics_queue_index));
+
+	// Create the first two push-constant transient commands.
+	push_tmp_cmd(device, tmp_cmd_pool, tmp_cmds);
+	push_tmp_cmd(device, tmp_cmd_pool, tmp_cmds);
 
 	for (int i = 0; i < max_frames_inflight; i++) {
 	    const auto& sem_cfg   = vk::SemaphoreCreateInfo();
@@ -1071,6 +1200,8 @@ namespace phx_sdl {
           pipeline(std::move(from.pipeline)),
           pl_layout(std::move(from.pl_layout)),
 
+          descriptor_set_layout(std::move(from.descriptor_set_layout)),
+
           swapchain(std::move(from.swapchain)),
           swc_format(std::move(from.swc_format)),
           swc_extent(std::move(from.swc_extent)),
@@ -1082,6 +1213,8 @@ namespace phx_sdl {
 
           cmd_pool(std::move(from.cmd_pool)),
           cmd_buffers(std::move(from.cmd_buffers)),
+          tmp_cmd_pool(std::move(from.tmp_cmd_pool)),
+          tmp_cmds(std::move(from.tmp_cmds)),
 
           current_frame(from.current_frame),
 
@@ -1089,11 +1222,17 @@ namespace phx_sdl {
           render_done(std::move(from.render_done)),
           inflight_fences(std::move(from.inflight_fences)),
 
-          last_frame_time(std::move(from.last_frame_time)),
-          frame_count(std::move(from.frame_count)),
+          metrics(std::move(from.metrics)),
 
+          // Resources that need dynamic lifetime and constant address.
           queue_priority(std::move(from.queue_priority)),
           app_info(std::move(from.app_info)),
+
+          // Resources that exist outside of the Renderer's lifetime.
+          scene(from.scene),
+
+          // State.
+          intent(from.intent),
 
           width(std::move(from.width)), height(std::move(from.height)),
 
@@ -1113,7 +1252,51 @@ namespace phx_sdl {
     }
 
     template <bool debugging>
-    void VKRenderer<debugging>::update() {}
+    const Uint32 VKRenderer<debugging>::window_flags() noexcept {
+	if constexpr (debugging) {
+	    return debug_window_flags();
+	}
+
+	return SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_SHOWN |
+	       SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_VULKAN |
+	       SDL_WINDOW_INPUT_GRABBED | SDL_WINDOW_INPUT_FOCUS |
+	       SDL_WINDOW_MOUSE_CAPTURE | SDL_WINDOW_MOUSE_FOCUS;
+    }
+
+    template <bool debugging>
+    const Uint32 VKRenderer<debugging>::debug_window_flags() noexcept {
+	return SDL_WINDOW_SHOWN | SDL_WINDOW_ALLOW_HIGHDPI |
+	       SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE;
+    }
+
+    template <bool debugging>
+    void VKRenderer<debugging>::post_hooks() noexcept {
+	if constexpr (!debugging) {
+	    SDL_ShowCursor(false);
+	}
+    }
+
+    template <bool debugging>
+    gfx::extent VKRenderer<debugging>::extent() noexcept {
+	return gfx::extent{ width, height };
+    }
+
+    template <bool debugging>
+    void VKRenderer<debugging>::clear() {}
+
+    template <bool debugging>
+    void VKRenderer<debugging>::update(const event::EventIntent& in) {
+	// TODO: Understand why this is so goofy.  Scaling factor or
+	// something?
+	//
+	// TODO: Replace this senseless design with a sensible
+	// direct-mutation or "functional" handle for modifying state in
+	// user code.
+	intent = bridge::Intent{ glm::vec2{
+	  double(in.x - double(width) / 2.0) / (double(width) / 2.0),
+	  double(in.y - double(height) / 2.0) /
+	    (double(height) / 2.0) } };
+    }
 
     template <bool debugging>
     void VKRenderer<debugging>::draw(std::nullptr_t) {
@@ -1123,11 +1306,15 @@ namespace phx_sdl {
 	// succeed until they are reset.  They will only be reset
 	// immediately before queue submission, which signals them upon
 	// completion.
+	//
+	// TODO: Poll instead and maybe make a new fence / cmd buffer?
 	device.waitForFences(inflight_fences[c], true,
 	                     std::numeric_limits<uint64_t>::max());
 
 	// TODO: Refactor to avoid giant try/catch.
 	// TODO: Understand why this is slow.
+	// TODO: Understand why Intel integrated GPU does not invalidate
+	// on resize.
 	try {
 	    // Get the index of the swapchain image to use.
 	    const auto& result = device.acquireNextImage2KHR(
@@ -1152,9 +1339,32 @@ namespace phx_sdl {
 	    vk::PipelineStageFlags stages(
 	      vk::PipelineStageFlagBits::eColorAttachmentOutput);
 
-	    vk::SubmitInfo submit_configs(1, &img_ready[c], &stages, 1,
-	                                  &cmd_buffers[i], 1,
-	                                  &render_done[c]);
+	    auto& tc = first_ready_cmd(device, tmp_cmd_pool, tmp_cmds);
+
+	    const auto& cb = tc.buf;
+
+	    // TODO: Understand why this is occasionally not in a ready
+	    // state.
+	    cb.begin(vk::CommandBufferBeginInfo(
+	      vk::CommandBufferUsageFlagBits::eOneTimeSubmit));
+
+	    const auto& pcs = bridge::PushConstants{
+		intent,
+		float(swc_extent.width) / float(swc_extent.height),
+	    };
+
+	    cb.pushConstants(pl_layout, vk::ShaderStageFlagBits::eAll,
+	                     0, sizeof(bridge::PushConstants), &pcs);
+	    // After completing the push constant command, set the
+	    // event status.
+	    cb.setEvent(tc.evt,
+	                vk::PipelineStageFlagBits::eAllCommands);
+
+	    cb.end();
+
+	    vk::CommandBuffer cbufs[]{ cmd_buffers[i], cb };
+	    vk::SubmitInfo submit_configs(1, &img_ready[c], &stages, 2,
+	                                  cbufs, 1, &render_done[c]);
 
 	    vk::PresentInfoKHR present_config(1, &render_done[c], 1,
 	                                      &swapchain, &i);
@@ -1166,6 +1376,11 @@ namespace phx_sdl {
 	    const auto& pres_result = pres_queue.presentKHR(
 	      present_config);
 
+	    // Now that we've kicked off the push constant / UBO
+	    // command, we can send it to the back of the line.
+	    tc.stat = TransientCommand::status::pending;
+	    move_first_to_end(tmp_cmds);
+
 	    switch (pres_result) {
 	    case vk::Result::eSuccess:
 		break;
@@ -1173,28 +1388,28 @@ namespace phx_sdl {
 	    default:
 		throw result.result;
 	    }
-
 	} catch ([[maybe_unused]] vk::Result& e) {
-	    // This is a soft failure that could have been saved, but we
-	    // just haven't handled this case yet.
+	    // This is a soft failure that could have been
+	    // saved, but we just haven't handled this case yet.
 	    if constexpr (debugging) {
 		std::cerr << "Soft failure in draw: " << e << std::endl;
 	    }
 
 	    reload_swapchain();
 	    throw phx_err::Retry{};
-
 	} catch ([[maybe_unused]] vk::OutOfDateKHRError& e) {
-	    // Exceptional renderer results mean the swapchain needs to
-	    // be rebuilt.  If the reload fails, re-throw.
+	    // Exceptional renderer results mean the swapchain
+	    // needs to be rebuilt.  If the reload fails,
+	    // re-throw.
 	    // https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#fundamentals-errorcodes
 	    //
-	    // VK_ERROR_OUT_OF_DATE_KHR A surface has changed in such a
-	    // way that it is no longer compatible with the swapchain,
-	    // and further presentation requests using the swapchain
-	    // will fail. Applications must query the new surface
-	    // properties and recreate their swapchain if they wish to
-	    // continue presenting to the surface.
+	    // VK_ERROR_OUT_OF_DATE_KHR A surface has changed in
+	    // such a way that it is no longer compatible with
+	    // the swapchain, and further presentation requests
+	    // using the swapchain will fail. Applications must
+	    // query the new surface properties and recreate
+	    // their swapchain if they wish to continue
+	    // presenting to the surface.
 	    if constexpr (debugging) {
 		std::cerr << "Swapchain expired: " << e.what()
 		          << std::endl;
@@ -1207,17 +1422,7 @@ namespace phx_sdl {
 
 	// If everything succeeded, update frame metrics.
 	if constexpr (debugging) {
-	    frame_count++;
-	    const auto& this_frame_time =
-	      std::chrono::high_resolution_clock::now();
-	    if (frame_count % 100 == 0) {
-		std::cerr
-		  << "Frame time: " << std::setprecision(3)
-		  << (this_frame_time - last_frame_time).count() /
-		       1000000.0
-		  << "ms" << std::endl;
-	    }
-	    last_frame_time = this_frame_time;
+	    metrics.update();
 	}
 
 	current_frame = (c + 1) % max_frames_inflight;
@@ -1225,14 +1430,54 @@ namespace phx_sdl {
     } // namespace phx_sdl
 
     template <bool debugging>
+    typename VKRenderer<debugging>::Metrics
+    VKRenderer<debugging>::get_metrics() noexcept {
+	return metrics;
+    }
+
+    template <bool debugging>
+    void VKRenderer<debugging>::Metrics::update() noexcept {
+	const auto& t = clock::now();
+	if (prev_frame_time.time_since_epoch().count() == 0) {
+	    prev_frame_time = t;
+	    avg_frame_time  = dur::zero();
+	    return;
+	}
+
+	const auto& dt = t - prev_frame_time;
+	if (dt > max_frame_time) {
+	    max_frame_time = dt;
+	}
+
+	prev_frame_time = t;
+
+	avg_frame_time = dur(
+	  dur::rep((dt.count() * alpha) +
+	           (1.0 - alpha) * avg_frame_time.count()));
+    }
+
+    template <bool debugging>
     void VKRenderer<debugging>::reload_swapchain() {
-	// TODO: DRY up between this and full teardown.
+	// TODO: DRY up between this and full teardown.  I think
+	// a lot of this is unnecessary.
 	device.waitIdle();
 
-	// First, clean up any transient resources.
+	// First, clean up any transient resources such as UBOs,
+	// memory, framebuffers, command pools, etc.
+	/*
+	for (const auto& buf : buffers) {
+	    device.destroyBuffer(buf);
+	}
+
+	for (const auto& mem : buffer_memory) {
+	    device.freeMemory(mem);
+	}
+	*/
+
 	destroy_framebuffers(device, swc_framebuffers);
 	device.freeCommandBuffers(cmd_pool, cmd_buffers);
 
+	// Destroy pipeline resources.
 	device.destroyPipeline(pipeline);
 	device.destroyPipelineLayout(pl_layout);
 
@@ -1259,29 +1504,31 @@ namespace phx_sdl {
 
 	vk::SwapchainKHR tmp_swapchain;
 
+	int w = 0, h = 0;
+
 	while (true) {
 	    // TODO: DRY this up with initial creation?
 	    // Then, reload the full swapchain:
 	    try {
-		int width  = 0;
-		int height = 0;
-		SDL_Vulkan_GetDrawableSize(window, &width, &height);
-		if (width == 0 || height == 0) {
-		    // If the drawable is zero-sized, we can't set up a
-		    // sane swapchain.
+		SDL_Vulkan_GetDrawableSize(window, &w, &h);
+		if (w == 0 || h == 0) {
+		    // If the drawable is zero-sized, we can't
+		    // set up a sane swapchain.
 		    throw phx_err::Retry{};
 		}
 
 		std::tie(tmp_swapchain, swc_format, swc_extent) =
 		  create_swapchain(phys_device, device, surface,
-		                   dyn_loader, width, height,
-		                   swapchain);
+		                   dyn_loader, w, h, swapchain);
 	    } catch ([[maybe_unused]] phx_err::Retry& r) {
 		continue;
 	    }
 
 	    break;
 	}
+
+	width  = w;
+	height = h;
 
 	device.destroySwapchainKHR(swapchain);
 
@@ -1292,8 +1539,8 @@ namespace phx_sdl {
 	swc_image_views = make_image_views(device, swc_images,
 	                                   swc_format);
 
-	const auto& frag_data   = read_all(res::ID::frag_spv);
-	const auto& vert_data   = read_all(res::ID::vert_spv);
+	const auto& frag_data   = read_all(scene.shader().frag);
+	const auto& vert_data   = read_all(scene.shader().vert);
 	const auto& frag_module = create_module(device, frag_data);
 	const auto& vert_module = create_module(device, vert_data);
 
@@ -1362,8 +1609,13 @@ namespace phx_sdl {
 	  vk::PipelineColorBlendStateCreateFlags(), false,
 	  vk::LogicOp::eCopy, 1, &color_blend_attachment);
 
+	// Configure pipeline layout / push constants / UBOs.
+	const auto& pcrange = vk::PushConstantRange(
+	  vk::ShaderStageFlagBits::eAll, 0,
+	  sizeof(bridge::PushConstants));
 	pl_layout = device.createPipelineLayout(
-	  vk::PipelineLayoutCreateInfo(vk::PipelineLayoutCreateFlags()),
+	  vk::PipelineLayoutCreateInfo(vk::PipelineLayoutCreateFlags(),
+	                               0, nullptr, 1, &pcrange),
 	  nullptr, dyn_loader);
 
 	vk::AttachmentDescription2KHR color_attachment_descr(
@@ -1431,42 +1683,25 @@ namespace phx_sdl {
 	    static_cast<uint32_t>(swc_framebuffers.size())));
 
 	for (int i = 0; i < swc_framebuffers.size(); i++) {
-	    const auto& cb = cmd_buffers[i];
-	    cb.begin(vk::CommandBufferBeginInfo(
-	      vk::CommandBufferUsageFlagBits::eSimultaneousUse));
-
-	    vk::ClearValue ccol(vk::ClearColorValue(
-	      std::array<float, 4>{ 0.0f, 0.0f, 0.0f, 1.0f }));
-
-	    cb.setDeviceMaskKHR(DEVICE_MASK, dyn_loader);
-
-	    cb.beginRenderPass(
-	      vk::RenderPassBeginInfo(render_pass, swc_framebuffers[i],
-	                              vk::Rect2D({ 0, 0 }, swc_extent),
-	                              1, &ccol),
-	      vk::SubpassContents::eInline);
-
-	    cb.bindPipeline(vk::PipelineBindPoint::eGraphics, pipeline);
-	    cb.draw(3, 1, 0, 0);
-	    cb.endRenderPass();
-	    cb.end();
+	    encode_renderpass(scene, cmd_buffers[i], dyn_loader,
+	                      render_pass, swc_framebuffers[i],
+	                      swc_extent, pipeline);
 	}
 
 	/*
 	for (int i = 0; i < max_frames_inflight; i++) {
 	    const auto& sem_cfg   = vk::SemaphoreCreateInfo();
-	    const auto& sig       = vk::FenceCreateFlagBits::eSignaled;
-	    const auto& fence_cfg = vk::FenceCreateInfo(sig);
+	    const auto& sig       =
+	vk::FenceCreateFlagBits::eSignaled; const auto&
+	fence_cfg = vk::FenceCreateInfo(sig);
 
-	    img_ready[i]       = device.createSemaphore(sem_cfg);
-	    render_done[i]     = device.createSemaphore(sem_cfg);
-	    inflight_fences[i] = device.createFence(fence_cfg);
+	    img_ready[i]       =
+	device.createSemaphore(sem_cfg); render_done[i]     =
+	device.createSemaphore(sem_cfg); inflight_fences[i] =
+	device.createFence(fence_cfg);
 	}
 	*/
     }
-
-    template <bool debugging>
-    void VKRenderer<debugging>::clear() {}
 
     template <bool debugging>
     void VKRenderer<debugging>::teardown() {
@@ -1477,7 +1712,13 @@ namespace phx_sdl {
 	destroy_fences(device, inflight_fences);
 
 	device.destroyCommandPool(cmd_pool);
+	for (const auto& cmd : tmp_cmds) {
+	    device.destroyEvent(cmd.evt);
+	}
+	device.destroyCommandPool(tmp_cmd_pool);
+	// TODO: Free command buffers.
 	device.destroyRenderPass(render_pass, nullptr, dyn_loader);
+	device.destroyDescriptorSetLayout(descriptor_set_layout);
 	device.destroyPipeline(pipeline);
 	destroy_framebuffers(device, swc_framebuffers);
 	device.destroyPipelineCache(pl_cache);

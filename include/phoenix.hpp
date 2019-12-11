@@ -1,10 +1,9 @@
 #ifndef PHX_PHOENIX_H
 #define PHX_PHOENIX_H
 
+#include "event.hpp"
 #include "graphics.hpp"
 #include "input.hpp"
-
-#include "event.hpp"
 #include "queue.hpp"
 
 namespace phx {
@@ -43,7 +42,17 @@ namespace phx {
 	void render(RenderPayload) noexcept(false);
 	// void enqueue(event::Event&&) noexcept(true);
 
+	// Update the internal state.
+	// TODO: There's probably a better way to do this.
+	void update(const event::EventIntent&) noexcept(false);
+
 	input::Input<Consumer>& input_handle() noexcept(true);
+
+	struct Metrics {
+	    typename GP::Metrics gfx;
+	};
+
+	Metrics get_metrics() noexcept(true);
 
     private:
 	GP                     gf;

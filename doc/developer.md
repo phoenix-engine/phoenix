@@ -86,7 +86,7 @@ $ phx help gen
 
 # ...
 
-$ phx gen -l 9 --to ../dep/res
+$ phx gen -l 9 --to ../dep/res --match ".*\.(jpg|spv|wav)"
 ```
 
 Now a customized compressed streaming asset library is included in the
@@ -173,7 +173,7 @@ using the following commands:
 $ cd phoenix/res
 $ glslangValidator --help
 # ...
-$ glslangValidator -V vk_renderer.vert.glsl -o verg.spv
+$ glslangValidator -V vk_renderer.vert.glsl -o vert.spv
 $ glslangValidator -V vk_renderer.frag.glsl -o frag.spv
 ```
 
