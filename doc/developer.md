@@ -154,6 +154,10 @@ are enabled which require
 
 ### Shaders
 
+Required tools:
+- [glslangValidator](https://www.lunarg.com/vulkan-sdk/)
+- [Phoenix CLI](https://github.com/phoenix-engine/phx)
+
 To run shader code on the GPU, Vulkan requires precompiled SPIR-V
 bitcode to ensure uniformity across different implementations.
 
@@ -166,20 +170,22 @@ Some editors include plugins for working with GLSL shaders.  In Emacs,
 you can install
 [`company-glsl`](https://github.com/guidoschmidt/company-glsl).
 
-Once you are ready to use or test your shaders, compile them into SPIR-V
-using the following commands:
+To work with shaders in Phoenix, they must be associated with a
+[Scene](../include/phx_sdl/scene.hpp).  VKRenderer is constructed with a
+Scene which tells it how to set up its draw commands, and what shaders
+to use.
 
-```sh
-$ cd phoenix/res
-$ glslangValidator --help
-# ...
-$ glslangValidator -V vk_renderer.vert.glsl -o vert.spv
-$ glslangValidator -V vk_renderer.frag.glsl -o frag.spv
-```
+The CMake build has a target which can be used to manually rebuild and
+redeploy shader assets, called `GenerateShaderResources`.  Due to a bug,
+this currently must be built twice to get the latest generated files in
+the Resource library.
 
-Now your shaders will be compiled into SPIR-V bitcode, and ready to
-use in Phoenix.  To generate [Phoenix binary assets](#assets), use
-the [`phx CLI`](#the-phx-cli).
+To build this target, you can run e.g. `ninja GenerateShaderResources`
+from your developer shell, or switch to "CMake Targets View" in Visual
+Studio's "Solution Explorer" toolbox.  See
+[CMake Projects in Visual Studio](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=vs-2019)
+for more details.
+
 
 ### SDL2
 
