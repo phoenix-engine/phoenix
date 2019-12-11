@@ -17,10 +17,10 @@ layout(location = 0) out vec4 outColor;
 
 void main() {
     vec2 dff = {
-       0.0625/( pc.a.a*(texCoord.x - pc.i.m.x)),
-        // pc.a.a*(texCoord.x - pc.i.m.x),
-        0.0625/(texCoord.y - pc.i.m.y)
-        // (texCoord.y - pc.i.m.y)
+      0.0625/(pc.a.a*(texCoord.x - pc.i.m.x)),
+      // pc.a.a*(texCoord.x - pc.i.m.x),
+      0.0625/(texCoord.y - pc.i.m.y)
+      // (texCoord.y - pc.i.m.y)
     };
 
     float dst = dff.x*dff.x + dff.y*dff.y;
@@ -33,7 +33,7 @@ void main() {
         outc.r = 1;
     }
     if (abs(texCoord.y - pc.i.m.y) < 1.0/256.0) {
-        outc.r = 0xff;
+        outc.r = 1;
     }
     if (dst < 1.0/64.0) {
         outc = 64*dst*vec4(1,1,1,1);
