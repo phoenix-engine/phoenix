@@ -46,6 +46,7 @@ separate build directory and run \
 'cmake /path/to/${PROJECT_NAME} [options]' there."
 )
 
+add_subdirectory(res)
 add_subdirectory(dep)
 add_subdirectory(src)
 add_subdirectory(include)
