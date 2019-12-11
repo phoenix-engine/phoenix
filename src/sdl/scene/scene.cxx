@@ -37,8 +37,8 @@ namespace phx_sdl {
 	                      res::ID::triangle_vert_spv };
     };
 
-    void World2d::encode_renderpass(
-      const const vk::CommandBuffer&   into,
+    void PushConstants::encode_renderpass(
+      const vk::CommandBuffer&         into,
       const vk::DispatchLoaderDynamic& loader,
       const vk::RenderPass& pass, const vk::Framebuffer& fb,
       const vk::Extent2D& extent, const vk::Pipeline& pipeline,
@@ -65,12 +65,12 @@ namespace phx_sdl {
 	into.endRenderPass();
     }
 
-    Scene::Shader World2d::shader(void) const noexcept {
-	return Scene::Shader{ res::ID::world2d_frag_spv,
-	                      res::ID::world2d_vert_spv };
+    Scene::Shader PushConstants::shader(void) const noexcept {
+	return Scene::Shader{ res::ID::pushconstants_frag_spv,
+	                      res::ID::pushconstants_vert_spv };
     };
 
-    const Triangle DefaultScenes::triangle{};
-    const World2d  DefaultScenes::world2d{};
+    const Triangle      DefaultScenes::triangle{};
+    const PushConstants DefaultScenes::pushconstants{};
 
 } // namespace phx_sdl

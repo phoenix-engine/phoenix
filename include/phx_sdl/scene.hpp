@@ -50,7 +50,7 @@ namespace phx_sdl {
 	  noexcept override;
     };
 
-    class World2d : public Scene {
+    class PushConstants : public Scene {
     public:
 	Shader shader(void) const noexcept override;
 
@@ -68,8 +68,8 @@ namespace phx_sdl {
     public:
 	DefaultScenes() = delete;
 
-	static const Triangle triangle;
-	static const World2d  world2d;
+	static const Triangle      triangle;
+	static const PushConstants pushconstants;
     };
 
 } // namespace phx_sdl
