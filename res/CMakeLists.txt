@@ -45,35 +45,32 @@ add_custom_command(
     COMMENT "Compiling pushconstants frag shader..."
 )
 
-# If any of the shader targets are built, regenerate the assets.
-add_custom_target(
-    GenerateShaderResources
+set(OUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../dep/res/res)
+message("Generating shader assets in ${OUT_DIR}")
+
+# Add a custom command for the generated output files.
+add_custom_command(
+    OUTPUT
+	${OUT_DIR}/triangle_frag_spv_decl.cxx ${OUT_DIR}/triangle_frag_spv_real.cxx
+	${OUT_DIR}/triangle_vert_spv_decl.cxx ${OUT_DIR}/triangle_vert_spv_real.cxx
+	${OUT_DIR}/pushconstants_frag_spv_decl.cxx  ${OUT_DIR}/pushconstants_frag_spv_real.cxx
+	${OUT_DIR}/pushconstants_vert_spv_decl.cxx  ${OUT_DIR}/pushconstants_vert_spv_real.cxx
     DEPENDS
 	triangle.vert.spv triangle.frag.spv
 	pushconstants.vert.spv pushconstants.frag.spv
-    BYPRODUCTS
-	../dep/res/res/triangle_frag_spv_decl.cxx ../dep/res/res/triangle_frag_spv_real.cxx
-	../dep/res/res/triangle_vert_spv_decl.cxx ../dep/res/res/triangle_vert_spv_real.cxx
-	../dep/res/res/pushconstants_frag_spv_decl.cxx  ../dep/res/res/pushconstants_frag_spv_real.cxx
-	../dep/res/res/pushconstants_vert_spv_decl.cxx  ../dep/res/res/pushconstants_vert_spv_real.cxx
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     COMMAND ${PHX_CLI} gen --skip-finalize -l 9 --from . --to ../dep/res --match ".*\.spv"
-    VERBATIM
     COMMENT "Generating assets..."
 )
 
-#[[
-add_custom_command(
-    OUTPUT
-	../dep/res/res/triangle_frag_spv_decl.cxx ../dep/res/res/triangle_frag_spv_real.cxx
-	../dep/res/res/triangle_vert_spv_decl.cxx ../dep/res/res/triangle_vert_spv_real.cxx
-	../dep/res/res/pushconstants_frag_spv_decl.cxx  ../dep/res/res/pushconstants_frag_spv_real.cxx
-	../dep/res/res/pushconstants_vert_spv_decl.cxx  ../dep/res/res/pushconstants_vert_spv_real.cxx
+# For now, depend on the generated source files using a manual custom
+# target.
+add_custom_target(
+    GenerateShaderResources
     DEPENDS
-	triangle.vert.spv triangle.frag.spv
-	pushconstants.vert.spv pushconstants.frag.spv
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    COMMAND ${PHX_CLI} gen --skip-finalize -l 9 --from . --to ../dep/res --match ".*\.spv"
-    COMMENT "Generating assets..."
+	${OUT_DIR}/triangle_frag_spv_decl.cxx ${OUT_DIR}/triangle_frag_spv_real.cxx
+	${OUT_DIR}/triangle_vert_spv_decl.cxx ${OUT_DIR}/triangle_vert_spv_real.cxx
+	${OUT_DIR}/pushconstants_frag_spv_decl.cxx  ${OUT_DIR}/pushconstants_frag_spv_real.cxx
+	${OUT_DIR}/pushconstants_vert_spv_decl.cxx  ${OUT_DIR}/pushconstants_vert_spv_real.cxx
+    COMMENT "Symbolic target for generating shader assets"
 )
-]]

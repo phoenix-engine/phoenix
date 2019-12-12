@@ -176,9 +176,9 @@ Scene which tells it how to set up its draw commands, and what shaders
 to use.
 
 The CMake build has a target which can be used to manually rebuild and
-redeploy shader assets, called `GenerateShaderResources`.  Due to a bug,
-this currently must be built twice to get the latest generated files in
-the Resource library.
+redeploy shader assets, called `GenerateShaderResources`.  To tell
+the Phoenix build to pick up your new shaders, run this target manually
+before rebuilding.
 
 To build this target, you can run e.g. `ninja GenerateShaderResources`
 from your developer shell, or switch to "CMake Targets View" in Visual
