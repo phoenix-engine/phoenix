@@ -13,6 +13,7 @@ project("${PHX_PROJECT_NAME}"
 
 cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
 if(POLICY CMP0048)
+    # Sane CMake project() command version defaults.
     cmake_policy(SET CMP0048 NEW)
 endif() # POLICY CMP0048
 
