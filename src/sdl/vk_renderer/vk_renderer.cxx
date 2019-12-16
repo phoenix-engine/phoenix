@@ -165,10 +165,12 @@ namespace phx_sdl {
 	    if (available_formats.size() == 1 &&
 	        available_formats[0].surfaceFormat.format ==
 	          vk::Format::eUndefined) {
-		return vk::SurfaceFormatKHR{
-		    vk::Format::eB8G8R8A8Unorm,
-		    vk::ColorSpaceKHR::eSrgbNonlinear,
-		};
+
+		vk::SurfaceFormatKHR sfcf;
+		sfcf.format     = vk::Format::eB8G8R8A8Unorm;
+		sfcf.colorSpace = vk::ColorSpaceKHR::eSrgbNonlinear;
+
+		return sfcf;
 	    }
 
 	    for (const auto& sfc_format : available_formats) {
