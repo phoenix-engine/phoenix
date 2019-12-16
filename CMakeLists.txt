@@ -4,18 +4,18 @@ set(PHX_PROJECT_NAME Phoenix)
 ##   set(PHX_PROJECT_NAME Phoenix-iOS)
 ## endif()
 
+cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
+if(POLICY CMP0048)
+    # Sane CMake project() command version defaults.
+    cmake_policy(SET CMP0048 NEW)
+endif() # POLICY CMP0048
+
 project("${PHX_PROJECT_NAME}"
   VERSION 0.0.0.1
   DESCRIPTION "A portable, modern C++ game engine for Metal and Vulkan"
   HOMEPAGE_URL "https://github.com/phoenix-engine/phoenix"
   LANGUAGES C CXX
 )
-
-cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
-if(POLICY CMP0048)
-    # Sane CMake project() command version defaults.
-    cmake_policy(SET CMP0048 NEW)
-endif() # POLICY CMP0048
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
