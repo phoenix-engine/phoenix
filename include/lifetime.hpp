@@ -10,13 +10,15 @@ namespace phx {
     struct ResourceKeeper
         : public std::unique_ptr<Resource, decltype(Destroyer)> {
 
+	using RDptr = std::unique_ptr<Resource, decltype(Destroyer)>;
+
 	static_assert(
 	  std::is_invocable_v<decltype(Destroyer), Resource*>,
 	  "Destroyer must be invocable on Resource*");
 
-	ResourceKeeper(Resource* r) : unique_ptr(r, Destroyer) {}
+	ResourceKeeper(Resource* r) : RDptr(r, Destroyer) {}
 
-	operator Resource*() const { return get(); }
+	operator Resource*() const { return RDptr::get(); }
     };
 
 } // namespace phx
