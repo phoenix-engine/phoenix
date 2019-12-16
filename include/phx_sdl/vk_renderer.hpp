@@ -85,13 +85,13 @@ namespace phx_sdl {
 	void draw(std::nullptr_t);
 
 	struct Metrics {
-	    using clock = std::chrono::high_resolution_clock;
-	    static_assert(clock::is_steady,
-	                  "High-resolution clock is not steady!");
+	    using clock = std::chrono::steady_clock;
+
 	    using time   = clock::time_point;
 	    using dur    = clock::duration;
 	    using rep    = clock::rep;
 	    using period = clock::period;
+
 	    using ms     = std::chrono::duration<double, std::milli>;
 
 	    dur  avg_frame_time;
