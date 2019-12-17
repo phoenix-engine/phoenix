@@ -165,7 +165,6 @@ namespace phx_sdl {
 	    if (available_formats.size() == 1 &&
 	        available_formats[0].surfaceFormat.format ==
 	          vk::Format::eUndefined) {
-
 		vk::SurfaceFormatKHR sfcf;
 		sfcf.format     = vk::Format::eB8G8R8A8Unorm;
 		sfcf.colorSpace = vk::ColorSpaceKHR::eSrgbNonlinear;
@@ -1440,7 +1439,7 @@ namespace phx_sdl {
     template <bool debugging>
     void VKRenderer<debugging>::Metrics::update() noexcept {
 	const auto& t = clock::now();
-	if (prev_frame_time.time_since_epoch().count() == 0) {
+	if (prev_frame_time == time{ dur::zero() }) {
 	    prev_frame_time = t;
 	    avg_frame_time  = dur::zero();
 	    return;
