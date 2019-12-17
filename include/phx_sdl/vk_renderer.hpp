@@ -92,7 +92,7 @@ namespace phx_sdl {
 	    using rep    = clock::rep;
 	    using period = clock::period;
 
-	    using ms     = std::chrono::duration<double, std::milli>;
+	    using ms = std::chrono::duration<double, std::milli>;
 
 	    dur  avg_frame_time;
 	    dur  max_frame_time;
